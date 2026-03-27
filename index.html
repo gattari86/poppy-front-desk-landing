@@ -95,11 +95,11 @@
       --secondary-dark: #D5CEE8;
       --white: #FFFFFF;
       --border: rgba(31, 31, 31, 0.08);
-      --shadow-sm: 0 1px 3px rgba(31, 31, 31, 0.06);
-      --shadow-md: 0 4px 16px rgba(31, 31, 31, 0.08);
-      --shadow-lg: 0 8px 32px rgba(31, 31, 31, 0.10);
-      --radius: 12px;
-      --radius-sm: 8px;
+      --shadow-sm: 0 2px 12px rgba(31, 31, 31, 0.04);
+      --shadow-md: 0 4px 40px rgba(31, 31, 31, 0.06);
+      --shadow-lg: 0 8px 40px rgba(31, 31, 31, 0.08);
+      --radius: 24px;
+      --radius-sm: 16px;
       --font-display: 'Poppins', sans-serif;
       --font-body: 'Raleway', sans-serif;
       --max-width: 1140px;
@@ -132,12 +132,11 @@
 
     .section-label {
       font-family: var(--font-display);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       display: block;
     }
 
@@ -219,20 +218,18 @@
     .nav-cta {
       font-family: var(--font-display);
       font-size: 0.85rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, #7B61FF 0%, #5A3DE8 100%);
+      font-weight: 500;
+      background: var(--text);
       color: var(--white) !important;
-      padding: 12px 28px;
-      border-radius: 8px;
-      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
-      box-shadow: 0 2px 8px rgba(107, 78, 255, 0.15);
-      margin-left: 8px;
+      padding: 12px 24px;
+      border-radius: 48px;
+      transition: transform 0.2s, box-shadow 0.3s;
+      margin-left: 12px;
     }
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(107, 78, 255, 0.25);
-      filter: brightness(1.05);
+      box-shadow: 0 4px 20px rgba(31, 31, 31, 0.12);
     }
 
     .nav-toggle {
@@ -280,48 +277,46 @@
 
     .btn-primary {
       font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, #7B61FF 0%, #5A3DE8 100%);
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: var(--text);
       color: var(--white);
-      padding: 14px 32px;
-      border-radius: var(--radius-sm);
+      padding: 16px 16px 16px 28px;
+      border-radius: 48px;
       border: none;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+      transition: transform 0.2s, box-shadow 0.3s;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 2px 8px rgba(107, 78, 255, 0.18);
+      gap: 10px;
     }
 
     .btn-primary:hover {
       color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(107, 78, 255, 0.28);
-      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 24px rgba(31, 31, 31, 0.15);
     }
 
     .btn-secondary {
       font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 600;
-      background: transparent;
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: var(--white);
       color: var(--text);
-      padding: 14px 32px;
-      border-radius: var(--radius-sm);
-      border: 2px solid var(--border);
+      padding: 16px 28px;
+      border-radius: 48px;
+      border: 1px solid rgba(31, 31, 31, 0.12);
       cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
 
     .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: rgba(107, 78, 255, 0.04);
+      border-color: rgba(31, 31, 31, 0.25);
+      color: var(--text);
+      box-shadow: 0 2px 12px rgba(31, 31, 31, 0.06);
     }
 
     .hero-image {
@@ -396,10 +391,10 @@
 
     .problem-stat {
       margin-top: 32px;
-      padding: 28px;
+      padding: 32px;
       background: var(--white);
       border-radius: var(--radius);
-      border-left: 4px solid var(--accent);
+      border-left: 3px solid var(--accent);
       box-shadow: var(--shadow-sm);
     }
 
@@ -467,7 +462,7 @@
       width: 48px;
       height: 48px;
       background: var(--secondary);
-      border-radius: 10px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -701,9 +696,9 @@
 
     .pilot-card {
       background: var(--white);
-      padding: 40px 36px;
+      padding: 44px 40px;
       border-radius: var(--radius);
-      border: 2px solid var(--accent);
+      border: 1px solid rgba(107, 78, 255, 0.2);
       box-shadow: var(--shadow-md);
     }
 
