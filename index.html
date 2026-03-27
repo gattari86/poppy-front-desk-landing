@@ -1057,7 +1057,7 @@
           <p>Calls come in during busy hours, before hours, and after hours. Front desk teams get pulled into the same questions over and over. Patients get inconsistent experiences depending on which location they reach.</p>
           <p>Leadership often has limited visibility into what is happening across the group. When customer handling breaks down, growth gets harder to manage.</p>
           <div class="problem-stat">
-            <span class="stat-number" id="stat-counter">20-35%</span>
+            <span class="stat-number"><span class="counter" data-target="20">0</span>-<span class="counter" data-target="35">0</span>%</span>
             <span class="stat-label">of dental office inbound calls go unanswered, according to industry research.</span>
           </div>
         </div>
@@ -1377,6 +1377,35 @@
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          countersStarted = true;
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 1200;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              counter.textContent = Math.round(target * eased);
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statEl = document.querySelector('.problem-stat');
+    if (statEl) counterObserver.observe(statEl);
   </script>
 
 </body>
