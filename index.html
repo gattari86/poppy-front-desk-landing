@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poppy Front Desk | AI Customer Handling for Multi-Location Dental Groups</title>
+  <meta name="description" content="Turn more calls into booked patients. Poppy Front Desk is a managed AI customer-handling system built for multi-location dental groups.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Poppy Front Desk | Turn More Calls Into Booked Patients">
+  <meta property="og:description" content="Managed AI customer handling for multi-location dental groups. Answer every call. Capture every booking. See everything.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frontdesk.poppymarketingandconsulting.com">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <style>
+    /* ============================================
+       CSS VARIABLES + RESET
+    ============================================ */
+    :root {
+      --bg: #F6F4EF;
+      --bg-alt: #EFECE5;
+      --text: #1F1F1F;
+      --text-muted: #5A5A5A;
+      --accent: #6B4EFF;
+      --accent-hover: #5A3DE8;
+      --secondary: #E8E3F3;
+      --secondary-dark: #D5CEE8;
+      --white: #FFFFFF;
+      --border: rgba(31, 31, 31, 0.08);
+      --shadow-sm: 0 1px 3px rgba(31, 31, 31, 0.06);
+      --shadow-md: 0 4px 16px rgba(31, 31, 31, 0.08);
+      --shadow-lg: 0 8px 32px rgba(31, 31, 31, 0.10);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font-display: 'Poppins', sans-serif;
+      --font-body: 'Raleway', sans-serif;
+      --max-width: 1140px;
+      --section-pad: 100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SCROLL PROGRESS BAR
+    ============================================ */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--accent);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================================
+       NAV
+    ============================================ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(246, 244, 239, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: var(--shadow-sm); }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    .nav-cta {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-toggle svg { width: 24px; height: 24px; stroke: var(--text); }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    .hero {
+      padding: 140px 0 var(--section-pad);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content { position: relative; z-index: 2; }
+
+    .hero h1 { margin-bottom: 20px; color: var(--text); }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn-primary {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(107, 78, 255, 0.25);
+    }
+
+    .btn-secondary {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: transparent;
+      color: var(--text);
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(107, 78, 255, 0.04);
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       TRUST BAR
+    ============================================ */
+    .trust-bar {
+      padding: 40px 0;
+      background: var(--secondary);
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .trust-item i, .trust-item svg {
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
+    }
+
+    .trust-item span {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ============================================
+       PROBLEM SECTION
+    ============================================ */
+    .problem {
+      padding: var(--section-pad) 0;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .problem-content h2 { margin-bottom: 20px; }
+
+    .problem-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    .problem-stat {
+      margin-top: 32px;
+      padding: 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .problem-stat .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+    }
+
+    .problem-stat .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .problem-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       OPPORTUNITY SECTION
+    ============================================ */
+    .opportunity {
+      padding: var(--section-pad) 0;
+      background: var(--bg-alt);
+    }
+
+    .opportunity-inner {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .opportunity h2 { margin-bottom: 20px; }
+
+    .opportunity p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    /* ============================================
+       WHAT IT DOES
+    ============================================ */
+    .features {
+      padding: var(--section-pad) 0;
+    }
+
+    .features-header {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 60px;
+    }
+
+    .features-header h2 { margin-bottom: 16px; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      padding: 36px 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--secondary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon i, .feature-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--accent);
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       WHY DIFFERENT
+    ============================================ */
+    .different {
+      padding: var(--section-pad) 0;
+      background: var(--bg-alt);
+    }
+
+    .different-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .different-content h2 { margin-bottom: 20px; }
+
+    .different-content p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.75;
+    }
+
+    .diff-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+    .diff-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .diff-list i, .diff-list svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .different-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .different-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       HOW IT WORKS
+    ============================================ */
+    .how-it-works {
+      padding: var(--section-pad) 0;
+    }
+
+    .how-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+    }
+
+    .how-header h2 { margin-bottom: 12px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--secondary-dark);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .step h3 { font-size: 1.05rem; margin-bottom: 10px; }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       OUTCOMES
+    ============================================ */
+    .outcomes {
+      padding: var(--section-pad) 0;
+      background: var(--bg-alt);
+    }
+
+    .outcomes-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 50px;
+    }
+
+    .outcomes-header h2 { margin-bottom: 16px; }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .outcome-item {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: transform 0.3s;
+    }
+
+    .outcome-item:hover { transform: translateY(-3px); }
+
+    .outcome-item i, .outcome-item svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .outcome-item span {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: block;
+      line-height: 1.4;
+    }
+
+    /* ============================================
+       BELIEF
+    ============================================ */
+    .belief {
+      padding: 80px 0;
+      background: var(--text);
+      color: var(--bg);
+      text-align: center;
+    }
+
+    .belief-inner { max-width: 640px; margin: 0 auto; }
+
+    .belief h2 { color: var(--bg); margin-bottom: 20px; }
+
+    .belief p {
+      color: rgba(246, 244, 239, 0.7);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+       PILOT OFFER
+    ============================================ */
+    .pilot {
+      padding: var(--section-pad) 0;
+    }
+
+    .pilot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .pilot-content h2 { margin-bottom: 20px; }
+
+    .pilot-content > p {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .pilot-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .pilot-includes li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .pilot-includes i, .pilot-includes svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .pilot-card {
+      background: var(--white);
+      padding: 40px 36px;
+      border-radius: var(--radius);
+      border: 2px solid var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pilot-card-label {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .pilot-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .pilot-card .pilot-price {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .pilot-card .pilot-price-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .pilot-card .pilot-metric {
+      padding: 16px;
+      background: var(--secondary);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .pilot-card .pilot-metric strong {
+      font-family: var(--font-display);
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .pilot-card .pilot-metric span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pilot-card .btn-primary { width: 100%; justify-content: center; }
+
+    /* ============================================
+       IDEAL FIT
+    ============================================ */
+    .fit {
+      padding: var(--section-pad) 0;
+      background: var(--bg-alt);
+    }
+
+    .fit-inner {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .fit h2 { margin-bottom: 40px; }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: left;
+    }
+
+    .fit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .fit-item i, .fit-item svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .fit-item span {
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       FINAL CTA
+    ============================================ */
+    .final-cta {
+      padding: var(--section-pad) 0;
+      text-align: center;
+    }
+
+    .final-cta-inner { max-width: 600px; margin: 0 auto; }
+
+    .final-cta h2 { margin-bottom: 20px; }
+
+    .final-cta p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .final-cta .hero-ctas { justify-content: center; }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      padding: 48px 0;
+      background: var(--text);
+      color: rgba(246, 244, 239, 0.6);
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--bg);
+      margin-bottom: 12px;
+    }
+
+    footer .footer-brand span { color: var(--accent); }
+
+    footer p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    footer a { color: var(--accent); }
+
+    footer .footer-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(246, 244, 239, 0.5);
+    }
+
+    footer .footer-links a:hover { color: var(--accent); }
+
+    /* ============================================
+       BACK TO TOP
+    ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 900;
+      box-shadow: var(--shadow-md);
+    }
+
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { transform: translateY(-3px); }
+    .back-to-top svg { width: 20px; height: 20px; }
+
+    /* ============================================
+       FILM GRAIN
+    ============================================ */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 10000;
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .outcome-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px; }
+
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 24px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        gap: 16px;
+      }
+
+      .nav-links.open .nav-cta {
+        text-align: center;
+        display: block;
+        padding: 14px 22px;
+      }
+
+      .hero { padding: 100px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image img { height: 300px; }
+
+      .trust-items { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+      .problem-grid { grid-template-columns: 1fr; gap: 40px; }
+      .problem-image { order: -1; }
+      .problem-image img { height: 260px; }
+
+      .different-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .feature-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 40px; }
+      .outcome-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .pilot-grid { grid-template-columns: 1fr; gap: 40px; }
+      .fit-grid { grid-template-columns: 1fr; }
+
+      .hero-ctas { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+
+      .footer-links { flex-direction: column; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .trust-items { grid-template-columns: 1fr; }
+      .outcome-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Poppy <span>Front Desk</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#features">What We Do</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pilot">The Pilot</a></li>
+        <li><a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" target="_blank" class="nav-cta">Book a Strategy Call</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-aos="fade-up">
+          <span class="section-label">For Multi-Location Dental Groups</span>
+          <h1>Turn more calls into booked patients.</h1>
+          <p>Poppy Front Desk helps multi-location dental groups make booking easier, reduce missed demand, and create a more trusted patient experience across every location.</p>
+          <div class="hero-ctas">
+            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" target="_blank" class="btn-primary">
+              Book a Strategy Call
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.pexels.com/photos/6812434/pexels-photo-6812434.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Friendly dental office receptionist welcoming a patient" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
+          <i data-lucide="building-2"></i>
+          <span>Built for multi-location groups</span>
+        </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="50">
+          <i data-lucide="heart-handshake"></i>
+          <span>Supports your team, not replaces it</span>
+        </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="calendar-check"></i>
+          <span>Designed for easier booking</span>
+        </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="150">
+          <i data-lucide="trending-up"></i>
+          <span>Made for organized growth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="problem-grid">
+        <div class="problem-content" data-aos="fade-up">
+          <span class="section-label">The Problem</span>
+          <h2>Your team should not have to choose between caring for patients and catching every call.</h2>
+          <p>Calls come in during busy hours, before hours, and after hours. Front desk teams get pulled into the same questions over and over. Patients get inconsistent experiences depending on which location they reach.</p>
+          <p>Leadership often has limited visibility into what is happening across the group. When customer handling breaks down, growth gets harder to manage.</p>
+          <div class="problem-stat">
+            <span class="stat-number" id="stat-counter">20-35%</span>
+            <span class="stat-label">of dental office inbound calls go unanswered, according to industry research.</span>
+          </div>
+        </div>
+        <div class="problem-image" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.pexels.com/photos/6170560/pexels-photo-6170560.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Overwhelmed front desk staff on the phone" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opportunity -->
+  <section class="opportunity">
+    <div class="container">
+      <div class="opportunity-inner" data-aos="fade-up">
+        <span class="section-label">The Opportunity</span>
+        <h2>Most dental groups do not have a demand problem. They have a customer-handling problem.</h2>
+        <p>Patients are already calling. The issue is what happens when no one answers, when the experience feels inconsistent, or when a booking opportunity gets delayed.</p>
+        <p>Poppy Front Desk is built to help dental groups capture more of the demand they already have.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header" data-aos="fade-up">
+        <span class="section-label">What Poppy Front Desk Does</span>
+        <h2>A managed system built for the realities of growing dental groups.</h2>
+        <p class="section-subtitle">Not a chatbot. Not a generic phone tool. A booking-focused, voice-first system.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i data-lucide="phone-incoming"></i></div>
+          <h3>Answer Every Call</h3>
+          <p>A warm, natural voice answers inbound calls at every location. Before hours, after hours, and during peak overflow.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="feature-icon"><i data-lucide="message-circle"></i></div>
+          <h3>Handle Common Questions</h3>
+          <p>Hours, insurance, location details, services offered. Your patients get clear answers without waiting on hold.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i data-lucide="calendar-plus"></i></div>
+          <h3>Capture Booking Requests</h3>
+          <p>When a patient wants to book, Poppy captures their name, preferred time, and reason for visit, then notifies your staff in real time.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i data-lucide="bell-ring"></i></div>
+          <h3>Notify Staff Instantly</h3>
+          <p>Booking requests are sent to your team the moment they are captured. No delay. No missed follow-up.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+          <h3>Group-Level Visibility</h3>
+          <p>See call activity, booking flow, and demand patterns across every location from one view.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i data-lucide="settings-2"></i></div>
+          <h3>Per-Location Configuration</h3>
+          <p>Different hours, different teams, different services. One system that respects how each office actually operates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Different -->
+  <section class="different" id="different">
+    <div class="container">
+      <div class="different-grid">
+        <div class="different-content" data-aos="fade-up">
+          <span class="section-label">Why This Is Different</span>
+          <h2>Built for multi-location groups, not just single offices.</h2>
+          <p>Most phone tools are made for one location at a time. They do not account for different business hours, different routing rules, or the need for leadership to see what is happening across the group.</p>
+          <p>Poppy Front Desk is built around that reality.</p>
+          <ul class="diff-list">
+            <li><i data-lucide="check-circle"></i> <span>Per-location configuration for every office</span></li>
+            <li><i data-lucide="check-circle"></i> <span>Centralized visibility for leadership</span></li>
+            <li><i data-lucide="check-circle"></i> <span>Booking-focused workflows, not just message-taking</span></li>
+            <li><i data-lucide="check-circle"></i> <span>Warm, trusted caller experience</span></li>
+            <li><i data-lucide="check-circle"></i> <span>Managed service with no self-serve complexity</span></li>
+          </ul>
+        </div>
+        <div class="different-image" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.pexels.com/photos/5622026/pexels-photo-5622026.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Dental team collaborating in a modern clinic" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="how-header" data-aos="fade-up">
+        <span class="section-label">How It Works</span>
+        <h2>Four steps to better customer handling.</h2>
+      </div>
+      <div class="steps">
+        <div class="step" data-aos="fade-up" data-aos-delay="0">
+          <span class="step-number">01</span>
+          <h3>We learn your flow</h3>
+          <p>We understand how your locations currently handle calls, booking, routing, and common patient questions.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="100">
+          <span class="step-number">02</span>
+          <h3>We configure the system</h3>
+          <p>Greetings, hours, routing, FAQ handling, and booking capture configured for how your group operates.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="200">
+          <span class="step-number">03</span>
+          <h3>Calls are handled</h3>
+          <p>Patients get a clearer, easier experience. Staff get notified when booking requests are captured.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="300">
+          <span class="step-number">04</span>
+          <h3>Leadership gets visibility</h3>
+          <p>Clear insight into call activity, booking flow, and where opportunities may be slipping through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="outcomes" id="outcomes">
+    <div class="container">
+      <div class="outcomes-header" data-aos="fade-up">
+        <span class="section-label">Outcomes</span>
+        <h2>Better customer handling creates more organized growth.</h2>
+      </div>
+      <div class="outcome-grid">
+        <div class="outcome-item" data-aos="fade-up" data-aos-delay="0">
+          <i data-lucide="users"></i>
+          <span>More booked patients</span>
+        </div>
+        <div class="outcome-item" data-aos="fade-up" data-aos-delay="50">
+          <i data-lucide="shield-check"></i>
+          <span>Less front-desk overload</span>
+        </div>
+        <div class="outcome-item" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="git-merge"></i>
+          <span>More consistency across locations</span>
+        </div>
+        <div class="outcome-item" data-aos="fade-up" data-aos-delay="150">
+          <i data-lucide="eye"></i>
+          <span>Better visibility for leadership</span>
+        </div>
+        <div class="outcome-item" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="smile"></i>
+          <span>A more trusted patient experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Belief -->
+  <section class="belief">
+    <div class="container">
+      <div class="belief-inner" data-aos="fade-up">
+        <span class="section-label" style="color: var(--accent);">Our Belief</span>
+        <h2>AI should make work lighter, not more confusing.</h2>
+        <p>We believe AI should amplify people, not replace them. The goal is not to remove the human side of customer handling. The goal is to make it easier for patients to book, easier for teams to stay organized, and easier for leaders to make better decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilot Offer -->
+  <section class="pilot" id="pilot">
+    <div class="container">
+      <div class="pilot-grid">
+        <div class="pilot-content" data-aos="fade-up">
+          <span class="section-label">Start Here</span>
+          <h2>Start with a 90-day pilot.</h2>
+          <p>Poppy Front Desk begins with a focused pilot across 3 locations so your group can evaluate real results before deciding on a broader rollout.</p>
+          <ul class="pilot-includes">
+            <li><i data-lucide="check"></i> 3 locations configured and live</li>
+            <li><i data-lucide="check"></i> Booking-focused call handling</li>
+            <li><i data-lucide="check"></i> Real-time staff notifications</li>
+            <li><i data-lucide="check"></i> Weekly performance reporting</li>
+            <li><i data-lucide="check"></i> Monthly review with leadership</li>
+            <li><i data-lucide="check"></i> Ongoing optimization from real call data</li>
+          </ul>
+        </div>
+        <div class="pilot-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pilot-card-label">90-Day Pilot</div>
+          <h3>3 Locations</h3>
+          <div class="pilot-price">$249<span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/location/month</span></div>
+          <div class="pilot-price-note">Plus one-time implementation fee</div>
+          <div class="pilot-metric">
+            <strong>15% booking lift target</strong>
+            <span>Primary success metric, defined together before launch</span>
+          </div>
+          <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" target="_blank" class="btn-primary">Talk About a Pilot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ideal Fit -->
+  <section class="fit">
+    <div class="container">
+      <div class="fit-inner" data-aos="fade-up">
+        <span class="section-label">Ideal Fit</span>
+        <h2>Best for growing dental groups with 10 to 30 locations.</h2>
+      </div>
+      <div class="fit-grid" style="max-width: 800px; margin: 40px auto 0;">
+        <div class="fit-item" data-aos="fade-up" data-aos-delay="0">
+          <i data-lucide="building"></i>
+          <span>Growing through new locations or acquisitions</span>
+        </div>
+        <div class="fit-item" data-aos="fade-up" data-aos-delay="50">
+          <i data-lucide="user-cog"></i>
+          <span>Centralized operations leadership</span>
+        </div>
+        <div class="fit-item" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="search"></i>
+          <span>Know demand is being missed but lack visibility into how much</span>
+        </div>
+        <div class="fit-item" data-aos="fade-up" data-aos-delay="150">
+          <i data-lucide="zap"></i>
+          <span>Want a simple, managed solution without a large IT project</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta" id="contact">
+    <div class="container">
+      <div class="final-cta-inner" data-aos="fade-up">
+        <span class="section-label">Get Started</span>
+        <h2>Ready to turn more calls into booked patients?</h2>
+        <p>Let's look at where opportunities may be slipping through, what your current call flow looks like, and whether a 90-day pilot makes sense.</p>
+        <div class="hero-ctas">
+          <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" target="_blank" class="btn-primary">
+            Book a Strategy Call
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#pilot" class="btn-secondary">Talk About a Pilot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">Poppy <span>Front Desk</span></div>
+      <p>A product of Poppy Marketing & Consulting</p>
+      <p>Ricardo Gattas-Moras</p>
+      <p><a href="mailto:ricardo@poppymarketingandconsulting.com">ricardo@poppymarketingandconsulting.com</a></p>
+      <p><a href="tel:+19417774933">(941) 777-4933</a></p>
+      <div class="footer-links">
+        <a href="https://www.poppymarketingandconsulting.com" target="_blank">Poppy Marketing</a>
+        <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" target="_blank">Book a Call</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    // AOS
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60,
+    });
+
+    // Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+
+    // Scroll progress
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scroll-progress').style.width = progress + '%';
+    });
+
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Nav toggle (mobile)
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Back to top
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Nav active state
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observerOptions = { rootMargin: '-30% 0px -70% 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
