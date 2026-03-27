@@ -276,23 +276,24 @@
       font-family: var(--font-display);
       font-size: 0.95rem;
       font-weight: 600;
-      background: var(--accent);
+      background: linear-gradient(135deg, #7B61FF 0%, #5A3DE8 100%);
       color: var(--white);
       padding: 14px 32px;
       border-radius: var(--radius-sm);
       border: none;
       cursor: pointer;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      box-shadow: 0 2px 8px rgba(107, 78, 255, 0.18);
     }
 
     .btn-primary:hover {
-      background: var(--accent-hover);
       color: var(--white);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(107, 78, 255, 0.25);
+      box-shadow: 0 6px 20px rgba(107, 78, 255, 0.28);
+      filter: brightness(1.05);
     }
 
     .btn-secondary {
@@ -1061,7 +1062,7 @@
           </div>
         </div>
         <div class="problem-image" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.pexels.com/photos/6170560/pexels-photo-6170560.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Overwhelmed front desk staff on the phone" loading="lazy">
+          <img src="https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Empty reception desk with phone -- no one to answer" loading="lazy">
         </div>
       </div>
     </div>
