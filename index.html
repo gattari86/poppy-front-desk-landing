@@ -252,10 +252,34 @@
        HERO
     ============================================ */
     .hero {
-      padding: 140px 0 var(--section-pad);
       position: relative;
       overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      padding: 140px 0 var(--section-pad);
     }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-video-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(246, 244, 239, 0.92) 0%, rgba(246, 244, 239, 0.82) 50%, rgba(246, 244, 239, 0.65) 100%);
+    }
+
+    .hero .container { position: relative; z-index: 2; }
 
     .hero-grid {
       display: grid;
@@ -264,7 +288,7 @@
       align-items: center;
     }
 
-    .hero-content { position: relative; z-index: 2; }
+    .hero-content { position: relative; }
 
     .hero h1 { margin-bottom: 20px; color: var(--text); }
 
@@ -428,6 +452,7 @@
     ============================================ */
     .features {
       padding: var(--section-pad) 0;
+      overflow-x: hidden;
     }
 
     .features-header {
@@ -586,51 +611,47 @@
     ============================================ */
     .demo {
       padding: 80px 0;
-      background: var(--white);
+      background: var(--text);
+      color: var(--bg);
+      position: relative;
+      overflow: hidden;
     }
 
     .demo-inner {
-      max-width: 680px;
+      max-width: 600px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .demo .section-label {
+      color: rgba(107, 78, 255, 0.7);
     }
 
     .demo-inner h2 {
-      margin-bottom: 16px;
+      color: var(--bg);
+      margin-bottom: 12px;
     }
 
     .demo-inner > p {
-      color: var(--text-muted);
-      margin-bottom: 36px;
+      color: rgba(246, 244, 239, 0.6);
+      margin-bottom: 40px;
       line-height: 1.75;
-    }
-
-    .demo-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px 36px;
-      text-align: center;
-    }
-
-    .demo-phone-label {
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 8px;
-      display: block;
+      font-size: 0.98rem;
     }
 
     .demo-phone {
       font-family: var(--font-display);
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 700;
-      color: var(--text);
-      display: block;
-      margin-bottom: 16px;
-      padding: 8px 0;
+      color: var(--bg);
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 12px 0;
       min-height: 44px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
     }
 
     .demo-phone:hover {
@@ -638,15 +659,15 @@
     }
 
     .demo-hint {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: rgba(246, 244, 239, 0.55);
+      line-height: 1.65;
+      margin-bottom: 24px;
     }
 
     .demo-disclaimer {
-      font-size: 0.78rem;
-      color: rgba(90, 90, 90, 0.65);
+      font-size: 0.75rem;
+      color: rgba(246, 244, 239, 0.3);
       line-height: 1.5;
     }
 
@@ -706,9 +727,11 @@
       background: var(--text);
       color: var(--bg);
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .belief-inner { max-width: 640px; margin: 0 auto; }
+    .belief-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 2; }
 
     .belief h2 { color: var(--bg); margin-bottom: 20px; }
 
@@ -1020,9 +1043,12 @@
         padding: 14px 22px;
       }
 
-      .hero { padding: 100px 0 64px; }
+      .hero { padding: 100px 0 64px; min-height: auto; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .hero-image img { height: 300px; }
+      .hero-video-bg::after {
+        background: linear-gradient(180deg, rgba(246, 244, 239, 0.95) 0%, rgba(246, 244, 239, 0.88) 100%);
+      }
 
       .trust-items { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
@@ -1076,6 +1102,11 @@
 
   <!-- Hero -->
   <section class="hero" id="hero">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="https://videos.pexels.com/video-files/6755015/6755015-hd_1920_1080_25fps.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content" data-aos="fade-up">
@@ -1151,32 +1182,32 @@
         <p class="section-subtitle">A booking-focused, voice-first system built for the realities of multi-location dental groups.</p>
       </div>
       <div class="feature-grid">
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card" data-aos="fade-right" data-aos-delay="0">
           <div class="feature-icon"><i data-lucide="phone-incoming"></i></div>
           <h3>Answer Every Call</h3>
           <p>A warm, natural voice answers inbound calls at every location. Before hours, after hours, and during peak overflow.</p>
         </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="50">
           <div class="feature-icon"><i data-lucide="message-circle"></i></div>
           <h3>Handle Common Questions</h3>
           <p>Hours, insurance, location details, services offered. Your patients get clear answers without waiting on hold.</p>
         </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
           <div class="feature-icon"><i data-lucide="calendar-plus"></i></div>
           <h3>Capture Booking Requests</h3>
-          <p>When a patient wants to book, Poppy captures their name, preferred time, and reason for visit, then notifies your staff in real time.</p>
+          <p>When a patient wants to book, Grace captures their name, preferred time, and reason for visit, then notifies your staff in real time.</p>
         </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="0">
           <div class="feature-icon"><i data-lucide="bell-ring"></i></div>
           <h3>Notify Staff Instantly</h3>
           <p>Booking requests are sent to your team the moment they are captured. No delay. No missed follow-up.</p>
         </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="feature-card" data-aos="fade-right" data-aos-delay="50">
           <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
           <h3>Group-Level Visibility</h3>
           <p>See call activity, booking flow, and demand patterns across every location from one view.</p>
         </div>
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card" data-aos="fade-left" data-aos-delay="100">
           <div class="feature-icon"><i data-lucide="settings-2"></i></div>
           <h3>Per-Location Configuration</h3>
           <p>Different hours, different teams, different services. One system that respects how each office actually operates.</p>
@@ -1246,14 +1277,11 @@
     <div class="container">
       <div class="demo-inner" data-aos="fade-up">
         <span class="section-label">Hear It Yourself</span>
-        <h2>Experience a live demo.</h2>
-        <p>Want to hear what it sounds like before we talk? Call the number below and walk through a sample booking conversation with Grace, our AI assistant. This is a live, working system.</p>
-        <div class="demo-card">
-          <span class="demo-phone-label">Live Demo Line</span>
-          <a href="tel:+13467086397" class="demo-phone">(346) 708-6397</a>
-          <p class="demo-hint">Try booking a cleaning, asking about hours, or just say hello. Grace will walk you through it.</p>
-          <p class="demo-disclaimer">This is a demo environment configured for a sample dental office. Calls may be recorded for quality and testing purposes.</p>
-        </div>
+        <h2>Experience it live.</h2>
+        <p>Call the number below and have a real conversation with Grace. Book a cleaning, ask about hours, or just say hello.</p>
+        <a href="tel:+13467086397" class="demo-phone">(346) 708-6397</a>
+        <p class="demo-hint">This is a live, working system configured for a sample dental office.</p>
+        <p class="demo-disclaimer">Demo environment. Calls may be recorded for quality purposes.</p>
       </div>
     </div>
   </section>
@@ -1291,7 +1319,7 @@
   </section>
 
   <!-- Belief -->
-  <section class="belief">
+  <section class="belief" id="belief">
     <div class="container">
       <div class="belief-inner" data-aos="fade-up">
         <span class="section-label" style="color: var(--accent);">Our Belief</span>
@@ -1402,6 +1430,8 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
 
   <script>
     // AOS
@@ -1468,6 +1498,26 @@
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+    // Vanta.js on belief section
+    if (typeof VANTA !== 'undefined') {
+      VANTA.DOTS({
+        el: '#belief',
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200,
+        minWidth: 200,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x6B4EFF,
+        color2: 0x3a2d7a,
+        backgroundColor: 0x1F1F1F,
+        size: 2.0,
+        spacing: 28,
+        showLines: false,
+      });
+    }
 
     // Animated counters
     const counters = document.querySelectorAll('.counter');
