@@ -582,6 +582,75 @@
     }
 
     /* ============================================
+       LIVE DEMO
+    ============================================ */
+    .demo {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .demo-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .demo-inner h2 {
+      margin-bottom: 16px;
+    }
+
+    .demo-inner > p {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .demo-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      text-align: center;
+    }
+
+    .demo-phone-label {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .demo-phone {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      display: block;
+      margin-bottom: 16px;
+      padding: 8px 0;
+      min-height: 44px;
+    }
+
+    .demo-phone:hover {
+      color: var(--accent);
+    }
+
+    .demo-hint {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .demo-disclaimer {
+      font-size: 0.78rem;
+      color: rgba(90, 90, 90, 0.65);
+      line-height: 1.5;
+    }
+
+    /* ============================================
        OUTCOMES
     ============================================ */
     .outcomes {
@@ -1167,6 +1236,23 @@
           <span class="step-number">04</span>
           <h3>Leadership gets visibility</h3>
           <p>Clear insight into call activity, booking flow, and where opportunities may be slipping through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demo -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <div class="demo-inner" data-aos="fade-up">
+        <span class="section-label">Hear It Yourself</span>
+        <h2>Experience a live demo.</h2>
+        <p>Want to hear what Poppy sounds like before we talk? Call the number below and walk through a sample booking conversation. This is a live, working system.</p>
+        <div class="demo-card">
+          <span class="demo-phone-label">Live Demo Line</span>
+          <a href="tel:+13467086397" class="demo-phone">(346) 708-6397</a>
+          <p class="demo-hint">Try booking a cleaning, asking about hours, or just say hello. Poppy will walk you through it.</p>
+          <p class="demo-disclaimer">This is a demo environment configured for a sample dental office. Calls may be recorded for quality and testing purposes.</p>
         </div>
       </div>
     </div>
