@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frontdesk.poppymarketingandconsulting.com/sitemap.xml

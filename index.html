@@ -19,6 +19,15 @@
   <meta name="twitter:title" content="Poppy Front Desk -- AI Customer Handling for Dental Groups">
   <meta name="twitter:description" content="Turn missed calls into booked patients. Managed AI call handling built for multi-location dental groups.">
 
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKP02273LR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YKP02273LR');
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -1498,6 +1507,39 @@
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+    // GA4 event tracking
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href') || '';
+        const text = link.textContent.trim();
+
+        // Book a Strategy Call clicks
+        if (href.includes('booking-calendar') && text.includes('Strategy')) {
+          gtag('event', 'book_strategy_call_click', { link_text: text, link_url: href });
+        }
+
+        // Talk About a Pilot clicks
+        if (text.includes('Pilot')) {
+          gtag('event', 'talk_about_pilot_click', { link_text: text, link_url: href });
+        }
+
+        // Demo number clicks
+        if (href.startsWith('tel:')) {
+          gtag('event', 'demo_number_click', { phone_number: href.replace('tel:', '') });
+        }
+
+        // Email clicks
+        if (href.startsWith('mailto:')) {
+          gtag('event', 'email_click', { email: href.replace('mailto:', '') });
+        }
+
+        // Outbound clicks to Poppy Marketing
+        if (href.includes('poppymarketingandconsulting.com') && !href.includes('booking-calendar')) {
+          gtag('event', 'outbound_click', { link_text: text, link_url: href });
+        }
+      });
+    });
 
     // Vanta.js on belief section
     if (typeof VANTA !== 'undefined') {
