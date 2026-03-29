@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F6F4EF"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Poppins, Helvetica, Arial, sans-serif" font-weight="600" font-size="72" fill="#6B4EFF">Poppy Front Desk</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Raleway, Helvetica, Arial, sans-serif" font-weight="400" font-size="28" fill="#1F1F1F">Managed AI Customer Handling</text>
+  <text x="600" y="385" text-anchor="middle" font-family="Raleway, Helvetica, Arial, sans-serif" font-weight="400" font-size="28" fill="#1F1F1F">for Multi-Location Dental Groups</text>
+  <line x1="500" y1="420" x2="700" y2="420" stroke="#6B4EFF" stroke-width="3" stroke-linecap="round"/>
+  <text x="600" y="470" text-anchor="middle" font-family="Raleway, Helvetica, Arial, sans-serif" font-weight="500" font-size="20" fill="#6B4EFF">poppymarketingandconsulting.com</text>
+</svg>
