@@ -1511,6 +1511,7 @@
   <script defer src="https://unpkg.com/lucide@0.460.0"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
 
   <script>
     // AOS
@@ -1611,10 +1612,10 @@
       });
     });
 
-    // Vanta.js on belief section
+    // Vanta.js DOTS on demo section (interactive, energetic)
     if (typeof VANTA !== 'undefined') {
       VANTA.DOTS({
-        el: '#belief',
+        el: '#demo',
         mouseControls: false,
         touchControls: false,
         gyroControls: false,
@@ -1628,6 +1629,23 @@
         size: 2.0,
         spacing: 28,
         showLines: false,
+      });
+
+      // Vanta.js NET on belief section (subtle, connected)
+      VANTA.NET({
+        el: '#belief',
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200,
+        minWidth: 200,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x4a3a8a,
+        backgroundColor: 0x1F1F1F,
+        points: 6,
+        maxDistance: 22,
+        spacing: 18,
       });
     }
 
