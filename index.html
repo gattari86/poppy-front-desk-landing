@@ -444,6 +444,8 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
       text-align: center;
+      justify-items: start;
+      max-width: 680px;
     }
 
     .trust-item {
@@ -451,19 +453,26 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+
+    .trust-item:hover {
+      opacity: 0.85;
     }
 
     .trust-item i, .trust-item svg {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       color: var(--accent);
     }
 
     .trust-item span {
       font-family: var(--font-display);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text);
+      letter-spacing: 0.03em;
     }
 
     /* ============================================
@@ -1388,7 +1397,7 @@
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .hero-image img { height: 300px; }
 
-      .trust-items { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .trust-items { grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 100%; justify-items: center; }
 
       .problem-grid { grid-template-columns: 1fr; gap: 40px; }
       .problem-image { order: -1; }
@@ -1410,7 +1419,7 @@
     }
 
     @media (max-width: 480px) {
-      .trust-items { grid-template-columns: 1fr; }
+      .trust-items { grid-template-columns: repeat(2, 1fr); }
       .outcome-grid { grid-template-columns: 1fr; }
     }
   </style>
