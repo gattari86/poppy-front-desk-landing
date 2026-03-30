@@ -1021,6 +1021,111 @@
     }
 
     /* ============================================
+       COMPARISON
+    ============================================ */
+    .comparison {
+      padding: var(--section-pad) 0;
+    }
+
+    .comparison-inner {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .comparison-inner h2 { margin-bottom: 16px; }
+
+    .comparison-intro {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      max-width: 640px;
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+      list-style: none;
+    }
+
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.93rem;
+      padding: 16px 20px;
+      background: var(--bg-alt);
+      border-radius: var(--radius-sm);
+    }
+
+    .why-list i, .why-list svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .compare-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .compare-table th {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .compare-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table tr.compare-highlight td {
+      background: rgba(107, 78, 255, 0.04);
+      font-weight: 500;
+    }
+
+    .compare-table .compare-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .compare-note {
+      font-size: 0.78rem;
+      color: rgba(90, 90, 90, 0.6);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .why-list { grid-template-columns: 1fr; }
+      .compare-table { font-size: 0.82rem; }
+      .compare-table th, .compare-table td { padding: 10px 12px; }
+    }
+
+    /* ============================================
        IDEAL FIT
     ============================================ */
     .fit {
@@ -1601,6 +1706,71 @@
         <p class="roi-note">This is an example, not a guarantee. Your actual results depend on your current call volume, job values, and how much demand is currently being missed. The pilot is designed to measure the real impact using your numbers.</p>
 
         <p class="roi-cta-line">Want to run the math with your own numbers? <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener">Book a strategy call</a> and we will walk through it together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison">
+    <div class="container">
+      <div class="comparison-inner">
+        <div data-aos="fade-up">
+          <span class="section-label">Why Operators Choose Us</span>
+          <h2>Built for multi-location teams, not generic answering.</h2>
+          <p class="comparison-intro">Most AI receptionist tools sell minutes or call counts. Poppy Front Desk is built around locations, booked jobs, and operational consistency for home services companies.</p>
+        </div>
+
+        <ul class="why-list" data-aos="fade-up">
+          <li><i data-lucide="map-pin"></i> <span>Built for multi-location home services</span></li>
+          <li><i data-lucide="tag"></i> <span>Simple per-location pricing</span></li>
+          <li><i data-lucide="calendar-check"></i> <span>90-day pilot with clear success criteria</span></li>
+          <li><i data-lucide="target"></i> <span>Focused on booked jobs, not just answered calls</span></li>
+          <li><i data-lucide="phone-call"></i> <span>Live demo you can call right now</span></li>
+          <li><i data-lucide="globe"></i> <span>Bilingual: English + Spanish</span></li>
+        </ul>
+
+        <div data-aos="fade-up">
+          <h3 style="font-size: 1.1rem; margin-bottom: 20px;">How we compare</h3>
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Pricing model</th>
+                  <th>Home services fit</th>
+                  <th>Best for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="compare-highlight">
+                  <td class="compare-name">Poppy Front Desk</td>
+                  <td>$249/location/month</td>
+                  <td>Multi-location focused</td>
+                  <td>Booked jobs + branch consistency</td>
+                </tr>
+                <tr>
+                  <td class="compare-name">Abby AI</td>
+                  <td>$99 to $690/month (by minutes)</td>
+                  <td>Home services page</td>
+                  <td>Minute-based AI receptionist</td>
+                </tr>
+                <tr>
+                  <td class="compare-name">Smith.ai</td>
+                  <td>$95 to $2,000/month (by calls)</td>
+                  <td>Home services page</td>
+                  <td>Call-based AI receptionist</td>
+                </tr>
+                <tr>
+                  <td class="compare-name">Ruby</td>
+                  <td>$250 to $720/month (by minutes)</td>
+                  <td>Home services page</td>
+                  <td>Human receptionist support</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="compare-note">Public competitor pricing from official pricing pages, March 2026. Poppy Front Desk includes a 500 call/location/month fair-use allowance.</p>
+        </div>
       </div>
     </div>
   </section>
