@@ -926,6 +926,100 @@
     .pilot-card .btn-primary { width: 100%; justify-content: center; }
 
     /* ============================================
+       ROI / VALUE
+    ============================================ */
+    .roi {
+      padding: var(--section-pad) 0;
+      background: var(--bg-alt);
+    }
+
+    .roi-inner {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .roi-inner h2 { margin-bottom: 16px; }
+
+    .roi-intro {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      font-size: 0.98rem;
+    }
+
+    .roi-example {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      margin-bottom: 32px;
+    }
+
+    .roi-example-label {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .roi-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+
+    .roi-line:last-of-type {
+      border-bottom: none;
+    }
+
+    .roi-line-label {
+      color: var(--text-muted);
+    }
+
+    .roi-line-value {
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .roi-line-highlight {
+      background: var(--secondary);
+      margin: 0 -32px;
+      padding: 14px 32px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      border-bottom: none;
+    }
+
+    .roi-line-highlight .roi-line-value {
+      color: var(--accent);
+      font-size: 1.15rem;
+    }
+
+    .roi-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .roi-cta-line {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .roi-cta-line a {
+      font-weight: 500;
+    }
+
+    /* ============================================
        IDEAL FIT
     ============================================ */
     .fit {
@@ -1462,6 +1556,50 @@
           </div>
           <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener" class="btn-primary">Talk About a Pilot</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI / Value -->
+  <section class="roi" id="roi">
+    <div class="container">
+      <div class="roi-inner" data-aos="fade-up">
+        <span class="section-label">The Business Case</span>
+        <h2>Even a modest lift pays for itself.</h2>
+        <p class="roi-intro">The math behind better call handling is straightforward. When more calls turn into booked jobs, the revenue improvement typically far exceeds the cost of the system. Here is what that looks like in practice.</p>
+
+        <div class="roi-example">
+          <span class="roi-example-label">Illustrative example, one location</span>
+
+          <div class="roi-line">
+            <span class="roi-line-label">Current booked jobs per month</span>
+            <span class="roi-line-value">120</span>
+          </div>
+          <div class="roi-line">
+            <span class="roi-line-label">Average revenue per booked job</span>
+            <span class="roi-line-value">$400</span>
+          </div>
+          <div class="roi-line">
+            <span class="roi-line-label">15% improvement target</span>
+            <span class="roi-line-value">+18 jobs</span>
+          </div>
+          <div class="roi-line">
+            <span class="roi-line-label">Additional monthly revenue</span>
+            <span class="roi-line-value">$7,200</span>
+          </div>
+          <div class="roi-line">
+            <span class="roi-line-label">Poppy Front Desk cost</span>
+            <span class="roi-line-value">-$249</span>
+          </div>
+          <div class="roi-line roi-line-highlight">
+            <span class="roi-line-label">Projected monthly upside per location</span>
+            <span class="roi-line-value">$6,951</span>
+          </div>
+        </div>
+
+        <p class="roi-note">This is an example, not a guarantee. Your actual results depend on your current call volume, job values, and how much demand is currently being missed. The pilot is designed to measure the real impact using your numbers.</p>
+
+        <p class="roi-cta-line">Want to run the math with your own numbers? <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener">Book a strategy call</a> and we will walk through it together.</p>
       </div>
     </div>
   </section>
