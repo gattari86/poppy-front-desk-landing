@@ -46,34 +46,55 @@
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization",
         "name": "Poppy Front Desk",
-        "url": "https://frontdesk.poppymarketingandconsulting.com",
-        "description": "Managed AI customer handling for multi-location home services companies.",
+        "url": "https://frontdesk.poppymarketingandconsulting.com/",
+        "logo": "https://frontdesk.poppymarketingandconsulting.com/og-image.svg",
+        "description": "Poppy Front Desk is a managed AI front desk for multi-location home services companies.",
         "parentOrganization": {
           "@type": "Organization",
           "name": "Poppy Marketing & Consulting",
-          "url": "https://www.poppymarketingandconsulting.com"
+          "url": "https://www.poppymarketingandconsulting.com/"
         },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-941-777-4933",
           "email": "ricardo@poppymarketingandconsulting.com",
           "contactType": "sales"
-        }
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/poppy-marketing-and-consulting/"
+        ]
       },
       {
         "@type": "WebSite",
+        "@id": "https://frontdesk.poppymarketingandconsulting.com/#website",
+        "url": "https://frontdesk.poppymarketingandconsulting.com/",
         "name": "Poppy Front Desk",
-        "url": "https://frontdesk.poppymarketingandconsulting.com"
+        "publisher": {
+          "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://frontdesk.poppymarketingandconsulting.com/#webpage",
+        "url": "https://frontdesk.poppymarketingandconsulting.com/",
+        "name": "Turn missed calls into booked jobs | Poppy Front Desk",
+        "isPartOf": {
+          "@id": "https://frontdesk.poppymarketingandconsulting.com/#website"
+        },
+        "about": {
+          "@id": "https://frontdesk.poppymarketingandconsulting.com/#service"
+        },
+        "description": "Poppy Front Desk helps multi-location home services companies capture more demand, book more jobs, and create a more consistent customer experience across every location."
       },
       {
         "@type": "Service",
-        "name": "Poppy Front Desk",
-        "serviceType": "AI Customer Handling",
-        "description": "Managed AI call handling system that answers inbound calls, captures booking requests, and provides group-level reporting for multi-location home services companies.",
+        "@id": "https://frontdesk.poppymarketingandconsulting.com/#service",
+        "name": "Managed AI Front Desk for Home Services",
+        "serviceType": "AI call handling and booking support for multi-location home services companies",
         "provider": {
-          "@type": "Organization",
-          "name": "Poppy Marketing & Consulting"
+          "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization"
         },
         "areaServed": {
           "@type": "Country",
@@ -81,7 +102,14 @@
         },
         "audience": {
           "@type": "BusinessAudience",
-          "audienceType": "Multi-location home services companies with 5 to 25 locations"
+          "audienceType": "Multi-location home services companies"
+        },
+        "description": "Poppy Front Desk helps HVAC, plumbing, electrical, and pest control companies turn missed calls into booked jobs with a managed AI front desk that handles inbound calls, captures service requests, supports scheduling, and improves customer handling across locations.",
+        "offers": {
+          "@type": "Offer",
+          "price": "249",
+          "priceCurrency": "USD",
+          "description": "90-day pilot pricing per location per month"
         }
       }
     ]
