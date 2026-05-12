@@ -2,3 +2,13 @@ node_modules/
 .DS_Store
 .env
 .vercel
+
+# Secrets and credentials (expanded 2026-04-17 per agency secrets hygiene standard)
+.env
+.env.*
+*_env
+*.key
+*.pem
+credentials.json
+*secret*
+*token*
