@@ -1,2104 +1,895 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poppy Front Desk -- Managed AI Customer Handling for Multi-Location Home Services Companies</title>
-  <meta name="description" content="Poppy Front Desk helps multi-location home services companies turn missed calls into booked jobs with managed AI call handling, real-time booking capture, and group-level visibility across every location.">
-  <link rel="canonical" href="https://frontdesk.poppymarketingandconsulting.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Poppy Front Desk">
-  <meta property="og:title" content="Poppy Front Desk -- AI Customer Handling for Home Services Companies">
-  <meta property="og:description" content="Turn missed calls into booked jobs. Managed AI call handling built for multi-location home services companies with 5 to 25 locations.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://frontdesk.poppymarketingandconsulting.com/">
-  <meta property="og:image" content="https://frontdesk.poppymarketingandconsulting.com/og-image.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Poppy Front Desk -- AI Customer Handling for Home Services Companies">
-  <meta name="twitter:description" content="Turn missed calls into booked jobs. Managed AI call handling built for multi-location home services companies.">
-  <meta name="twitter:image" content="https://frontdesk.poppymarketingandconsulting.com/og-image.png">
-
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKP02273LR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YKP02273LR');
-  </script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization",
-        "name": "Poppy Front Desk",
-        "url": "https://frontdesk.poppymarketingandconsulting.com/",
-        "logo": "https://frontdesk.poppymarketingandconsulting.com/og-image.png",
-        "description": "Poppy Front Desk is a managed AI front desk for multi-location home services companies.",
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Poppy Marketing & Consulting",
-          "url": "https://www.poppymarketingandconsulting.com/"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-941-777-4933",
-          "email": "ricardo@poppymarketingandconsulting.com",
-          "contactType": "sales"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/poppy-marketing-and-consulting/"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://frontdesk.poppymarketingandconsulting.com/#website",
-        "url": "https://frontdesk.poppymarketingandconsulting.com/",
-        "name": "Poppy Front Desk",
-        "publisher": {
-          "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://frontdesk.poppymarketingandconsulting.com/#webpage",
-        "url": "https://frontdesk.poppymarketingandconsulting.com/",
-        "name": "Turn missed calls into booked jobs | Poppy Front Desk",
-        "isPartOf": {
-          "@id": "https://frontdesk.poppymarketingandconsulting.com/#website"
-        },
-        "about": {
-          "@id": "https://frontdesk.poppymarketingandconsulting.com/#service"
-        },
-        "description": "Poppy Front Desk helps multi-location home services companies capture more demand, book more jobs, and create a more consistent customer experience across every location."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://frontdesk.poppymarketingandconsulting.com/#service",
-        "name": "Managed AI Front Desk for Home Services",
-        "serviceType": "AI call handling and booking support for multi-location home services companies",
-        "provider": {
-          "@id": "https://frontdesk.poppymarketingandconsulting.com/#organization"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
-        "audience": {
-          "@type": "BusinessAudience",
-          "audienceType": "Multi-location home services companies"
-        },
-        "description": "Poppy Front Desk helps HVAC, plumbing, electrical, and pest control companies turn missed calls into booked jobs with a managed AI front desk that handles inbound calls, captures service requests, supports scheduling, and improves customer handling across locations.",
-        "offers": {
-          "@type": "Offer",
-          "price": "249",
-          "priceCurrency": "USD",
-          "description": "90-day pilot pricing per location per month"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
-  <style>
-    /* ============================================
-       CSS VARIABLES + RESET
-    ============================================ */
-    :root {
-      --bg: #F6F4EF;
-      --bg-alt: #EFECE5;
-      --text: #1F1F1F;
-      --text-muted: #5A5A5A;
-      --accent: #6B5CFF;
-      --accent-hover: #5A3DE8;
-      --secondary: #E8E3F3;
-      --secondary-dark: #D5CEE8;
-      --white: #FFFFFF;
-      --border: rgba(31, 31, 31, 0.08);
-      --shadow-sm: 0 2px 12px rgba(31, 31, 31, 0.04);
-      --shadow-md: 0 4px 40px rgba(31, 31, 31, 0.06);
-      --shadow-lg: 0 8px 40px rgba(31, 31, 31, 0.08);
-      --radius: 24px;
-      --radius-sm: 16px;
-      --font-display: 'Poppins', sans-serif;
-      --font-body: 'Poppins', sans-serif;
-      --max-width: 1140px;
-      --section-pad: 100px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; font-size: 16px; }
-
-    body {
-      font-family: var(--font-body);
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: var(--accent-hover); }
-
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-
-    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
-    h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
-
-    .section-label {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--accent);
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 640px;
-      line-height: 1.7;
-    }
-
-    /* ============================================
-       SCROLL PROGRESS BAR
-    ============================================ */
-    #scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background: var(--accent);
-      z-index: 9999;
-      transition: width 0.1s linear;
-    }
-
-    /* ============================================
-       NAV
-    ============================================ */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(246, 244, 239, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      transition: box-shadow 0.3s;
-    }
-
-    nav.scrolled { box-shadow: var(--shadow-sm); }
-
-    .nav-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--text);
-      padding: 8px 0;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nav-logo span { color: var(--accent); }
-
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; overflow: visible; }
-
-    .nav-links a {
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      transition: color 0.2s;
-      padding: 8px 0;
-    }
-
-    .nav-links a:hover, .nav-links a.active { color: var(--text); }
-
-    .nav-links a.nav-cta {
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 500;
-      background: var(--text);
-      color: var(--white) !important;
-      padding: 12px 30px !important;
-      border-radius: 28px;
-      transition: transform 0.2s, box-shadow 0.3s;
-      margin-left: 16px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .nav-links a.nav-cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(31, 31, 31, 0.12);
-      color: var(--white) !important;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-toggle svg { width: 24px; height: 24px; stroke: var(--text); }
-
-    /* ============================================
-       HERO
-    ============================================ */
-    .hero {
-      padding: 140px 0 var(--section-pad);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero-content { position: relative; }
-
-    .hero h1 { margin-bottom: 20px; color: var(--text); }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 36px;
-      line-height: 1.75;
-    }
-
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .btn-primary, .btn-secondary {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 16px 28px;
-      border-radius: 48px;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      height: 52px;
-    }
-
-    .btn-primary {
-      background: var(--text);
-      color: var(--white);
-      transition: transform 0.2s, box-shadow 0.3s;
-    }
-
-    .btn-primary:hover {
-      color: var(--white);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 24px rgba(31, 31, 31, 0.15);
-    }
-
-    .btn-secondary {
-      background: var(--white);
-      color: var(--text);
-      border: 1px solid rgba(31, 31, 31, 0.12);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(31, 31, 31, 0.25);
-      color: var(--text);
-      box-shadow: 0 2px 12px rgba(31, 31, 31, 0.06);
-    }
-
-    .hero-image {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-    }
-
-    /* ============================================
-       SMART CHIPS
-    ============================================ */
-    .smart-chips {
-      padding: 0 0 20px;
-      margin-top: -40px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .chips-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .chip {
-      font-family: var(--font-display);
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 8px 18px;
-      border-radius: 48px;
-      transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
-      min-height: 36px;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .chip:hover {
-      color: var(--text);
-      border-color: rgba(31, 31, 31, 0.2);
-      box-shadow: 0 2px 8px rgba(31, 31, 31, 0.04);
-    }
-
-    @media (max-width: 768px) {
-      .smart-chips {
-        margin-top: -20px;
-        padding: 0 0 16px;
-      }
-      .chips-row {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start;
-        padding: 0 24px;
-        gap: 8px;
-        scrollbar-width: none;
-      }
-      .chips-row::-webkit-scrollbar { display: none; }
-      .chip {
-        flex-shrink: 0;
-        font-size: 0.75rem;
-        padding: 7px 14px;
-      }
-    }
-
-    /* ============================================
-       TRUST BAR
-    ============================================ */
-    .trust-bar {
-      padding: 40px 0;
-      background: var(--secondary);
-    }
-
-    .trust-items {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: center;
-      justify-items: start;
-      max-width: 680px;
-    }
-
-    .trust-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      opacity: 0.55;
-      transition: opacity 0.2s;
-    }
-
-    .trust-item:hover {
-      opacity: 0.85;
-    }
-
-    .trust-item i, .trust-item svg {
-      width: 24px;
-      height: 24px;
-      color: var(--accent);
-    }
-
-    .trust-item span {
-      font-family: var(--font-display);
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text);
-      letter-spacing: 0.03em;
-    }
-
-    /* ============================================
-       PROBLEM SECTION
-    ============================================ */
-    .problem {
-      padding: var(--section-pad) 0;
-    }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .problem-content h2 { margin-bottom: 20px; }
-
-    .problem-content p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      line-height: 1.75;
-    }
-
-    .problem-stat {
-      margin-top: 32px;
-      padding: 32px;
-      background: var(--white);
-      border-radius: var(--radius);
-      border-left: 3px solid var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .problem-stat .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--accent);
-      display: block;
-    }
-
-    .problem-stat .stat-label {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .problem-image {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-
-    .problem-image img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: 30% center;
-    }
-
-    /* ============================================
-       WHAT IT DOES
-    ============================================ */
-    .features {
-      padding: var(--section-pad) 0;
-      overflow-x: hidden;
-    }
-
-    .features-header {
-      text-align: center;
-      max-width: 660px;
-      margin: 0 auto 60px;
-    }
-
-    .features-header h2 { margin-bottom: 16px; }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .feature-card {
-      background: var(--white);
-      padding: 36px 28px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--secondary);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .feature-icon i, .feature-icon svg {
-      width: 24px;
-      height: 24px;
-      color: var(--accent);
-    }
-
-    .feature-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ============================================
-       WHY DIFFERENT
-    ============================================ */
-    .different {
-      padding: var(--section-pad) 0;
-      background: var(--bg-alt);
-    }
-
-    .different-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .different-content h2 { margin-bottom: 20px; }
-
-    .different-content p {
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      line-height: 1.75;
-    }
-
-    .diff-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-
-    .diff-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .diff-list i, .diff-list svg {
-      width: 22px;
-      height: 22px;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .different-image {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-
-    .different-image img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-    }
-
-    /* ============================================
-       TESTIMONIALS
-    ============================================ */
-    .testimonials {
-      padding: var(--section-pad) 0;
-    }
-
-    .testimonials-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 50px;
-    }
-
-    .testimonials-header h2 { margin-bottom: 12px; }
-
-    .testimonials-header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      padding: 32px 28px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-    }
-
-    .testimonial-stars {
-      color: #F59E0B;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-text {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .testimonial-role {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 768px) {
-      .testimonial-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ============================================
-       HOW IT WORKS
-    ============================================ */
-    .how-it-works {
-      padding: var(--section-pad) 0;
-    }
-
-    .how-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 60px;
-    }
-
-    .how-header h2 { margin-bottom: 12px; }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-    }
-
-    .step {
-      text-align: center;
-      position: relative;
-    }
-
-    .step-number {
-      font-family: var(--font-display);
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--secondary-dark);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .step h3 { font-size: 1.05rem; margin-bottom: 10px; }
-
-    .step p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ============================================
-       LIVE DEMO
-    ============================================ */
-    .demo {
-      padding: 80px 0;
-      background: var(--text);
-      color: var(--bg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .demo-inner {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .demo .section-label {
-      color: rgba(107, 92, 255, 0.7);
-    }
-
-    .demo-inner h2 {
-      color: var(--bg);
-      margin-bottom: 12px;
-    }
-
-    .demo-inner > p {
-      color: rgba(246, 244, 239, 0.6);
-      margin-bottom: 40px;
-      line-height: 1.75;
-      font-size: 0.98rem;
-    }
-
-    .demo-phone {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 700;
-      color: var(--bg);
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 12px 0;
-      min-height: 44px;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-    }
-
-    .demo-phone:hover {
-      color: var(--accent);
-    }
-
-    .demo-hint {
-      font-size: 0.9rem;
-      color: rgba(246, 244, 239, 0.55);
-      line-height: 1.65;
-      margin-bottom: 24px;
-    }
-
-    .demo-disclaimer {
-      font-size: 0.75rem;
-      color: rgba(246, 244, 239, 0.3);
-      line-height: 1.5;
-    }
-
-    /* ============================================
-       OUTCOMES
-    ============================================ */
-    .outcomes {
-      padding: var(--section-pad) 0;
-      background: var(--bg-alt);
-    }
-
-    .outcomes-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 50px;
-    }
-
-    .outcomes-header h2 { margin-bottom: 16px; }
-
-    .outcome-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-    }
-
-    .outcome-item {
-      text-align: center;
-      padding: 28px 16px;
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      transition: transform 0.3s;
-    }
-
-    .outcome-item:hover { transform: translateY(-3px); }
-
-    .outcome-item i, .outcome-item svg {
-      width: 32px;
-      height: 32px;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
-
-    .outcome-item span {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      font-weight: 500;
-      display: block;
-      line-height: 1.4;
-    }
-
-    /* ============================================
-       BELIEF
-    ============================================ */
-    .belief {
-      padding: 80px 0;
-      background: var(--text);
-      color: var(--bg);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .belief-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 2; }
-
-    .belief h2 { color: var(--bg); margin-bottom: 20px; }
-
-    .belief p {
-      color: rgba(246, 244, 239, 0.7);
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    /* ============================================
-       PILOT OFFER
-    ============================================ */
-    .pilot {
-      padding: var(--section-pad) 0;
-    }
-
-    .pilot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .pilot-content h2 { margin-bottom: 20px; }
-
-    .pilot-content > p {
-      color: var(--text-muted);
-      margin-bottom: 32px;
-      line-height: 1.75;
-    }
-
-    .pilot-includes {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 32px;
-    }
-
-    .pilot-includes li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.95rem;
-    }
-
-    .pilot-includes i, .pilot-includes svg {
-      width: 20px;
-      height: 20px;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .pilot-card {
-      background: var(--white);
-      padding: 44px 40px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(107, 92, 255, 0.2);
-      box-shadow: var(--shadow-md);
-    }
-
-    .pilot-card-label {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .pilot-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 8px;
-    }
-
-    .pilot-card .pilot-price {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .pilot-card .pilot-price-note {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-
-    .pilot-card .pilot-metric {
-      padding: 16px;
-      background: var(--secondary);
-      border-radius: var(--radius-sm);
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .pilot-card .pilot-metric strong {
-      font-family: var(--font-display);
-      display: block;
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-    }
-
-    .pilot-card .pilot-metric span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .pilot-card .btn-primary { width: 100%; justify-content: center; }
-
-    /* ============================================
-       ROI / VALUE
-    ============================================ */
-    .roi {
-      padding: var(--section-pad) 0;
-      background: var(--bg-alt);
-    }
-
-    .roi-inner {
-      max-width: 740px;
-      margin: 0 auto;
-    }
-
-    .roi-inner h2 { margin-bottom: 16px; }
-
-    .roi-intro {
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      font-size: 0.98rem;
-    }
-
-    .roi-example {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 36px 32px 0;
-      margin-bottom: 32px;
-      overflow: hidden;
-    }
-
-    .roi-example-label {
-      font-family: var(--font-display);
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 24px;
-      display: block;
-    }
-
-    .roi-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.93rem;
-      color: var(--text);
-    }
-
-    .roi-line:last-of-type {
-      border-bottom: none;
-    }
-
-    .roi-line-label {
-      color: var(--text-muted);
-    }
-
-    .roi-line-value {
-      font-family: var(--font-display);
-      font-weight: 600;
-      text-align: right;
-    }
-
-    .roi-line-highlight {
-      background: var(--secondary);
-      margin: 0 -32px;
-      padding: 14px 32px;
-      border-radius: 0 0 var(--radius) var(--radius);
-      border-bottom: none;
-    }
-
-    .roi-line-highlight .roi-line-value {
-      color: var(--accent);
-      font-size: 1.15rem;
-    }
-
-    .roi-note {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 28px;
-    }
-
-    .roi-cta-line {
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .roi-cta-line a {
-      font-weight: 500;
-    }
-
-    /* ============================================
-       COMPARISON
-    ============================================ */
-    .comparison {
-      padding: var(--section-pad) 0;
-    }
-
-    .comparison-inner {
-      max-width: 840px;
-      margin: 0 auto;
-    }
-
-    .comparison-inner h2 { margin-bottom: 16px; }
-
-    .comparison-intro {
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      font-size: 0.95rem;
-      max-width: 640px;
-    }
-
-    .why-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 48px;
-      list-style: none;
-    }
-
-    .why-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.93rem;
-      padding: 16px 20px;
-      background: var(--bg-alt);
-      border-radius: var(--radius-sm);
-    }
-
-    .why-list i, .why-list svg {
-      width: 20px;
-      height: 20px;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .compare-table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
-
-    .compare-table th {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 0.82rem;
-      text-align: left;
-      padding: 12px 16px;
-      border-bottom: 2px solid var(--border);
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .compare-table td {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
-      vertical-align: top;
-    }
-
-    .compare-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .compare-table tr.compare-highlight td {
-      background: rgba(107, 92, 255, 0.04);
-      font-weight: 500;
-    }
-
-    .compare-table .compare-name {
-      font-family: var(--font-display);
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .compare-note {
-      font-size: 0.78rem;
-      color: rgba(90, 90, 90, 0.6);
-      margin-top: 16px;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-      .why-list { grid-template-columns: 1fr; }
-      .compare-table { font-size: 0.82rem; }
-      .compare-table th, .compare-table td { padding: 10px 12px; }
-    }
-
-    /* ============================================
-       IDEAL FIT
-    ============================================ */
-    .fit {
-      padding: var(--section-pad) 0;
-      background: var(--bg-alt);
-    }
-
-    .fit-inner {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .fit h2 { margin-bottom: 40px; }
-
-    .fit-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      text-align: left;
-    }
-
-    .fit-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 20px;
-      background: var(--white);
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-    }
-
-    .fit-item i, .fit-item svg {
-      width: 22px;
-      height: 22px;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .fit-item span {
-      font-size: 0.93rem;
-      line-height: 1.5;
-    }
-
-    /* ============================================
-       FINAL CTA
-    ============================================ */
-    .final-cta {
-      padding: var(--section-pad) 0;
-      text-align: center;
-    }
-
-    .final-cta-inner { max-width: 600px; margin: 0 auto; }
-
-    .final-cta h2 { margin-bottom: 20px; }
-
-    .final-cta p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 36px;
-      line-height: 1.75;
-    }
-
-    .final-cta .hero-ctas { justify-content: center; }
-
-    /* ============================================
-       FOOTER
-    ============================================ */
-    footer {
-      padding: 48px 0;
-      background: var(--text);
-      color: rgba(246, 244, 239, 0.6);
-      text-align: center;
-    }
-
-    footer .footer-brand {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--bg);
-      margin-bottom: 12px;
-    }
-
-    footer .footer-brand span { color: var(--accent); }
-
-    footer p {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 4px;
-    }
-
-    footer a {
-      color: rgba(246, 244, 239, 0.85);
-      padding: 12px 0;
-      display: inline-block;
-      min-height: 44px;
-      transition: color 0.2s;
-    }
-
-    footer a:hover {
-      color: #FFFFFF;
-    }
-
-    footer .footer-links {
-      margin-top: 16px;
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    footer .footer-links a {
-      font-size: 0.85rem;
-      color: rgba(246, 244, 239, 0.55);
-      padding: 12px 4px;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    footer .footer-links a:hover { color: #FFFFFF; }
-
-    /* ============================================
-       BACK TO TOP
-    ============================================ */
-    .back-to-top {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 44px;
-      height: 44px;
-      background: var(--accent);
-      color: var(--white);
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s, transform 0.3s;
-      z-index: 900;
-      box-shadow: var(--shadow-md);
-    }
-
-    .back-to-top.visible { opacity: 1; pointer-events: auto; }
-    .back-to-top:hover { transform: translateY(-3px); }
-    .back-to-top svg { width: 20px; height: 20px; }
-
-    /* ============================================
-       FILM GRAIN
-    ============================================ */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 10000;
-    }
-
-    /* ============================================
-       RESPONSIVE
-    ============================================ */
-    @media (max-width: 1024px) {
-      .feature-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-      .outcome-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      :root { --section-pad: 64px; }
-
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        padding: 24px;
-        border-bottom: 1px solid var(--border);
-        box-shadow: var(--shadow-md);
-        gap: 16px;
-      }
-
-      .nav-links.open .nav-cta {
-        text-align: center;
-        display: block;
-        padding: 14px 22px;
-      }
-
-      .hero { padding: 100px 0 64px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .hero-image img { height: 300px; }
-
-      .trust-items { grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 100%; justify-items: center; }
-
-      .problem-grid { grid-template-columns: 1fr; gap: 40px; }
-      .problem-image { order: -1; }
-      .problem-image img { height: 260px; }
-
-      .different-grid { grid-template-columns: 1fr; gap: 40px; }
-
-      .feature-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; gap: 40px; }
-      .outcome-grid { grid-template-columns: repeat(2, 1fr); }
-
-      .pilot-grid { grid-template-columns: 1fr; gap: 40px; }
-      .fit-grid { grid-template-columns: 1fr; }
-
-      .hero-ctas { flex-direction: column; }
-      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-
-      .footer-links { flex-direction: column; gap: 8px; }
-    }
-
-    @media (max-width: 480px) {
-      .trust-items { grid-template-columns: repeat(2, 1fr); }
-      .outcome-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F6F4EF">
+<meta name="description" content="Front Desk by Poppy. A managed AI receptionist that answers every call in English and Spanish, captures the lead, and delivers it to your inbox or phone moments after the call.">
+<meta property="og:title" content="Front Desk by Poppy">
+<meta property="og:description" content="The calls you miss are the customers you lose. We answer them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://frontdesk.poppymarketingandconsulting.com">
+<title>Front Desk by Poppy. AI receptionist for small businesses.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- Scroll Progress -->
-  <div id="scroll-progress"></div>
+<a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- Nav -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">Poppy <span>Front Desk</span></a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#problem">The Problem</a></li>
-        <li><a href="#features">What We Do</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#pilot">The Pilot</a></li>
-        <li><a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener" class="nav-cta">Book a Strategy Call</a></li>
-      </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-  </nav>
-  <main>
+<!-- ======================================================
+     NAV
+====================================================== -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo" aria-label="Front Desk by Poppy">
+      <span class="logo-front">front</span><span class="logo-desk">desk</span><span class="logo-byline">by Poppy Marketing</span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#signup" class="btn btn-primary">Get started</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content" data-aos="fade-up">
-          <span class="section-label">For Multi-Location Home Services Companies</span>
-          <h1>Turn missed calls into booked jobs.</h1>
-          <p>Poppy Front Desk helps multi-location home services companies capture more demand, book more jobs, and create a more consistent customer experience across every location.</p>
-          <div class="hero-ctas">
-            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener" class="btn-primary">
-              Book a Strategy Call
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a href="#how-it-works" class="btn-secondary">See How It Works</a>
-          </div>
+<main id="main">
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+<section class="hero">
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="blob blob-5"></span>
+    <span class="blob blob-6"></span>
+  </div>
+  <div class="hero-shield" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="hero-eyebrow">
+          <i data-lucide="phone-call"></i>
+          24/7 bilingual phone coverage. Live in 5 business days.
+        </span>
+        <h1 class="hero-h1">The calls you miss are the customers you lose.</h1>
+        <p class="hero-h1-es" lang="es" aria-label="Spanish translation">Las llamadas que no contestas <span class="italic">son clientes que pierdes.</span></p>
+        <p class="hero-sub">A managed AI receptionist that answers <strong>every call</strong> in <strong>English and Spanish</strong>, captures the lead, and delivers it to your inbox or phone moments after the call ends.</p>
+        <div class="hero-ctas">
+          <a href="#signup" class="btn btn-primary btn-lg btn-magnetic" data-track="hero_cta_primary">
+            See it in action
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#proof" class="btn btn-link" data-track="hero_cta_secondary">
+            <i data-lucide="play"></i>
+            Hear a 30-second sample
+          </a>
         </div>
-        <div class="hero-image" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.pexels.com/photos/7681975/pexels-photo-7681975.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Friendly professional on a call, smiling with confidence" loading="eager">
+        <div class="hero-trust">
+          <span class="check"><i data-lucide="check"></i> No credit card to demo</span>
+          <span class="check"><i data-lucide="check"></i> English and Spanish</span>
+          <span class="check"><i data-lucide="check"></i> Cancel anytime</span>
         </div>
+        <p class="hero-price">Plans from <strong>$99/mo</strong>. Month-to-month. Cancel anytime.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Smart Chips -->
-  <div class="smart-chips">
-    <div class="container">
-      <div class="chips-row">
-        <a href="#how-it-works" class="chip">How It Works</a>
-        <a href="#demo" class="chip">Live Demo</a>
-        <a href="#pilot" class="chip">Pricing</a>
-        <a href="#roi" class="chip">ROI</a>
-        <a href="#testimonials" class="chip">Testimonials</a>
-        <a href="#fit" class="chip">Who It's For</a>
+      <div class="hero-card reveal" aria-hidden="true">
+        <div class="hero-card-meta-line">
+          <span class="hero-card-eyebrow">Incoming call · Tuesday 11:42 PM</span>
+        </div>
+        <div class="hero-card-msg">
+          <span class="label">Caller</span>
+          <p>Hi, do y'all do same-day water heater replacements? My pilot just went out.</p>
+        </div>
+        <div class="hero-card-msg outbound">
+          <span class="label">Front Desk</span>
+          <p>Yes, we cover same-day. I have you down for 8 AM tomorrow with Mike. You'll get a text confirmation shortly.</p>
+        </div>
+        <div class="hero-card-msg sms-toowner">
+          <span class="label">Lead alert to owner</span>
+          <p><strong>Lead captured.</strong> Maria Reyes · Same-day water heater · Booked 8 AM Wed · (713) 555 0182</p>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Trust Bar -->
-  <section class="trust-bar">
-    <div class="container">
-      <div class="trust-items">
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
-          <i data-lucide="wind"></i>
-          <span>HVAC</span>
-        </div>
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="50">
-          <i data-lucide="droplets"></i>
-          <span>Plumbing</span>
-        </div>
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
-          <i data-lucide="zap"></i>
-          <span>Electrical</span>
-        </div>
-        <div class="trust-item" data-aos="fade-up" data-aos-delay="150">
-          <i data-lucide="bug"></i>
-          <span>Pest Control</span>
-        </div>
+<!-- ======================================================
+     TRUST STRIP
+====================================================== -->
+<section class="trust-strip" data-trust="default">
+  <div class="container">
+    <div class="trust-grid">
+      <span class="trust-eyebrow">Built for the 1 in 5 calls in Spanish</span>
+      <span class="trust-logo">Twilio</span>
+      <span class="trust-logo">Stripe</span>
+      <span class="trust-logo">Anthropic</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PAIN
+====================================================== -->
+<section class="section" id="pain">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The cost of an unanswered phone</span>
+      <h2>Every missed call is money walking away.</h2>
+      <p>If you run a phone-driven service business, your calendar is full because of who you pick up for. The calls that go to voicemail almost never come back.</p>
+    </div>
+
+    <div class="pain-grid reveal-stagger">
+      <div class="pain-card">
+        <div class="pain-card-icon"><i data-lucide="languages"></i></div>
+        <div class="pain-card-stat">1 in <span data-count-to="5">0</span> callers</div>
+        <h3>Spanish-speaking customers click hang up.</h3>
+        <p>If <strong>1 in 5</strong> of your callers speaks Spanish and your team only answers in English, that revenue goes to the competitor who picked up bilingual on the first ring.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-icon"><i data-lucide="alarm-clock"></i></div>
+        <div class="pain-card-stat"><span data-count-to="20">0</span> to <span data-count-to="35">0</span>%</div>
+        <h3>The phone rings while you work.</h3>
+        <p>It rings while you're on a job, with another customer, after hours, on weekends. Industry data shows home services SMBs miss <strong>20 to 35 percent</strong> of inbound calls.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-icon"><i data-lucide="dollar-sign"></i></div>
+        <div class="pain-card-stat">~$<span data-count-to="500">0</span> <span class="small">per missed job</span></div>
+        <h3>The lead doesn't call back.</h3>
+        <p>Average service-job value runs around <strong>$500</strong> with a <strong>$3,500 lifetime customer value</strong>. Every missed call is a customer the next business gets to keep.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Problem -->
-  <section class="problem" id="problem">
-    <div class="container">
-      <div class="problem-grid">
-        <div class="problem-content" data-aos="fade-up">
-          <span class="section-label">The Problem</span>
-          <h2>Missed calls cost more than you think.</h2>
-          <p>Calls come in during busy hours, before hours, and after hours. Office staff get pulled into the same questions over and over. Customers get inconsistent experiences depending on which location they reach.</p>
-          <p>Leadership often has limited visibility into what is happening across the group. When customer handling breaks down, growth gets harder to manage.</p>
-          <div class="problem-stat">
-            <span class="stat-number"><span class="counter" data-target="20">0</span>-<span class="counter" data-target="35">0</span>%</span>
-            <span class="stat-label">of home services company inbound calls go unanswered, according to industry research.</span>
+<!-- ======================================================
+     VISUAL DIVIDER STRIP
+====================================================== -->
+<section class="section-tight">
+  <div class="visual-strip reveal">
+    <div class="visual-strip-inner">
+      <img src="assets/strip-1.jpg" alt="Florist arranging flowers in her shop, focused on her craft" class="visual-strip-img" loading="lazy">
+      <div class="visual-strip-overlay"></div>
+      <div class="visual-strip-content">
+        <p class="quote">You built the business. <span class="italic">We answer the phone.</span></p>
+        <span class="attribution">For real small businesses · English y español</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     HOW IT WORKS
+====================================================== -->
+<section class="section" id="how-it-works" style="background: var(--warm-gray);">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">How it works</span>
+      <h2>Live in five business days. No engineering on your side.</h2>
+      <p>You give us your business once. We handle every call after that.</p>
+    </div>
+
+    <div class="steps reveal-stagger">
+      <div class="step">
+        <h3>Tell us about your business.</h3>
+        <p>A <strong>15-minute onboarding call</strong>. We learn your hours, services, prices, FAQs, and what counts as a real lead vs a tire kicker.</p>
+      </div>
+      <div class="step">
+        <h3>We answer your calls.</h3>
+        <p><strong>Live in 5 business days.</strong> We pick up in English or Spanish based on the caller, every time, day or night.</p>
+      </div>
+      <div class="step">
+        <h3>You get the lead the way you work.</h3>
+        <p>Moments after the call ends. Caller name, phone, what they wanted, <strong>full transcript</strong>. On Basic, leads land by <strong>email or your Slack or Google Chat</strong>. On Pro, you also get <strong>SMS to your phone</strong> and your customer gets a booking confirmation text (after A2P 10DLC carrier approval).</p>
+      </div>
+      <div class="step">
+        <h3>Sunday morning, you get the receipts.</h3>
+        <p><strong>One weekly recap</strong> in your inbox (and on your phone if you are on Pro). Leads captured this week, appointments booked, and the dollars we caught for you. No dashboard to log into.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     VISUAL DIVIDER STRIP 2
+====================================================== -->
+<section class="section-tight">
+  <div class="visual-strip reveal">
+    <div class="visual-strip-inner">
+      <img src="assets/strip-2.jpg" alt="HVAC technician working on a rooftop unit" class="visual-strip-img" loading="lazy">
+      <div class="visual-strip-overlay"></div>
+      <div class="visual-strip-content">
+        <p class="quote">From the salon to the service truck. <span class="italic">We pick up.</span></p>
+        <span class="attribution">HVAC, plumbers, salons, contractors · phone-driven small business</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PROOF
+====================================================== -->
+<section class="section" id="proof">
+  <canvas id="proof-trunk" class="proof-trunk" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">See it work</span>
+      <h2>It does not sound like a robot.</h2>
+      <p>Here is a real call our agent handled, in English and Spanish, plus what your phone gets when the lead lands.</p>
+    </div>
+
+    <div class="proof-grid reveal-stagger">
+      <div class="proof-card featured">
+        <span class="proof-label"><i data-lucide="audio-lines"></i> Sample call</span>
+        <div class="proof-toggle" role="tablist" aria-label="Sample language">
+          <button class="active" data-lang="en">English</button>
+          <button data-lang="es">Español</button>
+        </div>
+        <div class="proof-player">
+          <button class="proof-play-btn" aria-label="Play sample">
+            <i data-lucide="play"></i>
+          </button>
+          <div class="proof-waveform" aria-hidden="true">
+            <span class="bar" style="height:30%"></span><span class="bar" style="height:60%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:50%"></span><span class="bar" style="height:90%"></span><span class="bar" style="height:65%"></span><span class="bar" style="height:75%"></span><span class="bar" style="height:40%"></span><span class="bar" style="height:85%"></span><span class="bar" style="height:55%"></span><span class="bar" style="height:70%"></span><span class="bar" style="height:45%"></span><span class="bar" style="height:60%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:35%"></span><span class="bar" style="height:50%"></span><span class="bar" style="height:75%"></span><span class="bar" style="height:65%"></span><span class="bar" style="height:90%"></span><span class="bar" style="height:55%"></span><span class="bar" style="height:40%"></span><span class="bar" style="height:70%"></span><span class="bar" style="height:50%"></span>
           </div>
+          <span class="proof-duration">0:00 / 0:32</span>
         </div>
-        <div class="problem-image" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.pexels.com/photos/5699830/pexels-photo-5699830.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Frustrated homeowner on phone trying to reach a service company" loading="lazy">
+        <p style="font-size:0.9375rem;">Sample HVAC call. The agent identifies the urgency, books the slot, and sends the owner the lead details moments after the call ends.</p>
+      </div>
+
+      <div class="proof-card">
+        <span class="proof-label"><i data-lucide="message-square"></i> Lead alert</span>
+        <h3 style="font-size:1.0625rem; margin-bottom: var(--space-3);">What hits your inbox or phone</h3>
+        <div class="proof-mock">
+          <div class="from">From: Front Desk</div>
+          <div class="body">New lead. Maria Reyes. (713) 555 0182. Same-day water heater. Booked 8 AM Wed. Tap for full transcript.</div>
         </div>
+        <p style="margin-top: var(--space-4); font-size:0.875rem; color:var(--slate);">Within seconds of the caller hanging up. Email and Slack or Google Chat on Basic. Email plus SMS on Pro after A2P approval.</p>
+      </div>
+
+      <div class="proof-card">
+        <span class="proof-label"><i data-lucide="calendar-check-2"></i> Sunday report</span>
+        <h3 style="font-size:1.0625rem; margin-bottom: var(--space-3);">The Money Message</h3>
+        <div class="proof-mock">
+          <div class="from">From: Front Desk</div>
+          <div class="body">This week: 23 leads captured, 14 appointments booked, est. $9,800 in caught revenue. Top spike: Saturday after hours. Reply Y for details.</div>
+        </div>
+        <p style="margin-top: var(--space-4); font-size:0.875rem; color:var(--slate);">Every Sunday morning. Email on Basic. Email plus SMS on Pro. No dashboard.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="features-header" data-aos="fade-up">
-        <span class="section-label">What Poppy Front Desk Does</span>
-        <h2>Your customers are already calling. Poppy makes sure those calls become booked jobs.</h2>
-        <p class="section-subtitle">A booking-focused, voice-first system built for the realities of multi-location home services companies.</p>
+<!-- ======================================================
+     FEATURES (BENTO)
+====================================================== -->
+<section class="section" id="features" style="background: var(--warm-gray);">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Features</span>
+      <h2>Built for the way small businesses actually run.</h2>
+      <p>Not "AI-powered." Just the boring fundamentals done well.</p>
+    </div>
+
+    <div class="bento reveal-stagger">
+      <div class="bento-card span-6 hero-tile">
+        <span class="bento-num">01</span>
+        <h3>Bilingual on the first ring. Not after a menu.</h3>
+        <p>No "press 1 for Spanish" friction. The agent detects the caller's language and responds in it, every call, every time. English and Spanish out of the box, full conversational fluency, no scripts.</p>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card" data-aos="fade-right" data-aos-delay="0">
-          <div class="feature-icon"><i data-lucide="phone-incoming"></i></div>
-          <h3>Answer Every Call</h3>
-          <p>A warm, natural voice answers inbound calls at every location. Before hours, after hours, and during peak overflow.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-left" data-aos-delay="50">
-          <div class="feature-icon"><i data-lucide="message-circle"></i></div>
-          <h3>Handle Common Questions</h3>
-          <p>Hours, service areas, pricing estimates, services offered. Your customers get clear answers without waiting on hold.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
-          <div class="feature-icon"><i data-lucide="calendar-plus"></i></div>
-          <h3>Capture Booking Requests</h3>
-          <p>When a customer wants to book, Grace captures their name, preferred time, and service needed, then notifies your staff in real time.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-left" data-aos-delay="0">
-          <div class="feature-icon"><i data-lucide="bell-ring"></i></div>
-          <h3>Notify Staff Instantly</h3>
-          <p>Booking requests are sent to your team the moment they are captured. No delay. No missed follow-up.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-right" data-aos-delay="50">
-          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Group-Level Visibility</h3>
-          <p>See call activity, booking flow, and demand patterns across every location from one view.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-left" data-aos-delay="100">
-          <div class="feature-icon"><i data-lucide="settings-2"></i></div>
-          <h3>Per-Location Configuration</h3>
-          <p>Different hours, different teams, different services. One system that respects how each office actually operates.</p>
-        </div>
+
+      <div class="bento-card span-3">
+        <span class="bento-num">02</span>
+        <h3>Lead alerts where you already work</h3>
+        <p>Moments after the call ends, you get the name, number, what they wanted, and the <strong>full transcript</strong>. <strong>Email, Slack, or Google Chat</strong> on Basic. <strong>Email plus SMS to your phone</strong> on Pro (after A2P approval). No dashboard, no app to install.</p>
+      </div>
+
+      <div class="bento-card span-3">
+        <span class="bento-num">03</span>
+        <h3>Same questions, no more</h3>
+        <p>Hours, prices, location, services. Your AI handles them <strong>every time, day or night</strong>, in either language, so your team stays focused on actual work.</p>
+      </div>
+
+      <div class="bento-card span-2">
+        <span class="bento-num">04</span>
+        <h3>Books to your calendar</h3>
+        <p>Google Calendar or Microsoft 365 Outlook. <strong>Pro tier only.</strong> We don't pretend to integrate with platforms we don't.</p>
+      </div>
+
+      <div class="bento-card span-2">
+        <span class="bento-num">05</span>
+        <h3>Recovers calls we miss</h3>
+        <p>If a call slips through, an <strong>automatic SMS</strong> goes to the caller within seconds and pulls them back in. <strong>Pro tier only, after A2P 10DLC carrier approval.</strong></p>
+      </div>
+
+      <div class="bento-card span-2">
+        <span class="bento-num">06</span>
+        <h3>Sunday Money Message</h3>
+        <p><strong>One weekly recap.</strong> Leads captured, appointments booked, revenue we caught for you. <strong>Email on Basic. Email plus SMS on Pro</strong> (after A2P approval). Replaces the dashboard you would never log into.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Why Different -->
-  <section class="different" id="different">
-    <div class="container">
-      <div class="different-grid">
-        <div class="different-content" data-aos="fade-up">
-          <span class="section-label">Why This Is Different</span>
-          <h2>Built for multi-location groups, not just single shops.</h2>
-          <p>Most phone tools are made for one location at a time. They do not account for different business hours, different routing rules, or the need for leadership to see what is happening across the group.</p>
-          <p>Poppy Front Desk is built around that reality.</p>
-          <ul class="diff-list">
-            <li><i data-lucide="check-circle"></i> <span>Per-location configuration for every office</span></li>
-            <li><i data-lucide="check-circle"></i> <span>Centralized visibility for leadership</span></li>
-            <li><i data-lucide="check-circle"></i> <span>Booking-focused workflows, not just message-taking</span></li>
-            <li><i data-lucide="check-circle"></i> <span>Warm, trusted caller experience</span></li>
-            <li><i data-lucide="check-circle"></i> <span>Managed service with no self-serve complexity</span></li>
-          </ul>
-        </div>
-        <div class="different-image" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.pexels.com/photos/6196677/pexels-photo-6196677.jpeg?auto=compress&cs=tinysrgb&w=940&h=650" alt="Professional home services team walking with tools and equipment" loading="lazy">
-        </div>
-      </div>
+<!-- ======================================================
+     PRICING
+====================================================== -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header center">
+      <span class="eyebrow">Pricing</span>
+      <h2>Two tiers. Month-to-month. No surprise charges.</h2>
+      <p>Pick the tier that matches your business. Cancel anytime.</p>
     </div>
-  </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="testimonials-header" data-aos="fade-up">
-        <span class="section-label">What People Say About Working With Us</span>
-        <h2>Built by a team businesses trust.</h2>
-        <p>Poppy Front Desk is built by Poppy Marketing & Consulting. Bilingual (English + Spanish). Here is what our clients say.</p>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card" data-aos="fade-right">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Poppy Marketing has been a total game-changer for our clinic. They reviewed our Google Ads setup, fixed what wasn't working, optimized everything, and now actively manage it for us. Since then, our bookings have tripled. We even added a second location into our campaigns, and we're getting consistent bookings from both."</p>
-          <div class="testimonial-author">Daisy Manali</div>
-          <div class="testimonial-role">Multi-Location Business Owner</div>
-        </div>
-        <div class="testimonial-card" data-aos="fade-up">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"My small business was struggling. We attempted Google and Meta advertising ourselves with no results. It felt like we were just throwing money away. A good friend recommended Poppy and we took a chance. My business is on the rise and I have hope again for the future."</p>
-          <div class="testimonial-author">Mark Adel</div>
-          <div class="testimonial-role">Small Business Owner</div>
-        </div>
-        <div class="testimonial-card" data-aos="fade-left">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"They feel more like a partner than a vendor, and that kind of relationship is rare. Their creative marketing campaigns brought in measurable growth in traffic, engagement, and conversions. If you're looking for a firm that's strategic, skilled, and truly dedicated to helping you grow, I can't recommend Poppy enough."</p>
-          <div class="testimonial-author">Phillip Adl</div>
-          <div class="testimonial-role">Business Owner</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="how-header" data-aos="fade-up">
-        <span class="section-label">How It Works</span>
-        <h2>Live in weeks, not months.</h2>
-      </div>
-      <div class="steps">
-        <div class="step" data-aos="fade-up" data-aos-delay="0">
-          <span class="step-number">01</span>
-          <h3>We learn your flow</h3>
-          <p>We understand how your locations currently handle calls, booking, routing, and common customer questions.</p>
-        </div>
-        <div class="step" data-aos="fade-up" data-aos-delay="100">
-          <span class="step-number">02</span>
-          <h3>We configure the system</h3>
-          <p>Greetings, hours, routing, FAQ handling, and booking capture configured for how your group operates.</p>
-        </div>
-        <div class="step" data-aos="fade-up" data-aos-delay="200">
-          <span class="step-number">03</span>
-          <h3>Calls are handled</h3>
-          <p>Customers get a clearer, easier experience. Staff get notified when booking requests are captured.</p>
-        </div>
-        <div class="step" data-aos="fade-up" data-aos-delay="300">
-          <span class="step-number">04</span>
-          <h3>Leadership gets visibility</h3>
-          <p>Clear insight into call activity, booking flow, and where opportunities may be slipping through.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Live Demo -->
-  <section class="demo" id="demo">
-    <div class="container">
-      <div class="demo-inner" data-aos="fade-up">
-        <span class="section-label">Hear It Yourself</span>
-        <h2>Experience it live.</h2>
-        <p>Call the number below and have a real conversation with Grace. Book a repair, ask about services, or just say hello.</p>
-        <a href="tel:+13467086397" class="demo-phone">(346) 708-6397</a>
-        <p class="demo-hint">This is a live, working system configured for a sample home services company.</p>
-        <p class="demo-disclaimer">Demo environment. Calls may be recorded for quality purposes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Outcomes -->
-  <section class="outcomes" id="outcomes">
-    <div class="container">
-      <div class="outcomes-header" data-aos="fade-up">
-        <span class="section-label">Outcomes</span>
-        <h2>Better customer handling creates more organized growth.</h2>
-      </div>
-      <div class="outcome-grid">
-        <div class="outcome-item" data-aos="fade-up" data-aos-delay="0">
-          <i data-lucide="users"></i>
-          <span>More booked jobs</span>
-        </div>
-        <div class="outcome-item" data-aos="fade-up" data-aos-delay="50">
-          <i data-lucide="shield-check"></i>
-          <span>Less front-desk overload</span>
-        </div>
-        <div class="outcome-item" data-aos="fade-up" data-aos-delay="100">
-          <i data-lucide="git-merge"></i>
-          <span>More consistency across locations</span>
-        </div>
-        <div class="outcome-item" data-aos="fade-up" data-aos-delay="150">
-          <i data-lucide="eye"></i>
-          <span>Better visibility for leadership</span>
-        </div>
-        <div class="outcome-item" data-aos="fade-up" data-aos-delay="200">
-          <i data-lucide="smile"></i>
-          <span>A more trusted customer experience</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Belief -->
-  <section class="belief" id="belief">
-    <div class="container">
-      <div class="belief-inner" data-aos="fade-up">
-        <span class="section-label" style="color: var(--accent);">Our Belief</span>
-        <h2>AI should make work lighter, not more confusing.</h2>
-        <p>We believe AI should amplify people, not replace them. The goal is not to remove the human side of customer handling. The goal is to make it easier for customers to book, easier for teams to stay organized, and easier for leaders to make better decisions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pilot Offer -->
-  <section class="pilot" id="pilot">
-    <div class="container">
-      <div class="pilot-grid">
-        <div class="pilot-content" data-aos="fade-up">
-          <span class="section-label">Start Here</span>
-          <h2>Start with a 90-day pilot.</h2>
-          <p>Poppy Front Desk begins with a focused pilot across 3 locations so your group can evaluate real results before deciding on a broader rollout.</p>
-          <ul class="pilot-includes">
-            <li><i data-lucide="check"></i> 3 locations configured and live</li>
-            <li><i data-lucide="check"></i> Booking-focused call handling</li>
-            <li><i data-lucide="check"></i> Real-time staff notifications</li>
-            <li><i data-lucide="check"></i> Weekly performance reporting</li>
-            <li><i data-lucide="check"></i> Monthly review with leadership</li>
-            <li><i data-lucide="check"></i> Ongoing optimization from real call data</li>
-          </ul>
-        </div>
-        <div class="pilot-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="pilot-card-label">90-Day Pilot</div>
-          <h3>3 Locations</h3>
-          <div class="pilot-price">$249<span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/location/month</span></div>
-          <div class="pilot-price-note">Plus one-time implementation fee</div>
-          <div class="pilot-metric">
-            <strong>15% booking lift target</strong>
-            <span>Primary success metric, defined together before launch</span>
-          </div>
-          <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener" class="btn-primary">Talk About a Pilot</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROI / Value -->
-  <section class="roi" id="roi">
-    <div class="container">
-      <div class="roi-inner" data-aos="fade-up">
-        <span class="section-label">The Business Case</span>
-        <h2>Even a modest lift pays for itself.</h2>
-        <p class="roi-intro">The math behind better call handling is straightforward. When more calls turn into booked jobs, the revenue improvement typically far exceeds the cost of the system. Here is what that looks like in practice.</p>
-
-        <div class="roi-example">
-          <span class="roi-example-label">Illustrative example, one location</span>
-
-          <div class="roi-line">
-            <span class="roi-line-label">Current booked jobs per month</span>
-            <span class="roi-line-value">120</span>
-          </div>
-          <div class="roi-line">
-            <span class="roi-line-label">Average revenue per booked job</span>
-            <span class="roi-line-value">$400</span>
-          </div>
-          <div class="roi-line">
-            <span class="roi-line-label">15% improvement target</span>
-            <span class="roi-line-value">+18 jobs</span>
-          </div>
-          <div class="roi-line">
-            <span class="roi-line-label">Additional monthly revenue</span>
-            <span class="roi-line-value">$7,200</span>
-          </div>
-          <div class="roi-line">
-            <span class="roi-line-label">Poppy Front Desk cost</span>
-            <span class="roi-line-value">-$249</span>
-          </div>
-          <div class="roi-line roi-line-highlight">
-            <span class="roi-line-label">Projected monthly upside per location</span>
-            <span class="roi-line-value">$6,951</span>
-          </div>
-        </div>
-
-        <p class="roi-note">This is an example, not a guarantee. Your actual results depend on your current call volume, job values, and how much demand is currently being missed. The pilot is designed to measure the real impact using your numbers.</p>
-
-        <p class="roi-cta-line">Want to run the math with your own numbers? <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener">Book a strategy call</a> and we will walk through it together.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comparison -->
-  <section class="comparison">
-    <div class="container">
-      <div class="comparison-inner">
-        <div data-aos="fade-up">
-          <span class="section-label">Why Operators Choose Us</span>
-          <h2>Built for multi-location teams, not generic answering.</h2>
-          <p class="comparison-intro">Most AI receptionist tools sell minutes or call counts. Poppy Front Desk is built around locations, booked jobs, and operational consistency for home services companies.</p>
-        </div>
-
-        <ul class="why-list" data-aos="fade-up">
-          <li><i data-lucide="map-pin"></i> <span>Built for multi-location home services</span></li>
-          <li><i data-lucide="tag"></i> <span>Simple per-location pricing</span></li>
-          <li><i data-lucide="calendar-check"></i> <span>90-day pilot with clear success criteria</span></li>
-          <li><i data-lucide="target"></i> <span>Focused on booked jobs, not just answered calls</span></li>
-          <li><i data-lucide="phone-call"></i> <span>Live demo you can call right now</span></li>
-          <li><i data-lucide="globe"></i> <span>Bilingual: English + Spanish</span></li>
+    <div class="pricing-grid two-tier reveal-stagger">
+      <div class="price-card">
+        <span class="price-tier">Basic</span>
+        <div class="price-amount">$99<span class="price-unit">/mo</span></div>
+        <p class="price-tagline">For solo owners and small teams. We answer <strong>every call</strong> and deliver the lead to your inbox or chat. <strong>No SMS noise. Leads land where you already work.</strong></p>
+        <ul class="price-features">
+          <li><i data-lucide="check"></i> 24/7 bilingual answer (English + Spanish)</li>
+          <li><i data-lucide="check"></i> Lead capture with full transcript</li>
+          <li><i data-lucide="check"></i> Email lead alerts after every captured call</li>
+          <li><i data-lucide="check"></i> Optional Slack or Google Chat webhook (your pick at intake)</li>
+          <li><i data-lucide="check"></i> Sunday Money Message by email</li>
+          <li><i data-lucide="check"></i> 5-business-day go-live, no asterisks</li>
+          <li><i data-lucide="check"></i> Custom greeting and FAQ library</li>
         </ul>
+        <p class="price-fineprint">No setup fee. Single location. Inbound voice only. SMS notifications are available on Pro after carrier approval.</p>
+        <a href="#signup" class="btn btn-ghost btn-block price-cta">Start with Basic</a>
+        <span class="cancel-anytime"><i data-lucide="check"></i> Cancel anytime, month-to-month</span>
+      </div>
 
-        <div data-aos="fade-up">
-          <h3 style="font-size: 1.1rem; margin-bottom: 20px;">How we compare</h3>
-          <div class="compare-table-wrap">
-            <table class="compare-table">
-              <thead>
-                <tr>
-                  <th>Option</th>
-                  <th>Pricing model</th>
-                  <th>Home services fit</th>
-                  <th>Best for</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="compare-highlight">
-                  <td class="compare-name">Poppy Front Desk</td>
-                  <td>$249/location/month</td>
-                  <td>Multi-location focused</td>
-                  <td>Booked jobs + branch consistency</td>
-                </tr>
-                <tr>
-                  <td class="compare-name">Abby AI</td>
-                  <td>$99 to $690/month (by minutes)</td>
-                  <td>Home services page</td>
-                  <td>Minute-based AI receptionist</td>
-                </tr>
-                <tr>
-                  <td class="compare-name">Smith.ai</td>
-                  <td>$95 to $2,000/month (by calls)</td>
-                  <td>Home services page</td>
-                  <td>Call-based AI receptionist</td>
-                </tr>
-                <tr>
-                  <td class="compare-name">Ruby</td>
-                  <td>$250 to $720/month (by minutes)</td>
-                  <td>Home services page</td>
-                  <td>Human receptionist support</td>
-                </tr>
-              </tbody>
-            </table>
+      <div class="price-card featured">
+        <span class="price-badge">Most popular</span>
+        <span class="price-tier">Pro</span>
+        <div class="price-amount">$199<span class="price-unit">/mo</span></div>
+        <p class="price-why">If your business books appointments, Pro pays for itself on the first booked call.</p>
+        <p class="price-tagline">For appointment-driven businesses. We answer, <strong>book the appointment on the call</strong>, and confirm it automatically.</p>
+        <ul class="price-features">
+          <li><i data-lucide="check"></i> Everything in Basic</li>
+          <li><i data-lucide="check"></i> Live calendar booking on the call</li>
+          <li><i data-lucide="check"></i> Google Calendar or Microsoft 365 Outlook</li>
+          <li><i data-lucide="check"></i> SMS lead alerts to owner (after A2P approval)</li>
+          <li><i data-lucide="check"></i> Customer-facing booking confirmation SMS (after A2P approval)</li>
+          <li><i data-lucide="check"></i> Lead Recovery SMS for missed calls (after A2P approval)</li>
+          <li><i data-lucide="check"></i> Up to 15 approved FAQs configured at onboarding</li>
+        </ul>
+        <div class="tier-disclosure">
+          <strong>About SMS activation:</strong> SMS features require carrier approval through the A2P 10DLC process. Poppy manages the campaign intake and submission as part of the setup fee. Your AI receptionist and email lead alerts go live in 5 business days. SMS activates separately when carrier review clears, typically 10 to 15 business days after submission. Email fallback in the interim.
+        </div>
+        <p class="price-fineprint">$399 one-time setup fee covers white-glove onboarding plus per-customer A2P 10DLC brand and campaign registration. Single location.</p>
+        <a href="#signup" class="btn btn-primary btn-block price-cta">Start with Pro</a>
+        <span class="cancel-anytime" style="color: rgba(246, 244, 239, 0.6)"><i data-lucide="check"></i> Cancel anytime, month-to-month</span>
+      </div>
+    </div>
+
+    <div class="custom-deflect reveal">
+      <div>
+        <h3>Need something we don't sell off the shelf?</h3>
+        <p>Multi-location, high call volume, or a use case the standard tiers don't fit? We do scoped custom engagements. Healthcare and HIPAA workflows are not part of our standard offer.</p>
+      </div>
+      <a href="mailto:frontdesk@poppymarketingandconsulting.com" class="btn btn-ghost btn-dark">Talk to us</a>
+    </div>
+
+    <div class="text-center">
+      <button class="compare-toggle" id="compare-toggle" aria-expanded="false" aria-controls="compare-table">
+        <span class="compare-label-full">Compare every feature side by side</span>
+        <span class="compare-label-short">Compare every feature</span>
+        <i data-lucide="chevron-down"></i>
+      </button>
+    </div>
+
+    <div class="compare-table" id="compare-table" hidden>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="center">Basic</th>
+            <th class="center">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>24/7 bilingual answer (EN + ES)</td><td class="center"><i data-lucide="check"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Lead capture with full transcript</td><td class="center"><i data-lucide="check"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Email or Slack/Google Chat lead alerts</td><td class="center"><i data-lucide="check"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>SMS lead alerts to owner (after A2P approval)</td><td class="center"><i data-lucide="minus" class="dash-icon" aria-label="not included"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Sunday Money Message</td><td class="center">Email</td><td class="center">Email + SMS</td></tr>
+          <tr><td>Custom greeting + FAQ library (up to 15)</td><td class="center"><i data-lucide="check"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Live calendar booking on the call</td><td class="center"><i data-lucide="minus" class="dash-icon" aria-label="not included"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Calendar integration (Google or Outlook)</td><td class="center"><i data-lucide="minus" class="dash-icon" aria-label="not included"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Customer-facing booking SMS (after A2P approval)</td><td class="center"><i data-lucide="minus" class="dash-icon" aria-label="not included"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>Lead Recovery SMS for missed calls (after A2P approval)</td><td class="center"><i data-lucide="minus" class="dash-icon" aria-label="not included"></i></td><td class="center"><i data-lucide="check"></i></td></tr>
+          <tr><td>A2P 10DLC brand and campaign registration</td><td class="center">Not required</td><td class="center">Included in setup</td></tr>
+          <tr><td>Time to live</td><td class="center">5 business days</td><td class="center">5 business days (AI + email). SMS activates after carrier approval, typically 10 to 15 business days from submission.</td></tr>
+          <tr><td>One-time setup fee</td><td class="center">None</td><td class="center">$399</td></tr>
+          <tr><td>Term</td><td class="center">Month-to-month</td><td class="center">Month-to-month</td></tr>
+          <tr><td>Locations included</td><td class="center">1</td><td class="center">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare-hiring reveal">
+      <h3>Compared to hiring a part-time front-desk hire</h3>
+      <p class="compare-sub">A part-time receptionist costs roughly $2,500 to $3,500 a month all-in (wage plus payroll taxes), based on US BLS receptionist median pay. Front Desk covers 24/7 in two languages.</p>
+      <div class="compare-cols">
+        <div class="compare-col bad">
+          <h4>Part-time human receptionist</h4>
+          <div class="price-line"><span class="price-amt">$2,500&ndash;$3,500</span><span class="price-suffix">per month</span></div>
+          <ul>
+            <li><i data-lucide="x"></i> One shift, weekdays only</li>
+            <li><i data-lucide="x"></i> Sick days, vacation, training, turnover</li>
+            <li><i data-lucide="x"></i> Bilingual coverage often costs extra or doesn't exist</li>
+            <li><i data-lucide="x"></i> Cannot answer at 11 PM, weekends, or holidays</li>
+          </ul>
+        </div>
+        <div class="compare-col good">
+          <h4>Front Desk by Poppy</h4>
+          <div class="price-line"><span class="price-amt">$99&ndash;$199</span><span class="price-suffix">per month</span></div>
+          <ul>
+            <li><i data-lucide="check"></i> 24/7, every day, weekends and holidays included</li>
+            <li><i data-lucide="check"></i> Bilingual EN and ES on the first ring, no extra charge</li>
+            <li><i data-lucide="check"></i> Live in 5 business days, no hiring or training</li>
+            <li><i data-lucide="check"></i> Delivers the lead to your inbox or phone moments after the call ends</li>
+            <li><i data-lucide="check"></i> Cancel anytime, month-to-month</li>
+          </ul>
+        </div>
+      </div>
+      <p class="compare-footnote">Part-time receptionist range based on US Bureau of Labor Statistics median hourly wage for receptionists, scaled to one shift weekdays plus typical employer-side payroll burden. Pro tier adds a $399 one-time setup fee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+<section class="section" id="faq" style="background: var(--warm-gray);">
+  <div class="container">
+    <div class="section-header center">
+      <span class="eyebrow">Frequently asked</span>
+      <h2>Hard questions, answered.</h2>
+      <p>What real prospects ask before they sign up.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>How long until I am live?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Five business days from signup. Day 1 is the onboarding call. Days 2 to 4 we configure your agent and run test calls with you. Day 5 you go live. Onboarding includes up to 15 approved FAQs and two rounds of revisions.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>When does SMS activate for Pro?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Your AI receptionist and email lead alerts go live within 5 business days. SMS to your phone and customer-facing booking confirmations activate separately when Twilio's carrier review approves your business, typically 10 to 15 business days after we submit the A2P 10DLC registration on your behalf. We start the registration the moment you sign. While SMS is pending, your lead alerts come by email and we'll text you the moment SMS goes live.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>What happens to my existing phone number?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Two options. The simpler one: keep your existing number and forward unanswered calls to us. The fuller one: port your number to us and we are the primary line. We walk you through whichever you pick during onboarding.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Will it sound like a robot?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We use high-quality voice models and tune the agent to your business voice during onboarding. Per state law (California Civil Code 17941.5 and similar), every call opens with an AI disclosure so callers know they are speaking to an automated assistant. We'll play you a real sample on the demo call.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>What happens if it cannot answer something?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">It captures the question, texts you the full transcript, and lets the caller know someone from the business will follow up. You decide how and when to call back. You never have to wonder what someone asked.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can I cancel?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Both tiers are month-to-month. Cancel any time. The Pro setup fee covers the white-glove onboarding (call flow, FAQs, calendar wiring, test calls) and is non-refundable once onboarding has begun. We will not hold your phone number hostage.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you handle healthcare or HIPAA workflows?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No. Healthcare practices, dental offices, med spas, and any use case involving protected health information are not a fit for our standard tiers. We do not sell into HIPAA-regulated workflows. If your business handles PHI, we will tell you upfront on the demo call.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>How do you keep my customer data safe?</span>
+          <i data-lucide="plus"></i>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Encrypted in transit and at rest. TCPA-compliant SMS. We never resell or use your data to train third-party models. Full Privacy Policy and Data Processing Addendum on this site.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FINAL CTA + SIGNUP
+====================================================== -->
+<section class="cta-section" id="signup">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-pitch reveal">
+        <span class="eyebrow">Get started</span>
+        <h2>Every week you wait is leads you do not get back.</h2>
+        <p class="lead">Three fields, two minutes, and we will reach out to schedule your demo. We will play you a real sample call before we ask you for anything.</p>
+        <ul>
+          <li><i data-lucide="check"></i> Zero credit card to demo</li>
+          <li><i data-lucide="check"></i> Live in 5 business days</li>
+          <li><i data-lucide="check"></i> Bilingual EN + ES from day one</li>
+          <li><i data-lucide="check"></i> Month-to-month, cancel any time</li>
+        </ul>
+      </div>
+
+      <div class="signup reveal">
+        <form id="signup-form" novalidate>
+          <h3>Get my demo</h3>
+          <p class="lead-small">We answer in under 4 hours, business days. Spanish o inglés.</p>
+
+          <div class="field">
+            <input type="text" id="business" name="business" placeholder=" " required autocomplete="organization">
+            <label for="business">Business name</label>
           </div>
-          <p class="compare-note">Public competitor pricing from official pricing pages, March 2026. Poppy Front Desk includes a 500 call/location/month fair-use allowance.</p>
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder=" " required autocomplete="tel" pattern="[\d\s\-\+\(\)]{10,}">
+            <label for="phone">Mobile phone</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+            <label for="email">Email</label>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="sms-consent" required>
+            <span>I agree to receive SMS for demo coordination. Reply STOP to opt out. <a href="/privacy" style="color: var(--purple); text-decoration: underline;">Privacy</a> + <a href="/terms" style="color: var(--purple); text-decoration: underline;">Terms</a>.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Request my demo</button>
+        </form>
+
+        <div class="signup-success" id="signup-success" role="status" aria-live="polite">
+          <div class="check-icon"><i data-lucide="check"></i></div>
+          <h3>You're on the list.</h3>
+          <p>We will text you within 4 business hours to set up the demo call. Watch for a message from a Texas number.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Ideal Fit -->
-  <section class="fit" id="fit">
-    <div class="container">
-      <div class="fit-inner" data-aos="fade-up">
-        <span class="section-label">Ideal Fit</span>
-        <h2>Best for growing home services companies with 5 to 25 locations.</h2>
-      </div>
-      <div class="fit-grid" style="max-width: 800px; margin: 40px auto 0;">
-        <div class="fit-item" data-aos="fade-up" data-aos-delay="0">
-          <i data-lucide="building"></i>
-          <span>Growing through new locations or acquisitions</span>
-        </div>
-        <div class="fit-item" data-aos="fade-up" data-aos-delay="50">
-          <i data-lucide="user-cog"></i>
-          <span>Centralized operations leadership</span>
-        </div>
-        <div class="fit-item" data-aos="fade-up" data-aos-delay="100">
-          <i data-lucide="search"></i>
-          <span>Know demand is being missed but lack visibility into how much</span>
-        </div>
-        <div class="fit-item" data-aos="fade-up" data-aos-delay="150">
-          <i data-lucide="zap"></i>
-          <span>Want a simple, managed solution without a large IT project</span>
-        </div>
-      </div>
-    </div>
-  </section>
+</main>
 
-  <!-- Final CTA -->
-  <section class="final-cta" id="contact">
-    <div class="container">
-      <div class="final-cta-inner" data-aos="fade-up">
-        <span class="section-label">Get Started</span>
-        <h2>Ready to turn more calls into booked jobs?</h2>
-        <p>Let's look at where opportunities may be slipping through, what your current call flow looks like, and whether a 90-day pilot makes sense.</p>
-        <div class="hero-ctas">
-          <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener" class="btn-primary">
-            Book a Strategy Call
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="#pilot" class="btn-secondary">Talk About a Pilot</a>
-        </div>
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Front Desk by Poppy">
+          <span class="logo-front">front</span><span class="logo-desk">desk</span><span class="logo-byline">by Poppy Marketing</span>
+        </a>
+        <p>A managed AI receptionist for small businesses. We answer the calls so you can run the work. Built by Poppy Marketing &amp; Consulting LLC in Katy, Texas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#signup">Get a demo</a></li>
+          <li><a href="mailto:frontdesk@poppymarketingandconsulting.com">frontdesk@poppymarketingandconsulting.com</a></li>
+          <li><a href="mailto:support@poppymarketingandconsulting.com">support@poppymarketingandconsulting.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="mailto:privacy@poppymarketingandconsulting.com">privacy@poppymarketingandconsulting.com</a></li>
+          <li><a href="mailto:legal@poppymarketingandconsulting.com">legal@poppymarketingandconsulting.com</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-brand">Poppy <span>Front Desk</span></div>
-      <p>A product of Poppy Marketing & Consulting</p>
-      <p>Ricardo Gattas-Moras</p>
-      <p><a href="mailto:ricardo@poppymarketingandconsulting.com">ricardo@poppymarketingandconsulting.com</a></p>
-      <p><a href="tel:+19417774933">(941) 777-4933</a></p>
-      <div class="footer-links">
-        <a href="https://www.poppymarketingandconsulting.com" rel="noopener">Poppy Marketing</a>
-        <a href="https://www.poppymarketingandconsulting.com/booking-calendar/free-strategy-session" rel="noopener">Book a Call</a>
-        <a href="/privacy.html">Privacy Policy</a>
-      </div>
+    <div class="footer-bottom">
+      <span>© 2026 Poppy Marketing &amp; Consulting LLC · 23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493</span>
+      <span>A managed service. Voice + SMS by Twilio. Billing by Stripe.</span>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Back to Top -->
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+<!-- ======================================================
+     SCRIPTS
+====================================================== -->
+<script src="https://unpkg.com/lucide@latest" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Lucide icons
+  if (window.lucide) lucide.createIcons();
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script defer src="https://unpkg.com/lucide@0.460.0"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  <script>
-    // AOS
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60,
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 12) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.classList.toggle('open');
+    navLinks.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }));
+
+  // Hero background is now CSS-driven (Option A: animated mesh gradient with floating blobs).
+  // Aurora element with 6 .blob children handles the visual; no canvas/JS needed.
+
+  // Proof section - TRUNK-style concentric distorted rings, 50% opacity
+  const proofCanvas = document.getElementById('proof-trunk');
+  const proofEl = document.getElementById('proof');
+  if (proofCanvas && proofEl && !reduceMotion) {
+    const pctx = proofCanvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let pW = 0, pH = 0;
+
+    const resize = () => {
+      pW = proofCanvas.clientWidth;
+      pH = proofCanvas.clientHeight;
+      proofCanvas.width = Math.floor(pW * dpr);
+      proofCanvas.height = Math.floor(pH * dpr);
+      pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    const VERTS = 90;
+
+    let pVisible = false, pT = 0;
+    const ptick = () => {
+      requestAnimationFrame(ptick);
+      if (!pVisible) return;
+      pT += 1;
+      const time = pT * 0.006;
+
+      pctx.clearRect(0, 0, pW, pH);
+
+      const cx = pW / 2;
+      const cy = pH / 2;
+      // Cover the full section regardless of aspect (wide desktop or tall mobile)
+      const maxR = Math.hypot(pW, pH) * 0.6;
+      const minR = 24;
+      const NUM_RINGS = Math.max(38, Math.round(maxR / 16));
+      const step = (maxR - minR) / NUM_RINGS;
+
+      for (let i = 0; i < NUM_RINGS; i++) {
+        const baseR = minR + i * step;
+        pctx.beginPath();
+        for (let v = 0; v <= VERTS; v++) {
+          const a = (v / VERTS) * Math.PI * 2;
+          // Layered sine distortion, ring-index-phased so rings ripple in sequence
+          const noise =
+            Math.sin(a * 3 + time + i * 0.28) * (8 + i * 0.12) +
+            Math.sin(a * 5 - time * 1.4 + i * 0.18) * 5 +
+            Math.sin(a * 2 + time * 0.7) * 3;
+          const r = baseR + noise;
+          const x = cx + Math.cos(a) * r;
+          const y = cy + Math.sin(a) * r;
+          if (v === 0) pctx.moveTo(x, y);
+          else pctx.lineTo(x, y);
+        }
+        // Ring opacity varies subtly so it reads as layered
+        const op = 0.18 + (i / NUM_RINGS) * 0.22;
+        pctx.strokeStyle = `rgba(107, 92, 255, ${op})`;
+        pctx.lineWidth = 1;
+        pctx.stroke();
+      }
+    };
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        pVisible = entries[0].isIntersecting;
+        if (pVisible && pT === 0) requestAnimationFrame(ptick);
+      }, { threshold: 0 }).observe(proofEl);
+    } else {
+      pVisible = true;
+      requestAnimationFrame(ptick);
+    }
+  }
+
+  // Hero card 3D tilt
+  const heroCard = document.querySelector('.hero-card');
+  if (heroCard && !reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    heroCard.addEventListener('mousemove', (e) => {
+      const rect = heroCard.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / (rect.width / 2);
+      const dy = (e.clientY - cy) / (rect.height / 2);
+      heroCard.style.transform = `perspective(900px) rotateY(${dx * 6}deg) rotateX(${-dy * 5}deg) translateY(-4px)`;
     });
-
-    // Lucide Icons
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof lucide !== 'undefined') lucide.createIcons();
+    heroCard.addEventListener('mouseleave', () => {
+      heroCard.style.transform = '';
     });
+  }
 
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      document.getElementById('scroll-progress').style.width = progress + '%';
+  // Magnetic buttons (desktop only)
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
+    document.querySelectorAll('.btn-magnetic').forEach(btn => {
+      const strength = 0.22;
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * strength;
+        const y = (e.clientY - rect.top - rect.height / 2) * strength;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
     });
+  }
 
-    // Nav scroll effect
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
+  // Spotlight bento card mouse-tracking
+  document.querySelectorAll('.bento-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
     });
+  });
 
-    // Nav toggle (mobile)
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-
-    // Close mobile nav on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Back to top
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 600);
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Nav active state
-    const sections = document.querySelectorAll('section[id]');
-    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
-    const observerOptions = { rootMargin: '-30% 0px -70% 0px' };
-    const observer = new IntersectionObserver((entries) => {
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          navAnchors.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
-          if (active) active.classList.add('active');
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
 
-    sections.forEach(section => observer.observe(section));
-
-    // GA4 event tracking
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        const href = link.getAttribute('href') || '';
-        const text = link.textContent.trim();
-
-        // Book a Strategy Call clicks
-        if (href.includes('booking-calendar') && text.includes('Strategy')) {
-          gtag('event', 'book_strategy_call_click', { link_text: text, link_url: href });
-        }
-
-        // Talk About a Pilot clicks
-        if (text.includes('Pilot')) {
-          gtag('event', 'talk_about_pilot_click', { link_text: text, link_url: href });
-        }
-
-        // Demo number clicks
-        if (href.startsWith('tel:')) {
-          gtag('event', 'demo_number_click', { phone_number: href.replace('tel:', '') });
-        }
-
-        // Email clicks
-        if (href.startsWith('mailto:')) {
-          gtag('event', 'email_click', { email: href.replace('mailto:', '') });
-        }
-
-        // Outbound clicks to Poppy Marketing
-        if (href.includes('poppymarketingandconsulting.com') && !href.includes('booking-calendar')) {
-          gtag('event', 'outbound_click', { link_text: text, link_url: href });
-        }
-      });
-    });
-
-    // Vanta.js DOTS on demo section (interactive, energetic)
-    if (typeof VANTA !== 'undefined') {
-      VANTA.DOTS({
-        el: '#demo',
-        mouseControls: false,
-        touchControls: false,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x6B5CFF,
-        color2: 0x3a2d7a,
-        backgroundColor: 0x1F1F1F,
-        size: 2.0,
-        spacing: 28,
-        showLines: false,
-      });
-
-      // Vanta.js NET on belief section (subtle, connected)
-      VANTA.NET({
-        el: '#belief',
-        mouseControls: false,
-        touchControls: false,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x4a3a8a,
-        backgroundColor: 0x1F1F1F,
-        points: 6,
-        maxDistance: 22,
-        spacing: 18,
-      });
-    }
-
-    // Animated counters
-    const counters = document.querySelectorAll('.counter');
-    let countersStarted = false;
-
-    const counterObserver = new IntersectionObserver((entries) => {
+  // Counter up
+  const counters = document.querySelectorAll('[data-count-to]');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const cIo = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !countersStarted) {
-          countersStarted = true;
-          counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 1200;
-            const startTime = performance.now();
-
-            function update(currentTime) {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const eased = 1 - Math.pow(1 - progress, 3);
-              counter.textContent = Math.round(target * eased);
-              if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-          });
-        }
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-count-to'), 10);
+        const dur = 1400;
+        const start = performance.now();
+        const animate = (now) => {
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.round(eased * target);
+          if (t < 1) requestAnimationFrame(animate);
+          else el.textContent = target;
+        };
+        requestAnimationFrame(animate);
+        cIo.unobserve(el);
       });
     }, { threshold: 0.5 });
+    counters.forEach(el => cIo.observe(el));
+  } else {
+    counters.forEach(el => { el.textContent = el.getAttribute('data-count-to'); });
+  }
 
-    const statEl = document.querySelector('.problem-stat');
-    if (statEl) counterObserver.observe(statEl);
-  </script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  // Sample-call EN/ES toggle (visual only, audio not wired yet)
+  document.querySelectorAll('.proof-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.closest('.proof-toggle');
+      parent.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Compare table toggle
+  const compareToggle = document.getElementById('compare-toggle');
+  const compareTable = document.getElementById('compare-table');
+  if (compareToggle && compareTable) {
+    compareToggle.addEventListener('click', () => {
+      const open = compareTable.classList.toggle('open');
+      compareToggle.classList.toggle('open', open);
+      compareToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) compareTable.removeAttribute('hidden'); else compareTable.setAttribute('hidden', '');
+    });
+  }
+
+  // Form validation + success
+  const form = document.getElementById('signup-form');
+  const success = document.getElementById('signup-success');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      ['business', 'phone', 'email'].forEach(name => {
+        const input = form.querySelector(`#${name}`);
+        const wrap = input.closest('.field');
+        wrap.classList.remove('invalid', 'shake');
+        if (!input.checkValidity()) {
+          wrap.classList.add('invalid');
+          requestAnimationFrame(() => wrap.classList.add('shake'));
+          valid = false;
+        }
+      });
+      const consent = form.querySelector('#sms-consent');
+      if (!consent.checked) { valid = false; consent.parentElement.style.color = '#d64545'; }
+      else { consent.parentElement.style.color = ''; }
+      if (!valid) return;
+      // For now, just show success state. Wire to backend later.
+      form.style.display = 'none';
+      success.classList.add('show');
+    });
+  }
+
+  // YW reseller variant via ?ref=yw
+  if (new URLSearchParams(window.location.search).get('ref') === 'yw') {
+    const trustEyebrow = document.querySelector('.trust-eyebrow');
+    if (trustEyebrow) trustEyebrow.textContent = 'Available through';
+    const trustGrid = document.querySelector('.trust-grid');
+    if (trustGrid && !document.querySelector('[data-yw-injected]')) {
+      const ywBadge = document.createElement('span');
+      ywBadge.className = 'trust-logo';
+      ywBadge.setAttribute('data-yw-injected', 'true');
+      ywBadge.innerHTML = 'Your Wireless<small>Authorized partner</small>';
+      trustGrid.insertBefore(ywBadge, trustGrid.children[1]);
+    }
+  }
+});
+</script>
 
 </body>
 </html>

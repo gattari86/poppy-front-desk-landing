@@ -1,9 +1,23 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/signup", "destination": "/", "permanent": true },
+    { "source": "/terms", "destination": "/legal/customer-subscription-agreement", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/account/portal-return", "destination": "/account/portal-return.html" }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
     {
       "source": "/account/(.*)",
       "headers": [
