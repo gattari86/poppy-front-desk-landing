@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Thank you, Front Desk by Poppy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F6F4EF;
+      --bg-alt: #EFECE5;
+      --text: #1F1F1F;
+      --text-muted: #5A5A5A;
+      --accent: #6B5CFF;
+      --accent-soft: #E8E3F3;
+      --border: rgba(31, 31, 31, 0.08);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --font-display: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --max-width: 640px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 80px 24px 40px;
+      flex: 1;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 48px;
+    }
+    .brand .accent { color: var(--accent); }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(28px, 5vw, 40px);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .lede {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+    .card h2 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .card p { margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    ol { padding-left: 22px; }
+    ol li { margin-bottom: 10px; }
+    ol li:last-child { margin-bottom: 0; }
+    .reference-block {
+      background: var(--bg-alt);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+    .reference-block strong { color: var(--text); font-family: ui-monospace, 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
+    .support-line {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 32px;
+    }
+    .support-line a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .support-line a:hover { text-decoration: underline; }
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      opacity: 0.7;
+    }
+    @media (max-width: 480px) {
+      main { padding: 48px 20px 24px; }
+      .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand"><span>front</span><span>desk</span> <span class="accent">by Poppy</span></div>
+
+    <h1>Thank you, your payment was received.</h1>
+    <p class="lede">Watch your email. We will be in touch within one business day.</p>
+
+    <div class="card">
+      <h2>What happens next</h2>
+      <ol>
+        <li>Poppy reviews your intake. Basic customers receive setup details within 5 business days. Pro customers receive a kickoff scheduling note within 1 business day.</li>
+        <li>You receive a confirmation email with your new business line and how owner alerts will reach you.</li>
+        <li>You go live. We notify you when Front Desk is answering your calls.</li>
+      </ol>
+      <div class="reference-block" id="reference-block" style="display:none;">
+        Reference: <strong id="session-ref"></strong>
+      </div>
+    </div>
+
+    <p class="support-line">
+      Questions, billing, anything we should know? Email
+      <a href="mailto:support@poppymarketingandconsulting.com">support@poppymarketingandconsulting.com</a>.
+    </p>
+  </main>
+
+  <footer>
+    Front Desk by Poppy Marketing &amp; Consulting LLC.
+  </footer>
+
+  <script>
+    (function () {
+      // Read session_id from query string. Display last 6 characters only.
+      // No API calls, no full session ID displayed, no customer data fetched.
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var sid = params.get('session_id');
+        if (sid && sid.length >= 6) {
+          var tail = sid.slice(-6);
+          var refEl = document.getElementById('session-ref');
+          var blockEl = document.getElementById('reference-block');
+          if (refEl && blockEl) {
+            refEl.textContent = tail;
+            blockEl.style.display = 'block';
+          }
+        }
+      } catch (e) {
+        // Silent on error. Reference is optional; page works without it.
+      }
+    })();
+  </script>
+</body>
+</html>
