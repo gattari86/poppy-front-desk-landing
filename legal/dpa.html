@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Processing Addendum — Front Desk by Poppy</title>
+  <meta name="description" content="Data Processing Addendum for the Front Desk by Poppy service.">
+  <link rel="canonical" href="https://frontdesk.poppymarketingandconsulting.com/legal/dpa">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F6F4EF;
+      --bg-alt: #EFECE5;
+      --text: #1F1F1F;
+      --text-muted: #5A5A5A;
+      --text-meta: #6B6B6B;
+      --accent: #6B5CFF;
+      --accent-hover: #5A3DE8;
+      --white: #FFFFFF;
+      --border: rgba(31, 31, 31, 0.08);
+      --shadow-sm: 0 2px 12px rgba(31, 31, 31, 0.04);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --font-display: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --max-width: 880px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.3; color: var(--text); }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(246, 244, 239, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .nav-logo span { color: var(--accent); }
+    .nav-logo:hover { color: var(--text); text-decoration: none; }
+
+    .nav-back {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back:hover { color: var(--accent); text-decoration: none; }
+
+    .legal-wrapper {
+      padding-top: 96px;
+      padding-bottom: 80px;
+    }
+
+    .legal-title {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .metadata-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 0.92rem;
+    }
+
+    .metadata-block dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 8px 16px;
+    }
+
+    .metadata-block dt {
+      font-weight: 600;
+      color: var(--text-meta);
+    }
+
+    .metadata-block dd { color: var(--text); word-break: break-word; }
+
+    .legal-body h2 {
+      font-size: 1.3rem;
+      margin-top: 40px;
+      margin-bottom: 14px;
+    }
+
+    .legal-body h3 {
+      font-size: 1.08rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .legal-body h4 {
+      font-size: 1rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .legal-body p,
+    .legal-body ul,
+    .legal-body ol {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .legal-body ul,
+    .legal-body ol { padding-left: 24px; }
+
+    .legal-body li { margin-bottom: 6px; }
+
+    .legal-body strong { color: var(--text); font-weight: 600; }
+
+    .legal-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 8px 16px;
+      margin: 16px 0;
+      color: var(--text);
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+    }
+
+    .legal-body blockquote p { margin-bottom: 0; }
+
+    .legal-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.94rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .legal-body th,
+    .legal-body td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .legal-body th {
+      background: var(--bg-alt);
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-meta);
+    }
+
+    .legal-body tr:last-child td { border-bottom: none; }
+
+    .legal-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .legal-body code {
+      background: var(--bg-alt);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.92em;
+    }
+
+    footer {
+      padding: 48px 0;
+      background: var(--text);
+      color: rgba(246, 244, 239, 0.6);
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: rgba(246, 244, 239, 0.9);
+      margin-bottom: 12px;
+    }
+
+    footer .footer-brand span { color: var(--accent); }
+
+    footer p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    footer a {
+      color: rgba(246, 244, 239, 0.85);
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: #FFFFFF; text-decoration: none; }
+
+    footer .footer-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(246, 244, 239, 0.55);
+      padding: 12px 4px;
+    }
+
+    footer .footer-links a:hover { color: #FFFFFF; }
+
+    @media (max-width: 640px) {
+      .footer-links { flex-direction: column; gap: 8px; }
+      .metadata-block dl { grid-template-columns: 1fr; }
+      .metadata-block dd { margin-bottom: 8px; }
+    }
+
+    @media print {
+      nav, footer { display: none; }
+      body { background: white; }
+      .legal-wrapper { padding-top: 0; }
+      .metadata-block { break-inside: avoid; }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Poppy <span>Front Desk</span></a>
+      <a href="/" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </nav>
+
+  <div class="legal-wrapper">
+    <div class="container">
+      <h1 class="legal-title">Data Processing Addendum — Front Desk by Poppy</h1>
+
+      <div class="metadata-block">
+        <dl>
+          <dt>Title</dt><dd>Data Processing Addendum</dd>
+          <dt>Version</dt><dd>v3_LAUNCH_2026-05-12</dd>
+          <dt>Effective Date</dt><dd>2026-05-12</dd>
+          <dt>Last Updated</dt><dd>2026-05-12</dd>
+          <dt>Provider</dt><dd>Poppy Marketing &amp; Consulting LLC</dd>
+          <dt>Provider Address</dt><dd>23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493</dd>
+          <dt>Contact</dt><dd><a href="mailto:privacy@poppymarketingandconsulting.com">privacy@poppymarketingandconsulting.com</a></dd>
+          <dt>Document URL</dt><dd><a href="https://frontdesk.poppymarketingandconsulting.com/legal/dpa">https://frontdesk.poppymarketingandconsulting.com/legal/dpa</a></dd>
+        </dl>
+      </div>
+
+      <div class="legal-body">
+<p>This Data Processing Addendum (“DPA”) is incorporated into and forms part of the Customer Subscription Agreement (“Agreement”) between Poppy Marketing &amp; Consulting LLC (“Poppy”, “Service Provider”, “Processor”) and the customer that has agreed to the Agreement (“Customer”, “Business”, “Controller”). This DPA governs Poppy’s processing of Personal Information on Customer’s behalf in connection with the Front Desk by Poppy service (“Service”).</p>
+<p>In the event of a conflict between this DPA and the Agreement, this DPA controls with respect to the processing of Personal Information.</p>
+<hr />
+<h2 id="definitions">1. Definitions</h2>
+<p>Capitalized terms not defined here have the meanings given in the Agreement or in the applicable privacy law.</p>
+<ul>
+<li><strong>“Applicable Privacy Law”</strong> means the California Consumer Privacy Act (“CCPA”) as amended by the California Privacy Rights Act (“CPRA”), the Texas Data Privacy and Security Act (“TDPSA”), and any other US state or federal law applicable to the processing of Personal Information under the Agreement.</li>
+<li><strong>“Personal Information”</strong> means information that identifies, relates to, describes, or is reasonably linkable to an identified or identifiable individual, processed by Poppy on Customer’s behalf.</li>
+<li><strong>“Processing”</strong> has the meaning given in Applicable Privacy Law.</li>
+<li><strong>“Caller”</strong> means an individual who calls a phone number Customer has provisioned through the Service.</li>
+<li><strong>“Caller Personal Information”</strong> means Personal Information about a Caller, processed by Poppy on Customer’s behalf.</li>
+<li><strong>“Subprocessor”</strong> means a third party engaged by Poppy to process Personal Information on Customer’s behalf.</li>
+<li><strong>“Security Incident”</strong> means a confirmed breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to Personal Information processed by Poppy on Customer’s behalf.</li>
+</ul>
+<hr />
+<h2 id="roles-and-scope">2. Roles and scope</h2>
+<h3 id="roles">2.1 Roles</h3>
+<p>For the purposes of Applicable Privacy Law: - Customer is the <strong>Business</strong> under CCPA / CPRA and the <strong>Controller</strong> under TDPSA with respect to Caller Personal Information. - Poppy is the <strong>Service Provider</strong> under CCPA / CPRA and the <strong>Processor</strong> under TDPSA with respect to Caller Personal Information processed under the Agreement.</p>
+<h3 id="scope-of-processing">2.2 Scope of processing</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subject matter</td>
+<td>Operation of the Front Desk service: AI receptionist call handling, lead capture, transactional SMS notifications, appointment booking</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>The term of the Agreement, plus the data retention periods set out in the Privacy Policy and in Section 8 of this DPA</td>
+</tr>
+<tr>
+<td>Nature and purpose</td>
+<td>Receiving, processing, transcribing, summarizing, and routing inbound business calls; sending notifications to Customer; sending transactional SMS messages on Customer’s behalf (Pro tier); integrating with Customer’s calendar and CRM systems</td>
+</tr>
+<tr>
+<td>Categories of Caller Personal Information</td>
+<td>Caller phone number, voice recording, call transcript, call summary, name (if provided), service request details, callback time preference, callback number, and other information voluntarily provided by the Caller during the call</td>
+</tr>
+<tr>
+<td>Categories of data subjects</td>
+<td>Callers to Customer’s business; Customer’s account users</td>
+</tr>
+<tr>
+<td>Special categories</td>
+<td>None expected. Customer represents and warrants that it will not direct Callers to provide, and will not configure the Service to elicit, sensitive personal information (financial account numbers, health information, government identifiers)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer-instructions">2.3 Customer instructions</h3>
+<p>Poppy will process Personal Information only on documented instructions from Customer, which include the Agreement, this DPA, and any further written instructions Customer provides through the Service interface or in writing to Poppy. If Poppy reasonably believes any instruction violates Applicable Privacy Law, Poppy will notify Customer and the parties will discuss in good faith.</p>
+<hr />
+<h2 id="service-provider-processor-obligations">3. Service Provider / Processor obligations</h2>
+<p>Poppy commits, with respect to Personal Information processed under the Agreement, to:</p>
+<ol type="1">
+<li><strong>Purpose limitation.</strong> Process Personal Information only for the purposes set out in Section 2.2 (the “Business Purpose”), and not for any other purpose, including not for Poppy’s own commercial purposes.</li>
+<li><strong>No sale or sharing.</strong> Not sell or share (as defined under CCPA / CPRA) Personal Information.</li>
+<li><strong>No combination.</strong> Not combine Personal Information processed on Customer’s behalf with Personal Information Poppy receives from or on behalf of any other person, or that Poppy collects from its own interactions with the data subject, except as permitted by CCPA Regulations Section 7050(b).</li>
+<li><strong>Confidentiality.</strong> Ensure that Poppy personnel authorized to process Personal Information are bound by confidentiality obligations.</li>
+<li><strong>Security.</strong> Implement and maintain reasonable security procedures and practices appropriate to the nature of the Personal Information, consistent with the safeguards described in Section 7 of the Privacy Policy.</li>
+<li><strong>Cooperation.</strong> Provide reasonable assistance to Customer in fulfilling Customer’s obligations under Applicable Privacy Law, including assisting with data subject requests (Section 5 of this DPA) and Security Incident notifications (Section 6).</li>
+<li><strong>Compliance certification.</strong> Promptly notify Customer if Poppy determines it can no longer meet its obligations under Applicable Privacy Law.</li>
+<li><strong>Right to take steps.</strong> Customer has the right, upon reasonable notice, to take reasonable and appropriate steps to (a) ensure Poppy uses Personal Information consistent with Customer’s obligations under Applicable Privacy Law, and (b) stop and remediate any unauthorized use of Personal Information.</li>
+</ol>
+<hr />
+<h2 id="subprocessors">4. Subprocessors</h2>
+<h3 id="authorization">4.1 Authorization</h3>
+<p>Customer authorizes Poppy to engage Subprocessors to process Personal Information, subject to the requirements of this Section 4.</p>
+<h3 id="subprocessor-list">4.2 Subprocessor list</h3>
+<p>The current list of Subprocessors is maintained at https://frontdesk.poppymarketingandconsulting.com/legal/subprocessors. The list identifies each Subprocessor, the Subprocessor’s location, and the categories of processing activities performed.</p>
+<h3 id="notice-of-changes">4.3 Notice of changes</h3>
+<p>Poppy will provide at least thirty (30) days’ written notice (by email and by updating the Subprocessors page) before adding a new Subprocessor or replacing an existing Subprocessor that processes Personal Information.</p>
+<h3 id="customer-objection-right">4.4 Customer objection right</h3>
+<p>Customer may object to a new or replacement Subprocessor by emailing privacy@poppymarketingandconsulting.com within the 30-day notice window, with a reasonable basis for the objection. The parties will work in good faith to resolve the objection. If the objection cannot be reasonably resolved, Customer may terminate the affected portion of the Service without penalty by providing written notice within fifteen (15) days after the conclusion of the good-faith resolution period.</p>
+<h3 id="subprocessor-obligations">4.5 Subprocessor obligations</h3>
+<p>Poppy will impose on each Subprocessor data protection obligations no less protective than those in this DPA, by written contract. Poppy remains liable to Customer for the performance of each Subprocessor.</p>
+<hr />
+<h2 id="data-subject-requests">5. Data subject requests</h2>
+<h3 id="caller-initiated-requests-received-by-poppy">5.1 Caller-initiated requests received by Poppy</h3>
+<p>If Poppy receives a privacy request directly from a Caller (for example, an SMS reply from a Caller asking to delete their information), Poppy will (a) acknowledge receipt to the Caller, (b) inform the Caller that Customer is the Business / Controller and that the request will be forwarded, (c) forward the request to Customer within five (5) business days, and (d) await Customer’s instruction before taking action.</p>
+<h3 id="customer-initiated-requests-received-by-customer">5.2 Customer-initiated requests received by Customer</h3>
+<p>If Customer receives a privacy request from a Caller, Customer will respond to the Caller and may request Poppy’s assistance. Poppy will provide reasonable assistance within thirty (30) days of Customer’s written request, including by providing Customer with the Caller’s records held by Poppy, deleting records on Customer’s instruction, or correcting records on Customer’s instruction.</p>
+<h3 id="records">5.3 Records</h3>
+<p>Poppy will maintain records of all data subject request actions taken on Customer’s instruction.</p>
+<hr />
+<h2 id="security-incident-notification">6. Security Incident notification</h2>
+<h3 id="notification-timing">6.1 Notification timing</h3>
+<p>If Poppy becomes aware of a Security Incident affecting Personal Information processed on Customer’s behalf, Poppy will notify Customer without undue delay and in any event within seventy-two (72) hours of confirmation. The notification will be sent by email to the privacy contact on file for Customer.</p>
+<h3 id="notification-content">6.2 Notification content</h3>
+<p>The notification will describe (to the extent then known): (a) the nature of the Security Incident, (b) the categories and approximate volume of Personal Information records involved, (c) the likely consequences, (d) the measures Poppy has taken or proposes to take to address the Security Incident, and (e) a point of contact for further information.</p>
+<h3 id="cooperation">6.3 Cooperation</h3>
+<p>Poppy will cooperate with Customer’s reasonable requests for information about the Security Incident and will assist Customer in fulfilling any notification obligations Customer owes to Callers or to regulators. Poppy will not make any public statement about a Security Incident without Customer’s prior consent (not to be unreasonably withheld), except as required by law.</p>
+<h3 id="mitigation">6.4 Mitigation</h3>
+<p>Poppy will take prompt and reasonable measures to mitigate the effects of any Security Incident and to prevent recurrence.</p>
+<h3 id="no-admission-of-liability">6.5 No admission of liability</h3>
+<p>A notification or response under this Section 6 is not an admission of fault or liability by Poppy.</p>
+<hr />
+<h2 id="audit-rights">7. Audit rights</h2>
+<h3 id="documentation">7.1 Documentation</h3>
+<p>Customer may request, no more than once per calendar year, a copy of Poppy’s then-current SOC 2 Type II report (when available), security overview, or other reasonable documentation evidencing Poppy’s compliance with this DPA.</p>
+<h3 id="on-site-audits">7.2 On-site audits</h3>
+<p>Customer’s right to audit on-site is limited to: (a) cause-based audits triggered by a Security Incident affecting Customer’s data, or (b) audits required by Applicable Privacy Law or by Customer’s regulators. On-site audits will be conducted (i) on at least thirty (30) days’ written notice, (ii) during normal business hours, (iii) by a mutually agreed independent auditor bound by confidentiality, (iv) at Customer’s expense (unless the audit reveals a material breach by Poppy, in which case Poppy bears the reasonable cost), and (v) in a manner that does not unreasonably disrupt Poppy’s operations or compromise the data of other customers.</p>
+<h3 id="subprocessor-audits">7.3 Subprocessor audits</h3>
+<p>Customer’s audit rights with respect to Subprocessors are exercised through Poppy’s contractual rights with the Subprocessor, not directly against the Subprocessor.</p>
+<hr />
+<h2 id="data-retention-return-and-deletion">8. Data retention, return, and deletion</h2>
+<h3 id="retention">8.1 Retention</h3>
+<p>Call recordings, transcripts, summaries, call metadata, and caller contact details are retained while the subscription is active and for up to thirty (30) days after service access ends, unless a longer period is required by law, needed for security, billing, dispute, or legal purposes, or requested by Customer in writing. Customer may request export or earlier deletion during the applicable retention period, subject to legal, security, billing, and operational limitations.</p>
+<h3 id="at-service-access-ends">8.2 At service access ends</h3>
+<p>On termination or expiration of the Agreement, Poppy will, at Customer’s choice (made within thirty (30) days after service access ends), either return all Personal Information to Customer in a commonly used machine-readable format, or delete the Personal Information. If Customer does not make a selection within thirty (30) days, Poppy will delete the Personal Information.</p>
+<h3 id="retention-exceptions">8.3 Retention exceptions</h3>
+<p>Notwithstanding Sections 8.1 and 8.2, Poppy may retain Personal Information where retention is required by law (for example, billing records subject to tax audit requirements), needed for security, billing, dispute, or legal purposes, or where Personal Information is held in routine backup systems pending scheduled deletion.</p>
+<h3 id="subprocessor-data">8.4 Subprocessor data</h3>
+<p>Poppy will instruct each Subprocessor to return or delete Personal Information consistent with this Section 8.</p>
+<hr />
+<h2 id="international-transfers">9. International transfers</h2>
+<p>The Service is provided from the United States. As of the Effective Date, Poppy does not knowingly process Personal Information of individuals located outside the United States in connection with the Service. If Customer’s use of the Service results in the processing of Personal Information of individuals located outside the United States, the parties will negotiate in good faith to add applicable cross-border transfer mechanisms (such as Standard Contractual Clauses) to this DPA.</p>
+<hr />
+<h2 id="term-and-termination">10. Term and termination</h2>
+<h3 id="term">10.1 Term</h3>
+<p>This DPA is effective as of the Effective Date and remains in effect for the term of the Agreement.</p>
+<h3 id="survival">10.2 Survival</h3>
+<p>Sections 6 (Security Incident notification, with respect to Security Incidents discovered during the term), 7 (Audit rights, for one year following termination), 8 (Data retention, return, and deletion), and any other provisions that by their nature should survive, will survive termination of the Agreement.</p>
+<hr />
+<h2 id="general">11. General</h2>
+<h3 id="order-of-precedence">11.1 Order of precedence</h3>
+<p>In the event of a conflict between this DPA and the Agreement, this DPA controls with respect to the processing of Personal Information.</p>
+<h3 id="no-third-party-beneficiaries">11.2 No third-party beneficiaries</h3>
+<p>This DPA does not create any third-party beneficiary rights, including for Callers. Callers’ rights are addressed through the Privacy Policy and Applicable Privacy Law.</p>
+<h3 id="liability">11.3 Liability</h3>
+<p>Each party’s liability under this DPA is subject to the limitations of liability set out in the Agreement.</p>
+<h3 id="governing-law">11.4 Governing law</h3>
+<p>This DPA is governed by the laws of the State of Texas, consistent with the Agreement.</p>
+<h3 id="notices">11.5 Notices</h3>
+<p>Notices to Poppy under this DPA: privacy@poppymarketingandconsulting.com, or by mail to Poppy Marketing &amp; Consulting LLC, 23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-brand">Poppy <span>Front Desk</span></div>
+      <p>A product of Poppy Marketing &amp; Consulting LLC</p>
+      <p>23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493</p>
+      <p><a href="mailto:support@poppymarketingandconsulting.com">support@poppymarketingandconsulting.com</a></p>
+      <div class="footer-links">
+        <a href="/legal/customer-subscription-agreement">Customer Subscription Agreement</a>
+        <a href="/legal/privacy">Privacy Policy</a>
+        <a href="/legal/dpa">Data Processing Addendum</a>
+        <a href="/legal/subprocessors">Subprocessors</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

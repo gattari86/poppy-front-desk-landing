@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Subscription Agreement — Front Desk by Poppy</title>
+  <meta name="description" content="Customer Subscription Agreement for the Front Desk by Poppy service.">
+  <link rel="canonical" href="https://frontdesk.poppymarketingandconsulting.com/legal/customer-subscription-agreement">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F6F4EF;
+      --bg-alt: #EFECE5;
+      --text: #1F1F1F;
+      --text-muted: #5A5A5A;
+      --text-meta: #6B6B6B;
+      --accent: #6B5CFF;
+      --accent-hover: #5A3DE8;
+      --white: #FFFFFF;
+      --border: rgba(31, 31, 31, 0.08);
+      --shadow-sm: 0 2px 12px rgba(31, 31, 31, 0.04);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --font-display: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --max-width: 880px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.3; color: var(--text); }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(246, 244, 239, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .nav-logo span { color: var(--accent); }
+    .nav-logo:hover { color: var(--text); text-decoration: none; }
+
+    .nav-back {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back:hover { color: var(--accent); text-decoration: none; }
+
+    .legal-wrapper {
+      padding-top: 96px;
+      padding-bottom: 80px;
+    }
+
+    .legal-title {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .metadata-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 0.92rem;
+    }
+
+    .metadata-block dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 8px 16px;
+    }
+
+    .metadata-block dt {
+      font-weight: 600;
+      color: var(--text-meta);
+    }
+
+    .metadata-block dd { color: var(--text); word-break: break-word; }
+
+    .legal-body h2 {
+      font-size: 1.3rem;
+      margin-top: 40px;
+      margin-bottom: 14px;
+    }
+
+    .legal-body h3 {
+      font-size: 1.08rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .legal-body h4 {
+      font-size: 1rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .legal-body p,
+    .legal-body ul,
+    .legal-body ol {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .legal-body ul,
+    .legal-body ol { padding-left: 24px; }
+
+    .legal-body li { margin-bottom: 6px; }
+
+    .legal-body strong { color: var(--text); font-weight: 600; }
+
+    .legal-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 8px 16px;
+      margin: 16px 0;
+      color: var(--text);
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+    }
+
+    .legal-body blockquote p { margin-bottom: 0; }
+
+    .legal-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.94rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .legal-body th,
+    .legal-body td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .legal-body th {
+      background: var(--bg-alt);
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-meta);
+    }
+
+    .legal-body tr:last-child td { border-bottom: none; }
+
+    .legal-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .legal-body code {
+      background: var(--bg-alt);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.92em;
+    }
+
+    footer {
+      padding: 48px 0;
+      background: var(--text);
+      color: rgba(246, 244, 239, 0.6);
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: rgba(246, 244, 239, 0.9);
+      margin-bottom: 12px;
+    }
+
+    footer .footer-brand span { color: var(--accent); }
+
+    footer p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    footer a {
+      color: rgba(246, 244, 239, 0.85);
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: #FFFFFF; text-decoration: none; }
+
+    footer .footer-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(246, 244, 239, 0.55);
+      padding: 12px 4px;
+    }
+
+    footer .footer-links a:hover { color: #FFFFFF; }
+
+    @media (max-width: 640px) {
+      .footer-links { flex-direction: column; gap: 8px; }
+      .metadata-block dl { grid-template-columns: 1fr; }
+      .metadata-block dd { margin-bottom: 8px; }
+    }
+
+    @media print {
+      nav, footer { display: none; }
+      body { background: white; }
+      .legal-wrapper { padding-top: 0; }
+      .metadata-block { break-inside: avoid; }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Poppy <span>Front Desk</span></a>
+      <a href="/" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </nav>
+
+  <div class="legal-wrapper">
+    <div class="container">
+      <h1 class="legal-title">Customer Subscription Agreement — Front Desk by Poppy</h1>
+
+      <div class="metadata-block">
+        <dl>
+          <dt>Title</dt><dd>Customer Subscription Agreement</dd>
+          <dt>Version</dt><dd>v3.3_LAUNCH_2026-05-12</dd>
+          <dt>Effective Date</dt><dd>2026-05-12</dd>
+          <dt>Last Updated</dt><dd>2026-05-12</dd>
+          <dt>Provider</dt><dd>Poppy Marketing &amp; Consulting LLC</dd>
+          <dt>Provider Address</dt><dd>23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493</dd>
+          <dt>Contact</dt><dd><a href="mailto:support@poppymarketingandconsulting.com">support@poppymarketingandconsulting.com</a></dd>
+          <dt>Document URL</dt><dd><a href="https://frontdesk.poppymarketingandconsulting.com/legal/customer-subscription-agreement">https://frontdesk.poppymarketingandconsulting.com/legal/customer-subscription-agreement</a></dd>
+        </dl>
+      </div>
+
+      <div class="legal-body">
+<p>This Customer Subscription Agreement (“Agreement”) is entered into between <strong>Poppy Marketing &amp; Consulting LLC</strong> (“Poppy”), a Texas limited liability company, and the customer identified in the Order Form (“Customer”), as of the date of Customer’s acceptance of this Agreement through the Front Desk intake and acceptance flow or, if applicable, the date Customer signs the Order Form (“Effective Date”).</p>
+<h3 id="definitions">1. Definitions</h3>
+<ul>
+<li><strong>“Service”</strong> means the Front Desk by Poppy AI receptionist platform, including the voice agent, customer dashboard, A2P registration services (Pro Tier), and operational support described in this Agreement.</li>
+<li><strong>“Tier”</strong> means the subscription level (Basic or Pro) selected by Customer on the Order Form.</li>
+<li><strong>“Voice Live”</strong> means the date on which Poppy operations completes a successful test call against Customer’s configured AI receptionist, validating greeting and call-routing logic. This date triggers Pro Tier monthly billing per Section 5.</li>
+<li><strong>“A2P Approval”</strong> (Pro Tier only) means the date Twilio’s carrier-level review approves Customer’s Brand Registration and Campaign for SMS messaging.</li>
+<li><strong>“Customer Data”</strong> means call recordings, call transcripts, call summaries, customer configuration data (greeting scripts, intent maps, business hours, routing logic), and customer-provided business information.</li>
+<li><strong>“Order Form”</strong> means the document, or the equivalent record of Customer’s intake submission, that specifies Tier, primary contact, billing details, and any Tier-specific add-ons. The Order Form is incorporated into this Agreement as <strong>Exhibit A</strong>.</li>
+<li><strong>“DPA”</strong> means the Data Processing Addendum applicable to this Agreement, published at https://frontdesk.poppymarketingandconsulting.com/legal/dpa and incorporated as <strong>Exhibit B</strong>.</li>
+<li><strong>“Channel Referral Partner”</strong> means a third-party retail or channel partner (including Your Wireless) through which Customer may have been referred to Poppy, where applicable. A Channel Referral Partner is not a party to this Agreement and has no authority over the Service.</li>
+<li><strong>“Subprocessors”</strong> means the third-party service providers Poppy uses to deliver the Service, as listed at https://frontdesk.poppymarketingandconsulting.com/legal/subprocessors and as referenced in the DPA.</li>
+</ul>
+<h3 id="brand-identification-and-customer-acknowledgment">2. Brand Identification and Customer Acknowledgment</h3>
+<p>This Section captures the identification of the Service provider and the mandatory acknowledgment required of every Customer prior to Service activation. The Parties consider this Section material to the Agreement.</p>
+<h4 id="service-provider-identification">2.1 Service Provider Identification</h4>
+<p>Front Desk by Poppy is <strong>provided, billed, operated, and supported solely by Poppy Marketing &amp; Consulting LLC.</strong> Poppy is the sole counterparty to Customer under this Agreement and is solely responsible for Service delivery, billing, support, and any obligations arising from this Agreement.</p>
+<h4 id="not-a-verizon-product-no-third-party-carrier-affiliation">2.2 Not a Verizon Product; No Third-Party Carrier Affiliation</h4>
+<p>Front Desk is <strong>not a Verizon product.</strong> Verizon Communications Inc. and its affiliates are NOT a party to this Agreement, are NOT involved in the delivery of the Service, have NOT endorsed the Service, and do NOT provide billing, technical support, customer support, or service assistance for the Service.</p>
+<p>Front Desk is also not endorsed by, supplied by, or affiliated with any other third-party carrier, telecommunications provider, or retail partner unless Poppy has expressly stated otherwise in writing. Where Customer was referred to Poppy by a Channel Referral Partner (such as Your Wireless), the Channel Referral Partner is an independent referral source only, is NOT a party to this Agreement, and has no authority to bind Poppy, modify this Agreement, or provide Service-related support.</p>
+<h4 id="mandatory-customer-acknowledgment">2.3 Mandatory Customer Acknowledgment</h4>
+<p>Customer expressly acknowledges and agrees to the following statement, which is a material term of this Agreement:</p>
+<blockquote>
+<p><em>“Customer acknowledges that Front Desk is provided, billed, operated, and supported by Poppy Marketing &amp; Consulting LLC. Customer further acknowledges that Front Desk is not a Verizon product, is not endorsed or supported by Verizon, and Verizon does not provide billing, technical support, customer support, or service assistance for Front Desk.”</em></p>
+</blockquote>
+<p>Customer’s acceptance of this acknowledgment is captured both by Customer’s signature on, or electronic acceptance of, this Agreement and by a timestamped confirmation captured during the Front Desk intake and acceptance flow per Section 7.4. This Agreement is the legal source of truth for the acknowledgment; the intake-captured confirmation is a confirming operational record.</p>
+<h4 id="inquiry-and-support-routing">2.4 Inquiry and Support Routing</h4>
+<p>Customer agrees to direct all inquiries related to Front Desk, including support questions, billing questions, technical issues, feature requests, cancellation requests, and complaints, <strong>exclusively to Poppy</strong> through the published Poppy support channels:</p>
+<ul>
+<li>Support email: <strong>support@poppymarketingandconsulting.com</strong></li>
+<li>Cancellation email: <strong>cancel@poppymarketingandconsulting.com</strong></li>
+<li>Support contact methods listed at: <strong>https://frontdesk.poppymarketingandconsulting.com</strong></li>
+</ul>
+<p>Customer agrees NOT to contact Verizon corporate, Verizon retail locations, Verizon support lines, any Channel Referral Partner retail location, or any Channel Referral Partner general support channel for Front Desk-related matters. Any Channel Referral Partner is unable to provide Service support and will route Customer back to Poppy.</p>
+<h4 id="customer-reliance">2.5 Customer Reliance</h4>
+<p>Customer represents that it has not relied on, and is not entering into this Agreement based on, any statement, representation, or promise made by any Channel Referral Partner, retail employee, or third party that conflicts with this Agreement, the Order Form, or Poppy’s published Service descriptions at https://frontdesk.poppymarketingandconsulting.com. Customer’s relationship for Service delivery is solely with Poppy.</p>
+<h4 id="no-third-party-representations">2.6 No Third-Party Representations</h4>
+<p>Customer acknowledges that no Channel Referral Partner, retail employee, sales representative, carrier employee, or third party has authority to modify this Agreement, make warranties on Poppy’s behalf, approve refunds, promise Service functionality, or bind Poppy to any obligation not expressly stated in this Agreement or the applicable Order Form. Any statement made by such a third party that conflicts with this Agreement or the Order Form is unauthorized and not binding on Poppy.</p>
+<h4 id="no-public-references-suggesting-affiliation">2.7 No Public References Suggesting Affiliation</h4>
+<p>Customer may not issue press releases, public statements, marketing claims, social media posts, customer testimonials, case studies, or other public references suggesting that Front Desk is affiliated with, endorsed by, supported by, or provided through Verizon, any other carrier, or any Channel Referral Partner. Customer may identify Poppy and Front Desk by Poppy as Customer’s service provider in factual, non-misleading references.</p>
+<h4 id="channel-referral-partner-compensation">2.8 Channel Referral Partner Compensation</h4>
+<p>A Channel Referral Partner (such as Your Wireless) may receive referral compensation from Poppy if Customer became a Front Desk customer through that Channel Referral Partner’s referral. Such compensation is paid by Poppy and does not affect the price or terms of Customer’s Service. A Channel Referral Partner’s role is limited to making the referral; the Channel Referral Partner is not a party to this Agreement and does not act as Poppy’s agent.</p>
+<h3 id="the-service">3. The Service</h3>
+<p>Poppy provides Customer with access to the Front Desk Service per Customer’s selected Tier.</p>
+<h4 id="basic-tier-99month">3.1 Basic Tier ($99/month)</h4>
+<ul>
+<li>Single-location AI receptionist</li>
+<li>Inbound voice call handling with bilingual (English/Spanish) auto-detection</li>
+<li>Lead capture and routing</li>
+<li>Notifications via email plus optional Slack OR Google Chat webhook</li>
+<li>Weekly email summary of captured leads, call activity, and notable missed-opportunity signals</li>
+<li>Customer-facing dashboard (mobile-accessible)</li>
+<li>AI receptionist live within 5 business days of contract acceptance</li>
+<li><strong>No scheduled onboarding meeting required.</strong> Customer completes intake at sign-up; Poppy provisions the AI agent in the background and notifies Customer at Voice Live.</li>
+</ul>
+<h4 id="pro-tier-199month-plus-399-one-time-setup-fee">3.2 Pro Tier ($199/month plus $399 one-time setup fee)</h4>
+<ul>
+<li>Everything in Basic Tier</li>
+<li>Live calendar booking on the call (Google Calendar or Microsoft Outlook only)</li>
+<li>Outbound transactional SMS to Customer (lead alerts) and to caller (booking confirmations)</li>
+<li>Per-Customer A2P 10DLC Brand Registration and Campaign</li>
+<li>AI receptionist live within 5 business days of contract acceptance</li>
+<li>SMS service activates upon A2P Approval per Section 4.3</li>
+<li><strong>45-minute Poppy-led kickoff appointment within 3 business days of contract acceptance</strong>, during which voice script, persona, A2P intake, and booking configuration are completed. Customer attendance required.</li>
+</ul>
+<h4 id="excluded-use-cases-hard-exclusion">3.3 Excluded Use Cases (Hard Exclusion)</h4>
+<p>Customer may not use the Service for healthcare, dental, therapy, chiropractic, medspa, clinical, pharmacy, medical, mental-health, or other workflows involving Protected Health Information, patient intake, symptoms, diagnosis, treatment, insurance, billing for care, or other health-related information. <strong>Poppy does not provide HIPAA-compliant services under this Agreement.</strong> Any healthcare or PHI-related use requires a separate written agreement, a Business Associate Agreement, and Poppy’s prior written approval.</p>
+<p>Customer also may not use the Service for: regulated financial advice, regulated insurance advice, regulated legal advice, life-safety or emergency-response workflows, government-regulated workflows requiring specialized compliance (including but not limited to FCRA, GLBA, COPPA), or any workflow Poppy reasonably determines requires specialized compliance beyond the scope of this Agreement.</p>
+<p>Custom-tier engagements (multi-location, regulated industries, specialized workflows) require a separate Statement of Work.</p>
+<h3 id="service-activation">4. Service Activation</h3>
+<h4 id="voice-live-trigger">4.1 Voice Live Trigger</h4>
+<p>Customer’s AI receptionist becomes “Voice Live” on the date Poppy operations completes a successful test call validating greeting and routing logic. Poppy targets Voice Live within 5 business days of the Effective Date.</p>
+<h4 id="customer-caused-delay-billing-trigger">4.2 Customer-Caused Delay Billing Trigger</h4>
+<p>If Voice Live is delayed beyond 10 calendar days because Customer fails to provide required information, respond to confirmation requests, attend the Pro Tier kickoff appointment (Pro only), approve configuration, provide required access, or complete required A2P information (Pro only), monthly billing may begin on the 10th calendar day after the Effective Date. Delays caused by Poppy’s own operations or by third-party providers do not trigger billing under this Section.</p>
+<h4 id="pro-monthly-billing-start-sms-activation-and-a2p-approval-pro-tier-only">4.3 Pro Monthly Billing Start; SMS Activation and A2P Approval (Pro Tier Only)</h4>
+<p>Pro monthly billing begins on Voice Live, even if SMS features are still pending A2P Approval. Customer acknowledges that SMS activation depends on third-party carrier review, Twilio processing, The Campaign Registry review, and Customer’s accurate submission of required business information.</p>
+<p>A2P Approval timing is controlled by Twilio, The Campaign Registry, mobile carriers, and other third-party reviewers. Poppy may provide estimated timelines based on current provider guidance, but Poppy does not guarantee approval, approval timing, or that any specific timeline will apply to Customer.</p>
+<p>If A2P Approval is rejected or materially delayed due to Customer information, Customer must provide corrected information within 5 business days of Poppy’s request. If SMS cannot be activated after commercially reasonable efforts, Poppy may, at its discretion: (a) continue providing non-SMS Pro functionality, (b) downgrade Customer to Basic at Customer’s request with prospective billing adjustment, or (c) terminate the SMS portion of the Service.</p>
+<h4 id="no-a2p-approval-guarantee">4.4 No A2P Approval Guarantee</h4>
+<p>The Service relies on third-party carrier and registry approvals over which Poppy has no control. Poppy is not liable for delays, denials, suspensions, or limitations imposed by Twilio, The Campaign Registry, mobile carriers, or any other third-party provider, except to the extent caused by Poppy’s gross negligence or willful misconduct.</p>
+<h3 id="pricing-and-billing">5. Pricing and Billing</h3>
+<h4 id="basic-tier">5.1 Basic Tier</h4>
+<ul>
+<li>Customer is charged <strong>$99 monthly</strong> on the Effective Date and on the same day each subsequent month.</li>
+<li>The Effective Date functions as the billing anchor. Payment is processed via Stripe.</li>
+<li>The pre-Voice-Live setup window (Days 0 to 5) is part of the Customer’s first paid month.</li>
+</ul>
+<h4 id="pro-tier">5.2 Pro Tier</h4>
+<ul>
+<li>Customer is charged <strong>$399 setup fee</strong> on the Effective Date. The setup fee covers Twilio Customer Profile setup, A2P Brand Registration, Campaign vetting, and voice agent configuration. The setup fee is non-refundable once A2P registration work has begun.</li>
+<li>Customer is charged <strong>$199 monthly beginning on Voice Live</strong>, and on the same day each subsequent month. Pro monthly billing begins at Voice Live whether or not SMS has been approved (see Section 4.3).</li>
+<li>A2P registration timeline is included in the Customer’s first paid month at no additional charge.</li>
+</ul>
+<h4 id="payment-method">5.3 Payment Method</h4>
+<p>All payments are processed via Stripe. Customer agrees to maintain a valid payment method on file with Stripe for the duration of this Agreement.</p>
+<h4 id="late-payment">5.4 Late Payment</h4>
+<p>If Customer’s payment fails, Poppy may suspend the Service after 7 days of unsuccessful retries and may terminate this Agreement after 30 days. Reactivation may require payment of past-due amounts.</p>
+<h4 id="disputes">5.5 Disputes</h4>
+<p>Customer must dispute any charge within 30 days of the charge date by emailing support@poppymarketingandconsulting.com. Disputes raised after 30 days are deemed waived.</p>
+<h3 id="cancellation-and-refunds">6. Cancellation and Refunds</h3>
+<h4 id="pre-voice-live-cancellation">6.1 Pre-Voice-Live Cancellation</h4>
+<p>If Customer cancels before Voice Live, Poppy refunds the first-month charge in full (Basic monthly OR Pro monthly portion). The Pro setup fee ($399) is non-refundable if Poppy has begun A2P registration work with Twilio at the time of cancellation; if cancellation occurs before A2P work begins (typically within 24 hours of the Effective Date), the setup fee is also refundable.</p>
+<h4 id="post-voice-live-cancellation">6.2 Post-Voice-Live Cancellation</h4>
+<p>Customer may cancel future recurring subscription charges at any time. Unless otherwise stated in this Agreement, cancellation takes effect at the end of the current billing period and already-charged fees are non-refundable. Customer retains access to the Service through the end of the current billing period.</p>
+<h4 id="cancellation-method">6.3 Cancellation Method</h4>
+<p>Customer may cancel through the Stripe customer portal at any time, or by emailing <strong>cancel@poppymarketingandconsulting.com</strong>. The cancellation address is monitored by Poppy and acknowledged in the ordinary course of business. Auto-renewal and cancellation are also disclosed on the Order Form.</p>
+<h3 id="onboarding">7. Onboarding</h3>
+<p>Onboarding obligations differ by Tier. Sections 7.1 and 7.2 below set the Tier-specific requirements; Sections 7.3 and 7.4 apply to both Tiers.</p>
+<h4 id="basic-tier-onboarding">7.1 Basic Tier Onboarding</h4>
+<p>For Basic Tier, Customer agrees to provide complete and accurate intake responses at sign-up and to respond to reasonable confirmation requests from Poppy before Voice Live. Basic Tier does not include a scheduled onboarding meeting. Poppy will provision the AI agent in the background and notify Customer when the voice agent is live.</p>
+<h4 id="pro-tier-onboarding">7.2 Pro Tier Onboarding</h4>
+<p>For Pro Tier, Customer agrees to schedule and attend a 45-minute kickoff appointment with Poppy within 3 business days of the Effective Date. The kickoff appointment is required to lock Customer’s voice agent configuration, persona, A2P intake, and booking integration before Voice Live. Customer also agrees to provide accurate business information for A2P 10DLC Brand Registration and Campaign vetting.</p>
+<h4 id="failure-to-onboard">7.3 Failure to Onboard</h4>
+<p>If Customer fails to provide required information, respond to Poppy’s reasonable confirmation requests, or (Pro only) schedule and attend the kickoff appointment within 10 business days of the Effective Date, Poppy may pause Service activation. Pause does not relieve Customer of payment obligations under Section 5.</p>
+<h4 id="intake-acceptance-flow-and-acceptance-record">7.4 Intake Acceptance Flow and Acceptance Record</h4>
+<p>Customer’s acceptance of this Agreement and related affirmations is captured through the Front Desk intake and acceptance flow at https://frontdesk.poppymarketingandconsulting.com. Customer’s authorized signer confirms acceptance during that flow. Poppy retains a per-Customer acceptance record documenting, at minimum: the document versions accepted (this Agreement, Privacy Policy, Data Processing Addendum, and Subprocessors page); the canonical URLs presented at acceptance; the timestamp of acceptance; the authorized signer’s name and email; the customer’s IP address and user agent; the affirmations Customer confirmed during intake; and, where applicable, the Stripe session and payment intent references.</p>
+<p>The intake-captured acceptance record is the operational evidence of Customer’s acceptance and supplements (but does not replace) any signature-based acceptance of this Agreement. Where Customer accepts this Agreement only through the intake flow, the intake acceptance record is sufficient evidence of acceptance.</p>
+<h3 id="customer-data-and-data-processing">8. Customer Data and Data Processing</h3>
+<h4 id="what-poppy-collects">8.1 What Poppy Collects</h4>
+<p>Poppy collects and stores the following Customer Data: - Call recordings (audio files) for inbound calls handled by the AI receptionist - Call transcripts and call summaries (text-based renderings and summaries of voice calls) - Customer configuration (greeting scripts, intent map, business hours, routing logic) - Customer-provided business information (business name, address, contact details, EIN for Pro Tier A2P registration) - Authorized signer information and acceptance records as described in Section 7.4</p>
+<h4 id="how-poppy-uses-customer-data">8.2 How Poppy Uses Customer Data</h4>
+<p>Poppy uses Customer Data solely to deliver, secure, support, maintain, and improve the Service, including: - Providing the Customer-facing dashboard (Customer’s own data only) - Performing A2P-related identity verification with Twilio (Pro Tier) - Maintaining acceptance and audit records for compliance and audit purposes - Improving the AI receptionist’s general performance in aggregate, without identifying individual Customers or their callers’ personal information</p>
+<p>Poppy will not sell Customer Data. Poppy will not use Customer Data to train third-party foundation models without Customer’s prior written consent.</p>
+<h4 id="customer-data-ownership">8.3 Customer Data Ownership</h4>
+<p>Customer owns Customer Data. Poppy holds Customer Data only as necessary to deliver the Service.</p>
+<h4 id="data-export-at-service-access-end">8.4 Data Export at Service Access End</h4>
+<p>On Customer’s written request, and in any event upon Customer’s election within thirty (30) days after service access ends, Poppy will provide: - ZIP archive of all call recordings (audio files) under Customer’s Twilio sub-account - JSON export of call transcripts and call summaries - JSON export of Customer configuration - Cooperation with Twilio number porting per industry-standard Letter of Authorization (LOA) process</p>
+<p>If Customer does not elect within thirty (30) days after service access ends, Poppy will delete the Personal Information consistent with Section 8.7 (Data Retention), except as required for tax, audit, security, billing, dispute, or legal record-keeping.</p>
+<h4 id="data-processing-addendum">8.5 Data Processing Addendum</h4>
+<p>Poppy will process Customer Data only to provide, secure, support, maintain, and improve the Service, as described in this Agreement and the Data Processing Addendum (the “DPA”) published at https://frontdesk.poppymarketingandconsulting.com/legal/dpa. The DPA is incorporated into this Agreement as <strong>Exhibit B</strong>. Poppy will use commercially reasonable administrative, technical, and organizational safeguards designed to protect Customer Data against unauthorized access, disclosure, alteration, and destruction. The DPA governs all data processing under this Agreement and controls in the event of conflict with respect to data processing.</p>
+<h4 id="subprocessors-and-third-party-services">8.6 Subprocessors and Third-Party Services</h4>
+<p>Customer authorizes Poppy to use third-party service providers and Subprocessors as necessary to provide the Service. The current list of Subprocessors is maintained at https://frontdesk.poppymarketingandconsulting.com/legal/subprocessors and referenced in the DPA. Poppy will provide at least thirty (30) days’ written notice before adding or replacing a Subprocessor that processes Customer Data, and Customer may object as described in Section 4.4 of the DPA. Poppy is not responsible for outages, delays, denials, policy changes, carrier filtering, account suspensions, or service limitations caused by third-party providers, except to the extent caused by Poppy’s gross negligence or willful misconduct.</p>
+<h4 id="data-retention">8.7 Data Retention</h4>
+<p>Call recordings, transcripts, summaries, call metadata, and caller contact details are retained while the subscription is active and for up to thirty (30) days after service access ends, unless a longer period is required by law, needed for security, billing, dispute, or legal purposes, or requested by Customer in writing. Customer may request export or earlier deletion during the applicable retention period, subject to legal, security, billing, and operational limitations. Subscriber business records, including subscription, billing, tax, and acceptance and audit records, are retained on standard US business-records and tax-audit timelines as described in the Privacy Policy.</p>
+<h4 id="caller-pii">8.8 Caller PII</h4>
+<p>Caller-provided personal information (names, phone numbers, addresses, and similar) collected during calls is treated as Customer Data and subject to the same protections in this Section 8 and the DPA. Customer is the controller of Caller PII; Poppy processes Caller PII on Customer’s behalf as a service provider and processor under applicable privacy law.</p>
+<h3 id="service-levels">9. Service Levels</h3>
+<h4 id="voice-live-target">9.1 Voice Live Target</h4>
+<p>Poppy targets Voice Live within 5 business days of the Effective Date.</p>
+<h4 id="uptime">9.2 Uptime</h4>
+<p>Poppy targets <strong>99.5% monthly uptime</strong> for the Service, excluding scheduled maintenance.</p>
+<h4 id="scheduled-maintenance">9.3 Scheduled Maintenance</h4>
+<p>Poppy provides at least 48 hours advance notice via email of any scheduled maintenance affecting Customer’s Service.</p>
+<h4 id="support">9.4 Support</h4>
+<ul>
+<li><strong>Pro Tier:</strong> email support response within 1 business day.</li>
+<li><strong>Basic Tier:</strong> email support response within 2 business days.</li>
+</ul>
+<h4 id="no-formal-sla-credits">9.5 No Formal SLA Credits</h4>
+<p>This Agreement does not provide service-level credits or refunds for unmet uptime targets at this stage. Service credits may be added in future revisions.</p>
+<h3 id="acceptable-use">10. Acceptable Use</h3>
+<h4 id="tcpa-compliance">10.1 TCPA Compliance</h4>
+<p>Customer is solely responsible for ensuring all SMS messages sent through the Service comply with the Telephone Consumer Protection Act (“TCPA”) and applicable state laws. Customer affirms it has the right to send SMS to recipients, including proper opt-in consent for any outbound marketing or notification SMS.</p>
+<h4 id="call-recording-laws">10.2 Call Recording Laws</h4>
+<p>Customer is solely responsible for ensuring call recording complies with applicable state laws (one-party vs. all-party consent jurisdictions) in the states where Customer’s callers are located. Customer affirms its AI receptionist’s greeting includes any disclosure required by Customer’s jurisdiction.</p>
+<h4 id="canonical-recording-disclosure">10.3 Canonical Recording Disclosure</h4>
+<p>At the start of every inbound call handled by the Service, Poppy’s AI receptionist plays a canonical Poppy-side recording disclosure to the caller:</p>
+<blockquote>
+<p><em>“This call may be recorded, transcribed, and summarized by Front Desk by Poppy. By continuing, you consent to recording and transcription.”</em></p>
+</blockquote>
+<p>A Spanish-language equivalent plays when the caller’s language is Spanish. The canonical disclosure plays before any business-specific greeting and is non-overridable. Customer is responsible for ensuring the overall call greeting, taken together with the canonical disclosure, complies with applicable state recording-consent laws in the states where its callers are located, including any additional consent steps required in all-party consent jurisdictions. Customer may not remove or weaken the canonical disclosure.</p>
+<h4 id="ai-accuracy-and-limitations">10.4 AI Accuracy and Limitations</h4>
+<p>Customer acknowledges that the Service uses artificial intelligence and automated workflows. AI-generated responses, routing decisions, summaries, transcripts, classifications, and booking actions may be incomplete, inaccurate, delayed, or misunderstood. Customer is responsible for reviewing Service outputs and maintaining appropriate human oversight.</p>
+<h4 id="no-emergency-or-regulated-use">10.5 No Emergency or Regulated Use</h4>
+<p>The Service is not designed for, and Customer may not use the Service for, emergency calls, urgent medical or life-safety response, regulated advice, medical intake, legal intake, financial advice, insurance advice, or any life-safety use case. Customer will not represent the Service as a replacement for emergency services, professional judgment, legal advice, medical advice, financial advice, insurance advice, or human review.</p>
+<h4 id="prohibited-uses">10.6 Prohibited Uses</h4>
+<p>Customer agrees not to use the Service for: - Outbound telemarketing without proper recipient consent - Workflows handling Protected Health Information (PHI) under HIPAA, per Section 3.3 - Illegal activities or activities violating Twilio’s Acceptable Use Policy - Spam, harassment, or fraudulent communications - Any use case excluded under Section 3.3</p>
+<h4 id="sms-suspension-right">10.7 SMS Suspension Right</h4>
+<p>Poppy may suspend or disable SMS features immediately if Poppy reasonably believes Customer’s use may violate TCPA, carrier rules, Twilio policies, A2P 10DLC requirements, consumer protection laws, consent requirements, or this Agreement.</p>
+<h4 id="pro-tier-customer-sms-responsibilities">10.8 Pro Tier Customer SMS Responsibilities</h4>
+<p>For Pro Tier Customers, Customer acknowledges and agrees that:</p>
+<ol type="a">
+<li>Front Desk Pro may send transactional SMS messages on Customer’s behalf, such as lead alerts, booking confirmations, and related service messages;</li>
+<li>Customer is responsible for maintaining any required SMS consent from message recipients;</li>
+<li>Customer will not use Front Desk for marketing or promotional SMS unless separately approved by Poppy in writing;</li>
+<li>Customer will honor opt-out requests Customer receives outside the Service and will not ask Poppy to message anyone who has opted out;</li>
+<li>Recipients may reply STOP to unsubscribe and HELP to request help;</li>
+<li>Carrier filtering, rejection, or suspension is outside Poppy’s control;</li>
+<li>Poppy may suspend SMS features if compliance issues are detected, as further described in Section 10.7.</li>
+</ol>
+<h3 id="customer-warranties">11. Customer Warranties</h3>
+<p>Customer represents and warrants, on a continuing basis throughout the Term, that:</p>
+<h4 id="authority">11.1 Authority</h4>
+<p>Customer has full corporate or organizational power and authority to enter into this Agreement and to grant the rights granted herein.</p>
+<h4 id="consents-and-permissions">11.2 Consents and Permissions</h4>
+<p>Customer has obtained and will maintain all consents, notices, permissions, and legal bases required to send messages, record calls, process caller information, and use the Service for Customer’s business purposes, including but not limited to: (a) SMS opt-in consent under TCPA and applicable state laws; (b) any additional call-recording disclosure or consent required by Customer’s jurisdiction beyond the canonical disclosure in Section 10.3; (c) any privacy-policy disclosures required by Customer’s regulatory environment.</p>
+<h4 id="no-regulated-data">11.3 No Regulated Data</h4>
+<p>Customer will not submit, route, or process through the Service any Protected Health Information, sensitive personal data, regulated financial information, regulated insurance information, or other regulated data category excluded under Section 3.3, except under a separate written agreement with Poppy.</p>
+<h4 id="accurate-business-information">11.4 Accurate Business Information</h4>
+<p>Customer warrants that all business information provided to Poppy (including legal business name, address, EIN, and contact details) is accurate and current, and Customer will promptly update Poppy if any of this information changes during the Term.</p>
+<h4 id="compliance-with-laws">11.5 Compliance with Laws</h4>
+<p>Customer will comply with all laws, regulations, and industry rules applicable to Customer’s use of the Service.</p>
+<h3 id="warranty-disclaimer">12. Warranty Disclaimer</h3>
+<p>Except as expressly stated in this Agreement, the Service is provided <strong>“as is” and “as available.”</strong> Poppy disclaims all warranties, express, implied, statutory, or otherwise, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, uninterrupted operation, error-free operation, accuracy, availability, lead conversion, revenue generation, A2P Approval, SMS deliverability, or booking outcomes. Customer’s use of the Service is at Customer’s own risk.</p>
+<h3 id="customer-responsibilities">13. Customer Responsibilities</h3>
+<h4 id="responsibility-for-personnel-and-authorized-users">13.1 Responsibility for Personnel and Authorized Users</h4>
+<p>Customer is responsible for all acts and omissions of its employees, contractors, agents, administrators, authorized users, and any other person Customer permits to access or use the Service on Customer’s behalf, as if such acts and omissions were Customer’s own. This includes dashboard users, personnel granted calendar or messaging access, and any person who interacts with the Service under Customer’s account.</p>
+<h4 id="specific-customer-obligations">13.2 Specific Customer Obligations</h4>
+<p>Customer agrees to: - Provide accurate intake form responses and configuration data - (Basic Tier) Respond to Poppy’s reasonable confirmation requests prior to Voice Live per Section 7.1 - (Pro Tier) Schedule and attend the 45-minute kickoff appointment per Section 7.2 - Provide accurate business information for A2P registration (Pro Tier), including legal business name, address, and EIN - Maintain a valid payment method via Stripe per Section 5.3 - Notify Poppy promptly of any Service issues, disputes, or operational concerns - Comply with the Acceptable Use provisions in Section 10 and the Customer Warranties in Section 11 - Comply with the brand-identification, inquiry-routing, and no-public-reference obligations in Section 2 - Refrain from any use case excluded under Section 3.3</p>
+<h3 id="intellectual-property">14. Intellectual Property</h3>
+<h4 id="poppys-ip">14.1 Poppy’s IP</h4>
+<p>Poppy retains all rights, title, and interest in and to the Service, including the AI platform, models, prompts, source code, voice agent architecture, and all related software and documentation. Nothing in this Agreement transfers ownership of Poppy’s IP to Customer.</p>
+<h4 id="customers-ip">14.2 Customer’s IP</h4>
+<p>Customer retains all rights, title, and interest in and to Customer Data, Customer’s business name, logo, and any Customer-provided content used in the Service.</p>
+<h4 id="license-to-poppy">14.3 License to Poppy</h4>
+<p>Customer grants Poppy a non-exclusive, royalty-free, limited license to use Customer Data solely as necessary to provide the Service per Section 8 and the DPA.</p>
+<h4 id="aggregate-analytics">14.4 Aggregate Analytics</h4>
+<p>Poppy may use aggregated, de-identified data derived from Customer Data (e.g., call volume statistics, common intent categories) for service improvement and benchmarking, provided no individual Customer or caller is identified.</p>
+<h3 id="confidentiality">15. Confidentiality</h3>
+<h4 id="mutual-confidentiality">15.1 Mutual Confidentiality</h4>
+<p>Each party agrees to keep confidential any non-public information disclosed by the other party in connection with this Agreement, including pricing, technical implementation details, business operations, customer lists, and Customer Data.</p>
+<h4 id="permitted-disclosures">15.2 Permitted Disclosures</h4>
+<p>A party may disclose Confidential Information: - To its employees, contractors, or advisors with a need to know, who are bound by similar confidentiality obligations - As required by law, regulation, or court order, with reasonable advance notice to the disclosing party where legally permitted</p>
+<h4 id="survival">15.3 Survival</h4>
+<p>The confidentiality obligations in this Section 15 survive termination of this Agreement for 5 years.</p>
+<h3 id="term-and-renewal">16. Term and Renewal</h3>
+<h4 id="term">16.1 Term</h4>
+<p>This Agreement begins on the Effective Date and continues on a month-to-month basis until terminated.</p>
+<h4 id="auto-renewal">16.2 Auto-Renewal</h4>
+<p>Each monthly billing period auto-renews via Stripe. Customer’s continued use of the Service constitutes acceptance of the renewal. Auto-renewal and cancellation are also disclosed on the Order Form (Exhibit A).</p>
+<h4 id="termination-by-customer">16.3 Termination by Customer</h4>
+<p>Customer may terminate this Agreement at any time per Section 6.3.</p>
+<h4 id="termination-by-poppy">16.4 Termination by Poppy</h4>
+<p>Poppy may terminate this Agreement: - For non-payment per Section 5.4 (after 30 days of failed payment) - For material breach not cured within 14 days of written notice - Immediately for violations of Section 10 (Acceptable Use), particularly Section 10.6 (Prohibited Uses) - Immediately for material breach of Section 2 (Brand Identification and Customer Acknowledgment), including any unauthorized representation by Customer that Front Desk is a Verizon product or a Verizon-affiliated product - Immediately for use of the Service for any case excluded under Section 3.3</p>
+<h3 id="limitation-of-liability">17. Limitation of Liability</h3>
+<h4 id="general-liability-cap">17.1 General Liability Cap</h4>
+<p>EXCEPT FOR EXCLUDED CLAIMS, EACH PARTY’S TOTAL LIABILITY UNDER THIS AGREEMENT IS CAPPED AT <strong>THE GREATER OF (I) FEES PAID OR PAYABLE BY CUSTOMER TO POPPY DURING THE 12 MONTHS PRECEDING THE EVENT GIVING RISE TO LIABILITY, OR (II) ONE THOUSAND U.S. DOLLARS ($1,000).</strong></p>
+<h4 id="data-and-security-liability-cap">17.2 Data and Security Liability Cap</h4>
+<p>FOR CLAIMS ARISING FROM CONFIDENTIALITY BREACHES, DATA SECURITY INCIDENTS, OR UNAUTHORIZED DISCLOSURE OF CUSTOMER DATA, POPPY’S TOTAL LIABILITY IS CAPPED AT <strong>THE GREATER OF (I) TWO TIMES THE FEES PAID OR PAYABLE BY CUSTOMER DURING THE 12 MONTHS PRECEDING THE EVENT, OR (II) FIVE THOUSAND U.S. DOLLARS ($5,000).</strong></p>
+<h4 id="excluded-claims-uncapped">17.3 Excluded Claims (Uncapped)</h4>
+<p>The caps in Sections 17.1 and 17.2 do NOT apply to, and the following are uncapped:</p>
+<ol type="a">
+<li>Customer’s payment obligations under Section 5;</li>
+<li>Customer’s indemnification obligations under Section 18;</li>
+<li>Customer’s violation of Section 3.3 (Excluded Use Cases);</li>
+<li>Customer’s violation of Section 10 (Acceptable Use), including outbound SMS misuse, call-recording violations, and prohibited uses;</li>
+<li>Customer’s violation of Section 11 (Customer Warranties), including consent failures and regulated-data violations;</li>
+<li>Customer’s violation of Section 2 (Brand Identification and Customer Acknowledgment);</li>
+<li>Either party’s fraud or willful misconduct.</li>
+</ol>
+<p>Confidentiality claims, data security incidents, and unauthorized disclosure of Customer Data claims against Poppy are governed by Section 17.2, not by this Section 17.3, unless caused by Poppy’s willful misconduct (in which case they are uncapped).</p>
+<h4 id="no-indirect-damages">17.4 No Indirect Damages</h4>
+<p>NEITHER PARTY IS LIABLE FOR INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, LOST REVENUE, OR LOSS OF DATA, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+<h4 id="survival-1">17.5 Survival</h4>
+<p>This Section 17 survives termination of this Agreement.</p>
+<h3 id="indemnification">18. Indemnification</h3>
+<h4 id="customer-indemnifies-poppy">18.1 Customer Indemnifies Poppy</h4>
+<p>Customer agrees to indemnify and defend Poppy from any third-party claims arising out of: - Customer’s breach of Section 10 (Acceptable Use) - Customer’s misuse of the Service for illegal activities - TCPA, consumer protection law, or other regulatory claims arising from Customer’s outbound SMS, call recording, or AI-disclosure practices - Customer’s failure to obtain required consents from callers (recording consent, SMS opt-in, privacy notices) - Customer’s breach of Section 2 (Brand Identification), including any unauthorized representation that Front Desk is a Verizon product - Customer’s use of the Service for any case excluded under Section 3.3 - Customer’s breach of Section 11 (Customer Warranties)</p>
+<h4 id="poppy-indemnifies-customer">18.2 Poppy Indemnifies Customer</h4>
+<p>Poppy agrees to indemnify and defend Customer from any third-party claims arising out of: - Poppy’s gross negligence or willful misconduct - Claims that the Service (excluding Customer Data and Customer-provided content) infringes a third party’s intellectual property rights</p>
+<h4 id="exclusions-to-poppys-indemnity">18.3 Exclusions to Poppy’s Indemnity</h4>
+<p>Poppy has no indemnification obligation for claims arising from: (a) Customer Data; (b) Customer-provided content; (c) Customer instructions; (d) third-party services (including Twilio, Stripe, Google, Microsoft, Slack); (e) unauthorized modifications by Customer; (f) use of the Service outside this Agreement; (g) combination of the Service with products or services not provided by Poppy; or (h) open-source components used outside Poppy’s intended scope.</p>
+<h4 id="poppys-right-to-cure-ip-claims">18.4 Poppy’s Right to Cure IP Claims</h4>
+<p>If the Service becomes, or Poppy reasonably believes may become, subject to an infringement claim, Poppy may, at its option and expense: (a) modify the Service to make it non-infringing while preserving substantially equivalent functionality; (b) procure for Customer the right to continue using the Service; or (c) terminate the affected portion of the Service and refund any prepaid unused fees on a pro-rated basis. The remedies in this Section 18.4 are Customer’s sole and exclusive remedies for any IP infringement claim against the Service.</p>
+<h4 id="indemnification-process">18.5 Indemnification Process</h4>
+<p>The indemnified party must promptly notify the indemnifying party of the claim and provide reasonable cooperation in defending or settling it. The indemnifying party controls the defense and settlement, provided no settlement requires the indemnified party to admit fault or pay any amount without consent.</p>
+<h3 id="modifications">19. Modifications</h3>
+<h4 id="amendments">19.1 Amendments</h4>
+<p>Poppy may amend this Agreement, including pricing and Service features, by providing at least 30 days advance notice via email to Customer’s primary contact.</p>
+<h4 id="customers-options-on-modification">19.2 Customer’s Options on Modification</h4>
+<p>If Customer does not agree to a material amendment, Customer may terminate this Agreement before the amendment’s effective date by providing written notice to Poppy. Customer’s continued use of the Service after the amendment’s effective date constitutes acceptance.</p>
+<h4 id="pilot-beta-and-experimental-features">19.3 Pilot, Beta, and Experimental Features</h4>
+<p>Pilot, beta, preview, or experimental features may be modified, suspended, or discontinued at any time, with or without notice. Poppy will use commercially reasonable efforts to avoid materially reducing core paid functionality during the current billing period. Pilot, beta, and experimental features are provided “as is” without warranty of any kind and are excluded from Poppy’s service-level targets in Section 9.</p>
+<h3 id="governing-law-and-dispute-resolution">20. Governing Law and Dispute Resolution</h3>
+<h4 id="governing-law">20.1 Governing Law</h4>
+<p>This Agreement is governed by the laws of the State of Texas, without regard to conflict-of-laws principles.</p>
+<h4 id="informal-resolution">20.2 Informal Resolution</h4>
+<p>Before initiating any formal proceeding, the parties will attempt in good faith to resolve disputes through written notice and a 30-day informal resolution period beginning on the date of the written notice. Either party may extend the informal resolution period by mutual written agreement.</p>
+<h4 id="arbitration">20.3 Arbitration</h4>
+<p>If the parties cannot resolve a dispute through informal resolution, any dispute arising out of or relating to this Agreement shall be resolved by binding arbitration in Houston, Texas, under JAMS Streamlined Arbitration Rules. Each party bears its own arbitration costs and attorneys’ fees.</p>
+<h4 id="small-claims-carve-out">20.4 Small Claims Carve-Out</h4>
+<p>Notwithstanding Section 20.3, either party may bring claims for unpaid fees or claims within small-claims-court jurisdiction in a court of competent jurisdiction in Harris County, Texas, without first proceeding to arbitration.</p>
+<h4 id="class-action-waiver">20.5 Class Action Waiver</h4>
+<p>The parties waive any right to bring or participate in any class, collective, or representative action or proceeding. Disputes shall be resolved on an individual basis only.</p>
+<h4 id="jury-trial-waiver">20.6 Jury Trial Waiver</h4>
+<p>Each party knowingly, voluntarily, and intentionally waives the right to a trial by jury in any action arising out of or relating to this Agreement.</p>
+<h4 id="equitable-relief">20.7 Equitable Relief</h4>
+<p>Either party may seek temporary equitable relief (e.g., injunctions) in the courts of the State of Texas to prevent imminent harm.</p>
+<h3 id="order-of-precedence">21. Order of Precedence</h3>
+<p>If there is a conflict between documents governing the Service, the following order of precedence controls:</p>
+<ol type="1">
+<li>The <strong>Order Form (Exhibit A)</strong> for commercial terms specific to Customer (Tier, pricing, billing details), as captured through the Front Desk intake process.</li>
+<li>The <strong>Data Processing Addendum (Exhibit B)</strong> for data processing terms.</li>
+<li>This <strong>Agreement</strong> for all other terms.</li>
+<li><strong>Intake forms and acceptance records</strong> completed by Customer.</li>
+<li><strong>Website and support documentation</strong> published by Poppy.</li>
+</ol>
+<p>A more-specific provision in a higher-priority document overrides any conflicting general provision in a lower-priority document.</p>
+<h3 id="miscellaneous">22. Miscellaneous</h3>
+<h4 id="entire-agreement">22.1 Entire Agreement</h4>
+<p>This Agreement, together with the Order Form (Exhibit A) and the DPA (Exhibit B), constitutes the entire agreement between the parties and supersedes all prior agreements relating to the Service.</p>
+<h4 id="no-waiver">22.2 No Waiver</h4>
+<p>A party’s failure to enforce any provision of this Agreement does not constitute a waiver of that provision or any other.</p>
+<h4 id="severability">22.3 Severability</h4>
+<p>If any provision of this Agreement is held unenforceable, the remaining provisions remain in full force and effect.</p>
+<h4 id="notices">22.4 Notices</h4>
+<p>All notices required under this Agreement shall be in writing and delivered via email to: - <strong>To Poppy:</strong> support@poppymarketingandconsulting.com (with copy to the privacy address for data-processing notices: privacy@poppymarketingandconsulting.com) - <strong>To Customer:</strong> the email address provided through the intake process or on the Order Form</p>
+<h4 id="force-majeure">22.5 Force Majeure</h4>
+<p>Neither party is liable for delays or failures in performance caused by events beyond its reasonable control, including natural disasters, war, terrorism, governmental action, or major internet or telecommunications outages affecting third-party providers (e.g., Twilio, Stripe, Google Workspace).</p>
+<h4 id="assignment">22.6 Assignment</h4>
+<p>Customer may not assign this Agreement without Poppy’s prior written consent. Poppy may assign this Agreement to a successor entity in connection with a merger, acquisition, or sale of substantially all of Poppy’s assets.</p>
+<h4 id="independent-contractors">22.7 Independent Contractors</h4>
+<p>The parties are independent contractors. Nothing in this Agreement creates a partnership, joint venture, agency, or employment relationship.</p>
+<h4 id="counterparts-and-electronic-acceptance">22.8 Counterparts and Electronic Acceptance</h4>
+<p>This Agreement may be accepted in counterparts, including via electronic signature or electronic acceptance through the Front Desk intake and acceptance flow. Each counterpart is deemed an original. Customer’s electronic acceptance has the same legal effect as a manual signature.</p>
+<hr />
+<h2 id="exhibit-a-order-form">Exhibit A — Order Form</h2>
+<p>The commercial terms specific to Customer (including Tier selection, pricing, billing details, authorized signer name and email, business information, payment method authorization, auto-renewal acknowledgment, and any optional integrations selected) are captured through the Front Desk intake process at https://frontdesk.poppymarketingandconsulting.com and recorded in Poppy’s customer database. The intake-captured information constitutes the Order Form for purposes of this Agreement and is incorporated by reference.</p>
+<p>Customer’s completion of the intake process and confirmation of the affirmations required to enter into the Service serve as Customer’s authorization of the commercial terms reflected in the intake record, including:</p>
+<ul>
+<li>Customer’s identity (legal business name, public business name, primary contact, business address)</li>
+<li>Authorized signer (name, email, and where provided, title)</li>
+<li>Tier selection (Basic or Pro) and associated pricing</li>
+<li>Payment method authorization via Stripe, including authorization to charge the payment method for setup fees (Pro only), recurring monthly subscription fees, and any past-due amounts permitted under this Agreement</li>
+<li>Auto-renewal disclosure: each monthly billing period auto-renews via Stripe; pricing may change with at least 30 days’ advance notice per Section 19.1; cancellation may be initiated through the Stripe customer portal or by emailing cancel@poppymarketingandconsulting.com; cancellation takes effect at the end of the current billing period unless otherwise stated in this Agreement, and already-charged fees are non-refundable except as expressly stated in Section 6</li>
+<li>EIN and additional business verification data required for A2P 10DLC Brand Registration and Campaign vetting (Pro Tier only)</li>
+<li>Any optional integrations selected (Slack webhook, Google Chat webhook, Google Calendar, Microsoft Outlook, SMS lead alerts, SMS booking confirmations, where applicable to the selected Tier)</li>
+<li>Channel Referral Partner information (where Customer was referred to Poppy through a Channel Referral Partner)</li>
+</ul>
+<hr />
+<h2 id="exhibit-b-data-processing-addendum">Exhibit B — Data Processing Addendum</h2>
+<p>The Data Processing Addendum applicable to this Agreement is published at https://frontdesk.poppymarketingandconsulting.com/legal/dpa and is incorporated into this Agreement by reference as Exhibit B. The DPA governs Poppy’s processing of Personal Information on Customer’s behalf and controls in the event of a conflict with this Agreement with respect to data processing. The current list of Subprocessors referenced in the DPA is maintained at https://frontdesk.poppymarketingandconsulting.com/legal/subprocessors.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-brand">Poppy <span>Front Desk</span></div>
+      <p>A product of Poppy Marketing &amp; Consulting LLC</p>
+      <p>23015 FM 529 Rd, Ste 200 PMB1125, Katy, TX 77493</p>
+      <p><a href="mailto:support@poppymarketingandconsulting.com">support@poppymarketingandconsulting.com</a></p>
+      <div class="footer-links">
+        <a href="/legal/customer-subscription-agreement">Customer Subscription Agreement</a>
+        <a href="/legal/privacy">Privacy Policy</a>
+        <a href="/legal/dpa">Data Processing Addendum</a>
+        <a href="/legal/subprocessors">Subprocessors</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
