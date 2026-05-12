@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#6B4EFF"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="18" fill="#F6F4EF">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Front Desk by Poppy</title>
+  <rect width="64" height="64" rx="10" fill="#F6F4EF"/>
+  <text x="32" y="46"
+        font-family="Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="36"
+        text-anchor="middle"
+        fill="#6B5CFF"
+        letter-spacing="-1">
+    <tspan font-weight="700">F</tspan><tspan font-weight="400">D</tspan>
+  </text>
 </svg>
