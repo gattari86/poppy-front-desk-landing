@@ -4,7 +4,8 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/signup", "destination": "/", "permanent": true },
-    { "source": "/terms", "destination": "/legal/customer-subscription-agreement", "permanent": true }
+    { "source": "/terms", "destination": "/legal/customer-subscription-agreement", "permanent": true },
+    { "source": "/privacy", "destination": "/legal/privacy", "permanent": true }
   ],
   "rewrites": [
     { "source": "/account/portal-return", "destination": "/account/portal-return.html" }
