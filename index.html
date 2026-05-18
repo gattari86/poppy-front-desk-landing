@@ -532,7 +532,7 @@
   <div class="container">
     <div class="cta-grid">
       <div class="cta-pitch reveal">
-        <span class="eyebrow">Stay in the loop</span>
+        <span class="eyebrow">Talk to us</span>
         <h2>Want updates without a sales call yet?</h2>
         <p class="lead">Drop your details and we'll keep you posted as Front Desk by Poppy expands. Ready to talk now? <a href="tel:+13467086397" style="color: var(--purple); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Call our demo line at (346) 708-6397</a> or <a href="https://cal.com/ricky-gm-t85goo/frontdesk-consultation" style="color: var(--purple); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;" target="_blank" rel="noopener">book a 30-minute consultation</a>.</p>
         <ul>
@@ -543,36 +543,14 @@
       </div>
 
       <div class="signup reveal">
-        <form id="signup-form" novalidate>
-          <h3>Stay in the loop</h3>
-          <p class="lead-small">We will reach out with updates and answer questions. Spanish o inglés.</p>
+        <h3>Talk to us</h3>
+        <p class="lead-small">Three quick ways to reach Front Desk by Poppy. Spanish o inglés.</p>
 
-          <div class="field">
-            <input type="text" id="business" name="business" placeholder=" " required autocomplete="organization">
-            <label for="business">Business name</label>
-          </div>
-          <div class="field">
-            <input type="tel" id="phone" name="phone" placeholder=" " required autocomplete="tel" pattern="[\d\s\-\+\(\)]{10,}">
-            <label for="phone">Mobile phone</label>
-          </div>
-          <div class="field">
-            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
-            <label for="email">Email</label>
-          </div>
+        <a href="https://cal.com/ricky-gm-t85goo/frontdesk-consultation" class="btn btn-primary btn-block btn-lg" target="_blank" rel="noopener" style="margin-bottom: 12px;">Book a 30-minute consultation</a>
 
-          <label class="consent">
-            <input type="checkbox" id="sms-consent" required>
-            <span>I agree to receive SMS updates from Front Desk by Poppy. Reply STOP to opt out. <a href="/privacy" style="color: var(--purple); text-decoration: underline;">Privacy</a> + <a href="/terms" style="color: var(--purple); text-decoration: underline;">Terms</a>.</span>
-          </label>
+        <a href="tel:+13467086397" class="btn btn-ghost btn-block btn-lg" style="margin-bottom: 12px;">Call the demo line: (346) 708-6397</a>
 
-          <button type="submit" class="btn btn-primary btn-block btn-lg">Keep me posted</button>
-        </form>
-
-        <div class="signup-success" id="signup-success" role="status" aria-live="polite">
-          <div class="check-icon"><i data-lucide="check"></i></div>
-          <h3>You're on the list.</h3>
-          <p>We will reach out with updates. Want to talk sooner? Call our demo line at <strong>(346) 708-6397</strong>.</p>
-        </div>
+        <a href="mailto:support@poppymarketingandconsulting.com" class="btn btn-ghost btn-block btn-lg">Email support</a>
       </div>
     </div>
   </div>
@@ -848,32 +826,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Form validation + success
-  const form = document.getElementById('signup-form');
-  const success = document.getElementById('signup-success');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let valid = true;
-      ['business', 'phone', 'email'].forEach(name => {
-        const input = form.querySelector(`#${name}`);
-        const wrap = input.closest('.field');
-        wrap.classList.remove('invalid', 'shake');
-        if (!input.checkValidity()) {
-          wrap.classList.add('invalid');
-          requestAnimationFrame(() => wrap.classList.add('shake'));
-          valid = false;
-        }
-      });
-      const consent = form.querySelector('#sms-consent');
-      if (!consent.checked) { valid = false; consent.parentElement.style.color = '#d64545'; }
-      else { consent.parentElement.style.color = ''; }
-      if (!valid) return;
-      // For now, just show success state. Wire to backend later.
-      form.style.display = 'none';
-      success.classList.add('show');
-    });
-  }
 
   // YW reseller variant via ?ref=yw
   if (new URLSearchParams(window.location.search).get('ref') === 'yw') {
