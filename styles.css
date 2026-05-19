@@ -2105,7 +2105,7 @@ p { color: var(--charcoal); }
   background-color: var(--white);
   border-radius: var(--radius-md);
 }
-.audio-caption {
+.audio-player .audio-caption {
   margin: var(--space-3) 0 0;
   font-size: var(--fs-tiny);
   color: var(--charcoal);
@@ -2113,6 +2113,9 @@ p { color: var(--charcoal); }
   letter-spacing: 0.02em;
   font-weight: 500;
 }
+/* Specificity override: .proof-card.featured p has rgba(246,244,239,0.75)
+   which would otherwise win on the dark featured card. */
+.proof-card.featured .audio-player .audio-caption { color: var(--charcoal); }
 .audio-note {
   margin: var(--space-3) 0 0;
   font-size: var(--fs-tiny);
