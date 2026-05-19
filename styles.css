@@ -2078,3 +2078,98 @@ p { color: var(--charcoal); }
 @media (prefers-reduced-motion: reduce) {
   .la-dot { animation: none; }
 }
+
+
+/* ============================================================
+   AUDIO PLAYER + TRANSCRIPT — sample demo call card
+   Replaces the prior chat-mockup card. Native <audio controls>
+   element wrapped in a brand-styled container with caption and
+   collapsible transcript fallback.
+   ============================================================ */
+
+.audio-player {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.audio-player audio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 44px;
+  outline: none;
+}
+.audio-player audio::-webkit-media-controls-panel {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+}
+.audio-caption {
+  margin: var(--space-3) 0 0;
+  font-size: var(--fs-tiny);
+  color: var(--slate);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.transcript-toggle {
+  margin-top: var(--space-3);
+}
+.transcript-toggle > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-small);
+  color: var(--purple);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  user-select: none;
+}
+.transcript-toggle > summary::-webkit-details-marker { display: none; }
+.transcript-toggle > summary::before {
+  content: "+";
+  display: inline-block;
+  width: 14px;
+  text-align: center;
+  font-weight: 700;
+  transition: transform 150ms var(--ease-out);
+}
+.transcript-toggle[open] > summary::before {
+  content: "\2013";
+}
+.transcript-toggle > summary:hover {
+  color: var(--violet);
+}
+.transcript-body {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--light-gray);
+  font-size: var(--fs-small);
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+.transcript-body p {
+  margin: 0 0 var(--space-2);
+}
+.transcript-body p:last-child {
+  margin-bottom: 0;
+}
+.transcript-body .transcript-note {
+  font-size: var(--fs-tiny);
+  color: var(--slate);
+  font-style: italic;
+  margin-bottom: var(--space-3);
+}
+.transcript-body strong {
+  color: var(--purple);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+@media (max-width: 640px) {
+  .audio-player { padding: var(--space-3); }
+  .transcript-body { font-size: var(--fs-tiny); }
+}
