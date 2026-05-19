@@ -12,3 +12,6 @@ node_modules/
 credentials.json
 *secret*
 *token*
+
+# Local-only photography library (high-res source files; do not deploy)
+photography/
