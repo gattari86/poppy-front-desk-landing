@@ -2108,9 +2108,17 @@ p { color: var(--charcoal); }
 .audio-caption {
   margin: var(--space-3) 0 0;
   font-size: var(--fs-tiny);
-  color: var(--slate);
+  color: var(--charcoal);
   text-align: center;
   letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.audio-note {
+  margin: var(--space-3) 0 0;
+  font-size: var(--fs-tiny);
+  line-height: 1.5;
+  color: rgba(246, 244, 239, 0.75);
+  font-style: italic;
 }
 
 .transcript-toggle {
