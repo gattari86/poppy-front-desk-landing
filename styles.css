@@ -1655,6 +1655,14 @@ p { color: var(--charcoal); }
 }
 .consent input { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; accent-color: var(--purple); }
 
+/* Mobile responsiveness fix for CTA section: prevent grid track + wide buttons from blowing out viewport */
+@media (max-width: 640px) {
+  .cta-grid > * { min-width: 0; }
+  .btn-block { white-space: normal; line-height: 1.3; }
+  .btn-block.btn-lg { padding-left: 1rem; padding-right: 1rem; }
+  .signup { padding: var(--space-6); }
+}
+
 .signup-success { display: none; text-align: center; padding: var(--space-8) 0; }
 .signup-success.show { display: block; }
 .signup-success .check-icon {
