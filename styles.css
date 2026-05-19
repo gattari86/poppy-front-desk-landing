@@ -704,32 +704,69 @@ p { color: var(--charcoal); }
 }
 
 /* TRUST STRIP */
-.trust-strip { background: var(--white); border-top: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray); padding: var(--space-8) 0; }
+/* TRUST BAR — industry verticals with icons.
+   Handles both .trust-item (new markup) and .trust-logo (legacy class
+   still injected by the ?ref=yw JS variant on line ~837 of index.html).
+   The eyebrow uses uppercase letter-spaced styling per brand. */
+.trust-strip {
+  background: var(--ivory);
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+  padding: 32px 0;
+}
 .trust-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-4) var(--space-10);
-}
-@media (min-width: 768px) {
-  .trust-grid { justify-content: space-between; gap: var(--space-6); }
+  justify-content: flex-start;
+  gap: 14px 36px;
 }
 .trust-eyebrow {
-  font-size: var(--fs-small);
-  color: var(--slate);
-  font-weight: 500;
-  letter-spacing: -0.005em;
-}
-.trust-logo {
+  font-size: 12px;
   font-weight: 600;
-  font-size: 1.0625rem;
-  color: var(--charcoal);
-  letter-spacing: -0.02em;
-  opacity: 0.72;
-  transition: opacity var(--dur-med) var(--ease-out);
+  color: var(--slate);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
-.trust-logo:hover { opacity: 1; }
+.trust-item,
+.trust-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--charcoal);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.trust-item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--purple);
+  stroke: var(--purple);
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+.trust-logo small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--slate);
+  letter-spacing: 0;
+  margin-top: 1px;
+}
+@media (max-width: 767px) {
+  .trust-grid {
+    gap: 12px 22px;
+    justify-content: center;
+  }
+  .trust-item,
+  .trust-logo { font-size: 14px; }
+  .trust-item svg { width: 17px; height: 17px; }
+  .trust-eyebrow { width: 100%; text-align: center; }
+}
+@media (min-width: 1024px) {
+  .trust-grid { gap: 14px 44px; }
+}
 
 /* PAIN */
 .pain-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
